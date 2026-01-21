@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { ArrowRight, ChevronRight , ChevronLeft } from 'lucide-react';
 import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
 import HostingBackground from "../../component/assets/Images/HostingBackground.png";
@@ -17,12 +18,23 @@ import BusinessImg from "../../component/assets/Images/BusinessImg.png";
 import CarIcon from "../../component/assets/Icons/CarIcon.png";
 import WatchIcon from "../../component/assets/Icons/WatchIcon.png";
 import LockIcon from "../../component/assets/Icons/LockIcon.png";
+import HostingImg1 from "../../component/assets/Images/HostingImg1.png";
+import HostingImg2 from "../../component/assets/Images/HostingImg2.png";
+import HostingImg3 from "../../component/assets/Images/HostingImg3.png";
+import HostingImg4 from "../../component/assets/Images/HostingImg4.png";
+import HostingImg5 from "../../component/assets/Images/HostingImg5.png";
+import HostingImg6 from "../../component/assets/Images/HostingImg6.png";
+import HostingImg7 from "../../component/assets/Images/HostingImg7.png";
+import HostingImg8 from "../../component/assets/Images/HostingImg8.png";
+import Avatar from "../../component/assets/Icons/Avatar.png";
+
+
 
 export default function Hosting() {
   return (
     <>
       <Navbar />
-    <section id="hosting" className="py-20 bg-white">
+    <section id="hosting" className="py-20 bg-[#F9F9F9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-170">
         {/* Header */}
         <div className="absolute inset-0">
@@ -295,7 +307,7 @@ What you get:
 </div>
 
 
-<div className="max-w-7xl mx-auto mt-32 px-6">
+<div className="w-[90%] mx-auto mt-32 px-6">
   <div className="bg-white border border-gray-200 rounded-3xl px-14 py-20">
 
     {/* Top Content */}
@@ -352,7 +364,139 @@ What you get:
     </div>
   </div>
 </div>
-  
+
+
+    {/* Made With Gdigital Section */}
+    <div
+  className="
+  relative
+  w-screen
+  left-1/2 right-1/2
+  -ml-[50vw] -mr-[50vw]
+  pt-30
+  overflow-hidden
+  mt-32
+  bg-[#079669]
+"
+>
+<div className="relative z-10 mx-auto">
+
+{/* Top Content */}
+<div className="text-center max-w-xl mx-auto mb-20 px-6">
+  <h2 className="text-5xl font-bold text-white mb-6">
+    Made With Gdigital
+  </h2>
+
+  <p className="text-lg text-white/80 mb-10">
+    Polish your brand, protect your inbox, and grow your business
+    with tools that keep you in the driver’s seat.
+  </p>
+
+  <button className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">
+    Get Started
+    <ArrowRight size={20} />
+  </button>
+</div>
+
+{/* Website Preview Grid */}
+<div className="relative max-w-9xl mx-auto">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    {[
+      HostingImg1,
+      HostingImg2,
+      HostingImg3,
+      HostingImg4,
+      HostingImg5,
+      HostingImg6,
+      HostingImg7,
+      HostingImg8,
+    ].map((img, index) => (
+      <div
+        key={index}
+        className="rounded-2xl overflow-hidden shadow-2xl bg-white"
+      >
+        <Image
+          src={img}
+          alt={`Website preview ${index + 1}`}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    ))}
+  </div>
+  </div>
+  {/* Bottom Fade (matches image) */}
+  <div className="pointer-events-none absolute bottom-0 left-0 w-full h-50 bg-gradient-to-t from-[#0aa06e] to-transparent" />
+</div>
+
+</div>
+
+<div className="flex max-w-7xl mx-auto px-6 py-24 gap-12">
+
+  {/* Left Section → Title + Arrows */}
+  <div className="flex flex-col justify-start gap-6 w-2/3">
+    <h2 className="text-4xl md:text-5xl font-bold mt-30">
+      <span className="text-[#23A654]">What Our Customer</span> <br />
+      <span className="text-gray-900">Says About US</span>
+    </h2>
+
+    {/* Navigation Arrows */}
+    <div className="flex gap-3 mt-4">
+      <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
+        <ChevronLeft size={20} />
+      </button>
+      <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
+        <ChevronRight size={20} />
+      </button>
+    </div>
+  </div>
+
+  {/* Right Section → Zig-Zag Testimonials */}
+  <div className="flex flex-col gap-8 w-2/3 relative">
+
+    {/* 1st Card → Center */}
+    <div className="flex justify-center">
+      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md">
+        <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+        <div>
+          <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+          <p className="text-gray-700 text-mdtext-md">
+            The online shop where you can sell your products.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* 2nd Card → Right + Green Border */}
+    <div className="flex justify-end">
+      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-[#23A654]">
+        <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+        <div>
+          <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+          <p className="text-gray-700 text-md">
+            Amazing customer support and smooth shopping experience.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* 3rd Card → Center */}
+    <div className="flex justify-center">
+      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md">
+        <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+        <div>
+          <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+          <p className="text-gray-700 text-md">
+            Loved the products, will definitely order again!
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
       </div>
     </section>
     <Footer />

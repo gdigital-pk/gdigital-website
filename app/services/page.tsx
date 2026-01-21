@@ -1,36 +1,39 @@
 import React from "react";
 import Image from "next/image";
-import MultimediaIcon1 from "../assets/Icons/MultimediaIcon1.png";
-import MultimediaIcon2 from "../assets/Icons/MultimediaIcon2.png";
-import MultimediaIcon3 from "../assets/Icons/MultimediaIcon3.png";
-import MultimediaIcon4 from "../assets/Icons/MultimediaIcon4.png";
-import MultimediaIcon5 from "../assets/Icons/MultimediaIcon5.png";
-import MultimediaIcon6 from "../assets/Icons/MultimediaIcon6.png";
-import Footer from "../layout/Footer";
+import MultimediaIcon1 from "../../component/assets/Icons/MultimediaIcon1.png";
+import MultimediaIcon2 from "../../component/assets/Icons/MultimediaIcon2.png";
+import MultimediaIcon3 from "../../component/assets/Icons/MultimediaIcon3.png";
+import MultimediaIcon4 from "../../component/assets/Icons/MultimediaIcon4.png";
+import MultimediaIcon5 from "../../component/assets/Icons/MultimediaIcon5.png";
+import MultimediaIcon6 from "../../component/assets/Icons/MultimediaIcon6.png";
+import Footer from "../../component/layout/Footer";
+import Navbar from "../../component/layout/Navbar";
 
 
 export default function Services() {
   return (
     <>
+    <Navbar/>
     <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-start mb-16 mt-8">
-          <h2 className="text-4xl md:text-[60px] font-bold text-gray-900 mb-4">
-            Future-ready products <br/> designed for scale.<br/> Strategy-first.
+        <div className="flex items-start w-full mb-16 mt-8">
+        <h2 className="text-3xl sm:text-4xl md:text-[60px] font-bold text-gray-900 mb-4 leading-snug">
+            Future-ready products designed <br/> for scale. Strategy-first.<br/>
+            Experience- <span className="text-[#23A654]">driven</span>.
           </h2>
         </div>
 
         {/* Process Flow Diagram */}
         <div className="mb-20 flex items-center justify-center">
-          <Image
-            src="/servicesImg.png"
-            alt="Services"
-            className="max-w-full h-auto"
-            width={1200}
-            height={600}
-          />
-        </div>
+  <Image
+    src="/servicesImg.png"
+    alt="Services"
+    className="max-w-full h-auto"
+    width={1200}
+    height={600}
+  />
+</div>
 
         {/* Our Services Section */}
         <div className="mb-20">
@@ -222,8 +225,8 @@ export default function Services() {
     </h3>
   </div>
 
-  {/* Right side - pushed to extreme right */}
-  <div className="md:w-1/2 ml-auto grid grid-cols-2 gap-6">
+  <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+
     {[
       { icon: MultimediaIcon1, title: "Multimedia" },
       { icon: MultimediaIcon2, title: "Multimedia" },

@@ -22,18 +22,18 @@ export default function about() {
         {/* Header */}
         <div className="mb-20 mt-8">
   {/* Heading */}
-  <div className="text-start">
+  <div className="flex items-start w-full mb-20">
     <h2 className="text-4xl md:text-[60px] font-bold text-gray-900 leading-snug">
-      Innovators and <br /> 
-      problem-solvers <br /> 
-      building reliable <br /> 
-      software to help <br /> 
-      businesses grow.
+      Innovators and  
+      problem-solvers <br/>
+      building reliable  
+      software to help <br/>
+      businesses <span className="text-[#23A654]">grow</span>.
     </h2>
   </div>
 
   {/* Images BELOW the text */}
-  <div className="flex flex-nowrap gap-4 mb15">
+  <div className="flex flex-nowrap gap-4 mb-15">
     <img src={TrustingImg.src} alt="Trusting" className="w-78 rounded-lg" />
     <img src={FutureFusionImg.src} alt="Future Fusion" className="w-78 rounded-lg" />
     <img src={PurposeImg.src} alt="Purpose" className="w-78 rounded-lg" />

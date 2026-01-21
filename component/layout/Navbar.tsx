@@ -21,12 +21,12 @@ export default function Navbar() {
           <div className="flex flex-1 items-center justify-end">
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-6">
-              <a
-                href="#services"
+              <Link
+                href="/services"
                 className="text-gray-700 hover:text-green-600 px-0 py-2 text-md font-medium transition-colors"
               >
                 Services
-              </a>
+              </Link>
               <Link href="/about" className="text-gray-700 hover:text-green-600 px-0 py-2 text-md font-medium transition-colors">
   About
 </Link>
