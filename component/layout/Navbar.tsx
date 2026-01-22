@@ -9,9 +9,9 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
         {/* Navbar main row, logo left, menu right */}
-        <div className="flex items-center h-16">
+        <div className="flex items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img src={LogoDesign.src} alt="Logo"/>
@@ -36,12 +36,12 @@ export default function Navbar() {
               >
                 Hosting
               </Link>
-              <a
-                href="#portfolio"
+              <Link
+                href="/our-work"
                 className="text-gray-700 hover:text-green-600 px-0 py-2 text-md font-medium transition-colors"
               >
                 Our Work
-              </a>
+              </Link>
             </div>
 
             {/* CTA Button */}

@@ -15,7 +15,7 @@ export default function Services() {
     <>
     <Navbar/>
     <section id="services" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
         {/* Header */}
         <div className="flex items-start w-full mb-16 mt-8">
         <h2 className="text-3xl sm:text-4xl md:text-[60px] font-bold text-gray-900 mb-4 leading-snug">
@@ -30,7 +30,7 @@ export default function Services() {
     src="/servicesImg.png"
     alt="Services"
     className="max-w-full h-auto"
-    width={1200}
+    width={1500}
     height={600}
   />
 </div>

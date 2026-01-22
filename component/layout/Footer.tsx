@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"; 
 import ConsultationIcon from "../assets/Icons/consultrationIcon.png";
 import MessageIcon from "../assets/Icons/Message.png";
 import PhoneIcon from "../assets/Icons/Phone.png";
@@ -12,7 +13,7 @@ import LogoDesign from "../../public/logoDesign.png";
 export default function Footer() {
   return (
     <footer className="bg-white pt-15 pb-18">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
 
         {/* ===== CTA SECTION ===== */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
@@ -42,13 +43,15 @@ export default function Footer() {
           </div>
 
           {/* Right Button */}
-          <a
-            href="/contact"
-            className="mt-8 md:mt-0 inline-flex items-center gap-3 bg-[#0A9B67] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#088a5b] transition"
-          >
-            Contact Us
-            <span className="text-xl">→</span>
-          </a>
+          <div className="hidden md:block ml-4">
+              <Link
+                href="/contact"
+                className="bg-green-600 text-white px-6 py-2 rounded-full text-md font-medium hover:bg-green-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
+
         </div>
 
         {/* ===== FOOTER CONTENT ===== */}

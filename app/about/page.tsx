@@ -18,7 +18,7 @@ export default function about() {
     <>
     <Navbar />
     <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
         {/* Header */}
         <div className="mb-20 mt-8">
   {/* Heading */}
@@ -34,10 +34,10 @@ export default function about() {
 
   {/* Images BELOW the text */}
   <div className="flex flex-nowrap gap-4 mb-15">
-    <img src={TrustingImg.src} alt="Trusting" className="w-78 rounded-lg" />
-    <img src={FutureFusionImg.src} alt="Future Fusion" className="w-78 rounded-lg" />
-    <img src={PurposeImg.src} alt="Purpose" className="w-78 rounded-lg" />
-    <img src={InovationImg.src} alt="Innovation" className="w-78 rounded-lg" />
+    <img src={TrustingImg.src} alt="Trusting" className="w-100 rounded-lg" />
+    <img src={FutureFusionImg.src} alt="Future Fusion" className="w-100 rounded-lg" />
+    <img src={PurposeImg.src} alt="Purpose" className="w-100 rounded-lg" />
+    <img src={InovationImg.src} alt="Innovation" className="w-100 rounded-lg" />
   </div>
 </div>
 
