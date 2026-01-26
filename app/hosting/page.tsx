@@ -31,12 +31,33 @@ import Avatar from "../../component/assets/Icons/Avatar.png";
 
 
 export default function Hosting() {
+
+
+ const plans = [
+    {
+      name: "Spark",
+      price: "$200",
+      icon: SparkIcon,
+    },
+    {
+      name: "Blaze",
+      price: "$200",
+      icon: null, // No icon at the top for Blaze in the image
+    },
+    {
+      name: "Inferno",
+      price: "$200",
+      icon: FireIcon,
+    },
+  ];
+
   return (
     <>
       <Navbar />
-    <section id="hosting" className="py-20 bg-[#F9F9F9]">
+    <section id="hosting" className="bg-[#F9F9F9]">
+      <div className="py-20">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20 mt-170">
-        {/* Header */}
+        {/* Header */} 
         <div className="absolute inset-0">
   <img
     src={HostingBackground.src}
@@ -78,9 +99,9 @@ export default function Hosting() {
     <Image
       src={DigitalFutureIcon}
       alt="Built for the Digital Future"
-      width={200}
-      height={200}
-    className="object-contain flex-shrink-0 bg-white z-10"
+      width={250}
+      height={250}
+    className="object-contain flex-shrink-0 z-10"
     />
   </div>
 
@@ -132,7 +153,7 @@ export default function Hosting() {
 
 
 
-<div className="mb-20 grid md:grid-cols-2 gap-12 items-center pt-20">
+<div className="mb-30 grid md:grid-cols-2 gap-12 items-center pt-20">
 
   {/* LEFT SIDE – IMAGE */}
   <div className="order-2 md:order-1 flex items-center justify-center">
@@ -164,7 +185,7 @@ export default function Hosting() {
     
 
         {/* Make your website in minutes */}
-        <div className=" grid md:grid-cols-3 gap-12 items-center pt-10">
+        <div className=" grid md:grid-cols-3 gap-12 items-center pt-20 pb-7">
           <div>
             <h3 className="text-4xl font-bold text-gray-900 mb-4">Hosting Packages
             Made for You</h3>
@@ -175,95 +196,110 @@ export default function Hosting() {
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-8">
-  <div className="flex items-center w-full">
-    <div className="flex-grow border-t border-gray-400"></div>
+  <div className="max-w-9xl mx-auto relative px-4 py-20">
+      {/* Main Grid Container */}
+      <div className="grid md:grid-cols-3 border-t border-b border-gray-200">
+        {plans.map((plan, i) => (
+          <div
+            key={i}
+            className={`relative p-10 md:p-14 flex flex-col items-start ${
+              i !== 2 ? "md:border-r border-gray-200" : ""
+            }`}
+          >
+            {/* Top Icon Placement - Absolute positioning to overlap the top border */}
+            <div className="absolute -top-12 left-1/2 -translate-x-1/2 md:left-14 md:translate-x-0">
+              {plan.icon && (
+                <Image
+                  src={plan.icon}
+                  alt={plan.name}
+                  width={90}
+                  height={90}
+                  className="object-contain"
+                />
+              )}
+            </div>
 
-    <Image src={SparkIcon} alt="Spark" width={90} height={90} className="mx-8" />
+            {/* Content starts with margin to account for the overlapping icon */}
+            <div className="mt-8 w-full">
+              <h4 className="text-5xl text-gray-800 font-medium mb-1">{plan.name}</h4>
+              <p className="text-base text-gray-500 mb-10 font-medium">(Basic Package)</p>
 
-    <div className="flex-grow border-t border-gray-400"></div>
+              <p className="text-5xl text-gray-800 font-bold mb-10">{plan.price}</p>
 
-    <Image src={FireIcon} alt="Fire" width={90} height={90} className="mx-8" />
+              <p className="text-lg text-gray-700 leading-relaxed mb-8 pr-4">
+                For individuals and small teams who need credibility without complexity.
+              </p>
 
-    <div className="flex-grow border-t border-gray-400"></div>
-  </div>
-</div>
-<div className="max-w-7xl mx-auto">
-<div className="max-w-7xl mx-auto grid md:grid-cols-3 border-t border-b border-gray-700">
+              <div className="w-full">
+                <p className="text-lg font-bold text-gray-800 mb-6">What you get:</p>
+                <ul className="space-y-4 text-[17px] text-gray-600 mb-10">
+                  <li className="flex items-center gap-4">
+                    <Image src={UserIcon} alt="Users" width={25} height={25} />
+                    <span>1–10 user</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <Image src={EmailIcon} alt="Email" width={25} height={25} className="mt-1" />
+                    <span>Branded domain email (e.g., you@company.com)</span>
+                  </li>
+                  <li className="flex items-center gap-4">
+                    <Image src={VirusProtection} alt="Security" width={25} height={25} />
+                    <span>Basic spam & virus protection</span>
+                  </li>
+                  <li className="flex items-center gap-4">
+                    <Image src={StorageIcon} alt="Storage" width={25} height={25} />
+                    <span>5GB storage per inbox</span>
+                  </li>
+                </ul>
+              </div>
 
-{["Spark", "Blaze", "Inferno"].map((plan, i) => (
-  <div
-    key={i}
-    className={`p-12 text-white ${
-      i !== 2 ? "border-r border-gray-700" : ""
-    }`}
-  >
-    <h4 className="text-4xl text-gray-900 font-bold mb-2">{plan}</h4>
-    <p className="text-lg text-gray-600 mb-6">(Basic Package)</p>
+              {/* Thin Divider Line */}
+              <div className="w-full border-t border-gray-100 pt-8 mt-auto">
+                <p className="text-lg font-bold text-gray-800 mb-4">Perfect for:</p>
+                <ul className="space-y-3 text-[17px] text-gray-600">
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span>Freelancers moving away from Gmail/Yahoo</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span>•</span>
+                    <span>Startups needing a professional look on a budget</span>
+                  </li>
+                </ul>
+              </div>
 
-    <p className="text-4xl text-gray-900 font-bold mb-8">$200</p>
+              <button className="mt-14 w-full py-4 border-2 border-[#10b981] text-gray-700 font-bold text-lg rounded-full hover:bg-emerald-50 transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
 
-    <p className="text-xl text-gray-600 mb-8">For individuals and small teams who need credibility without complexity.</p>
-
-    <p className="text-xl text-gray-600 mb-8">
-What you get:
-</p>
-
-<ul className="space-y-4 text-lg text-gray-600 mb-10">
-  <li className="flex items-center gap-3">
-    <Image src={UserIcon} alt="Users" width={20} height={20} />
-    <span>1–10 user</span>
-  </li>
-
-  <li className="flex items-center gap-3">
-    <Image src={EmailIcon} alt="Email" width={20} height={20} />
-    <span>Branded domain email (e.g., you@company.com)</span>
-  </li>
-
-  <li className="flex items-center gap-3">
-    <Image src={VirusProtection} alt="Security" width={20} height={20} />
-    <span>Basic spam & virus protection</span>
-  </li>
-
-  <li className="flex items-center gap-3">
-    <Image src={StorageIcon} alt="Storage" width={20} height={20} />
-    <span>5GB storage per inbox</span>
-  </li>
-</ul>
-
-    <p className="text-lg text-gray-600 mb-6">Perfect for:</p>
-    <ul className="space-y-2 text-lg text-gray-600">
-      <li>• Freelancers moving away from Gmail/Yahoo</li>
-      <li>• Startups needing a professional look on a budget</li>
-    </ul>
-
-    <button className="mt-20 mb-10 w-full h-15 py-3 border-3 border-green-500 text-gray-600 text-lg rounded-full">
-      Get Started
-    </button>
-  </div>
-))}
-</div>
-
-<div className="flex justify-center">
+      {/* The Shooting Star (StarIcon) positioned on the border between Col 1 and Col 2 */}
+      <div className="relative"> 
+  
+  <div className="hidden md:block absolute -bottom-10 left-1/2 -translate-x-1/2 pointer-events-none z-10">
     <Image
       src={StarIcon}
-      alt="Star"
-      width={110}
-      height={110}
+      alt="Shooting Star"
+      width={90}
+      height={90}
+      className="transform rotate-[-5deg]"
     />
   </div>
 
 </div>
+    </div>
 
 
-<div className="max-w-4xl mx-auto mt-24 px-6">
-  <div className="bg-[#FDFCFE] border border-gray-200 rounded-2xl py-20 px-10">
+<div className="max-w-7xl mx-auto mt-24 px-6 pb-10">
+<div className="bg-[#FDFCFE] border border-[#EAE9E9] rounded-2xl pt-20 px-10">
 
     {/* Content Wrapper */}
-    <div className="max-w-3xl">
+    <div className="max-w-3xl pl-20">
 
       {/* Heading */}
-      <h2 className="text-4xl font-bold text-gray-900 mb-6">
+      <h2 className="text-4xl font-bold text-gray-900 mb-6 ">
         Build trust with a professional business email
       </h2>
 
@@ -297,7 +333,7 @@ What you get:
       <Image
         src={BusinessImg}
         alt="Business Email"
-        width={900}
+        width={1300}
         height={900}
         className="object-contain"
       />
@@ -307,8 +343,10 @@ What you get:
 </div>
 
 
-<div className="w-[90%] mx-auto mt-32 px-6">
-  <div className="bg-white border border-gray-200 rounded-3xl px-14 py-20">
+<div className="max-w-9xl mx-auto mt-32 px-6 ">
+<div className="bg-white rounded-3xl px-14 py-20 pl-20
+  border border-gray-100 
+  shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
 
     {/* Top Content */}
     <div className="max-w-3xl mb-20">
@@ -327,7 +365,7 @@ What you get:
 
       {/* Feature 1 */}
       <div>
-        <Image src={CarIcon} alt="Fast Performance" width={48} height={48} className="mb-6" />
+        <Image src={CarIcon} alt="Fast Performance" width={60} height={50} className="mb-6" />
         <h4 className="text-2xl font-bold text-gray-900 mb-4">
           Blazing-Fast Performance
         </h4>
@@ -339,7 +377,7 @@ What you get:
 
       {/* Feature 2 */}
       <div>
-        <Image src={WatchIcon} alt="Uptime" width={48} height={48} className="mb-6" />
+        <Image src={WatchIcon} alt="Uptime" width={60} height={60} className="mb-3" />
         <h4 className="text-2xl font-bold text-gray-900 mb-4">
           99.9% Uptime Guarantee
         </h4>
@@ -351,7 +389,7 @@ What you get:
 
       {/* Feature 3 */}
       <div>
-        <Image src={LockIcon} alt="Security" width={48} height={48} className="mb-6" />
+        <Image src={LockIcon} alt="Security" width={60} height={60} className="mb-3" />
         <h4 className="text-2xl font-bold text-gray-900 mb-4">
           Managed Security
         </h4>
@@ -364,17 +402,14 @@ What you get:
     </div>
   </div>
 </div>
-
+</div>
 
     {/* Made With Gdigital Section */}
     <div
   className="
-  relative
-  w-screen
-  left-1/2 right-1/2
-  -ml-[50vw] -mr-[50vw]
+
+ max-w-10xl mx-auto
   pt-30
-  overflow-hidden
   mt-32
   bg-[#079669]
 "
@@ -455,7 +490,7 @@ What you get:
 
     {/* 1st Card → Center */}
     <div className="flex justify-center">
-      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md">
+      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
         <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
         <div>
           <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
@@ -468,7 +503,7 @@ What you get:
 
     {/* 2nd Card → Right + Green Border */}
     <div className="flex justify-end">
-      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-[#23A654]">
+      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
         <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
         <div>
           <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
@@ -481,7 +516,7 @@ What you get:
 
     {/* 3rd Card → Center */}
     <div className="flex justify-center">
-      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md">
+      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
         <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
         <div>
           <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
