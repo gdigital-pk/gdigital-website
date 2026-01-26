@@ -1,152 +1,134 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link"; 
+import Link from "next/link";
+import { ArrowRight } from 'lucide-react';
+// Icons (assuming paths are correct)
 import ConsultationIcon from "../assets/Icons/consultrationIcon.png";
 import MessageIcon from "../assets/Icons/Message.png";
 import PhoneIcon from "../assets/Icons/Phone.png";
 import LinkedInIcon from "../assets/Icons/LinkedIn.png";
 import InstagramIcon from "../assets/Icons/Instagram.png";
 import WhatsAppIcon from "../assets/Icons/WhatsApp.png";
-import SocialIcon from "../assets/Icons/Social.png";
+import SocialIcon from "../assets/Icons/Social.png"; // This will be the 'X' icon
 import LogoDesign from "../../public/logoDesign.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-white pt-15 pb-18">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
-
-        {/* ===== CTA SECTION ===== */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
-          
-          {/* Left */}
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-4">
+    <footer className="bg-white pt-10 pb-12">
+      <div className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+        
+        {/* ===== TOP SECTION: CTA ===== */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-transparent pb-16">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-4 mb-4">
               <Image
-                src={ConsultationIcon} // replace with your icon
+                src={ConsultationIcon}
                 alt="Consultation"
-                width={40}
-                height={40}
+                width={48}
+                height={48}
+                className="w-10 h-10 md:w-12 md:h-12"
               />
-              <h2 className="text-4xl md:text-[44px] font-semibold text-gray-800">
+              <h2 className="text-2xl sm:text-3x md:text-5xl font-semibold text-[#333e48] tracking-tight">
                 Schedule a Free Consultation
               </h2>
             </div>
 
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-xl text-[#333e48] font-medium mb-3">
               Or apply as a digital accessibility expert
             </p>
 
-            <p className="text-gray-400 max-w-lg">
+            <p className="text-gray-400 text-base max-w-md leading-relaxed">
               We are an accessible workplace. People with disabilities are welcome
               to apply.
             </p>
           </div>
 
-          {/* Right Button */}
-          <div className="hidden md:block ml-4">
-              <Link
-                href="/contact"
-                className="bg-green-600 text-white px-6 py-2 rounded-full text-md font-medium hover:bg-green-700 transition-colors"
-              >
-                Contact Us
-              </Link>
+          <div className="mt-8 md:mt-0">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-[#00966C] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#007a58] transition-all"
+            >
+              Contact Us
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+
+        {/* ===== MIDDLE SECTION: LOGO & LINKS ===== */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8">
+          
+          {/* Column 1: Logo & Contact */}
+          <div className="md:col-span-5 lg:col-span-6">
+            <Image
+              src={LogoDesign}
+              alt="GDigital"
+              width={140}
+              height={50}
+              className="mb-8"
+            />
+            <div className="space-y-5 text-[#333e48] font-medium">
+              <div className="flex items-center gap-4">
+                <Image src={MessageIcon} alt="Email" width={24} height={24} />
+                <a href="mailto:hello@gdigital.com" className="hover:text-[#00966C]">hello@gdigital.com</a>
+              </div>
+              <div className="flex items-center gap-4">
+                <Image src={PhoneIcon} alt="Phone" width={24} height={24} />
+                <a href="tel:+4560475264" className="hover:text-[#00966C]">+45 60 47 52 64</a>
+              </div>
+            </div>
+          </div>
+
+        {/* Company & Resources Wrapper (Side-by-side on mobile) */}
+        <div className="md:col-span-6 grid grid-cols-2 gap-4">
+            {/* Company Column */}
+            <div>
+              <h6 className="text-xl font-bold text-[#333e48] mb-6">Company</h6>
+              <ul className="space-y-3 text-gray-400 font-medium">
+                <li className="hover:text-[#00966C] cursor-pointer">About Us</li>
+                <li className="hover:text-[#00966C] cursor-pointer">Careers</li>
+                <li className="hover:text-[#00966C] cursor-pointer">What We Do</li>
+              </ul>
             </div>
 
-        </div>
-
-        {/* ===== FOOTER CONTENT ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div>
-            <Image
-              src={LogoDesign} // your logo
-              alt="GDigital"
-              width={120}
-              height={70}
-              className="mb-6"
-            />
-
-<div className="space-y-4 mt-8 text-gray-700 ">
-  <p className="flex items-center gap-3">
-    <Image src={MessageIcon} alt="Email" width={22} height={22} />
-    hello@gdigital.com
-  </p>
-
-  <p className="flex items-center gap-3">
-    <Image src={PhoneIcon} alt="Phone" width={22} height={22} />
-    +45 60 47 52 64
-  </p>
-</div>
-          </div>
-          <div />
-          <div>
-            <h6 className="text-xl font-semibold text-gray-800 mb-6">
-              Company
-            </h6>
-            <ul className="space-y-3 text-gray-400">
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>What We Do</li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="text-xl font-semibold text-gray-800 mb-6">
-              Resources
-            </h6>
-            <ul className="space-y-3 text-gray-400">
-              <li>Privacy Policy</li>
-              <li>Cookies</li>
-              <li>Terms & Conditions</li>
-            </ul>
+            {/* Resources Column */}
+            <div>
+              <h6 className="text-xl font-bold text-[#333e48] mb-6">Resources</h6>
+              <ul className="space-y-3 text-gray-400 font-medium">
+                <li className="hover:text-[#00966C] cursor-pointer">Privacy Policy</li>
+                <li className="hover:text-[#00966C] cursor-pointer">Cookies</li>
+                <li className="hover:text-[#00966C] cursor-pointer">Terms & Conditions</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-3">
-        <div className="flex gap-5 mt-5">
-  <a href="#" aria-label="LinkedIn">
-    <Image
-      src={LinkedInIcon}
-      alt="LinkedIn"
-      width={32}
-      height={32}
-      className="hover:opacity-70 transition"
-    />
-  </a>
 
-  <a href="#" aria-label="Instagram">
-    <Image
-      src={InstagramIcon}
-      alt="Instagram"
-      width={30}
-      height={30}
-      className="hover:opacity-70 transition"
-    />
-  </a>
 
-  <a href="#" aria-label="WhatsApp">
-    <Image
-      src={WhatsAppIcon}
-      alt="WhatsApp"
-      width={30}
-      height={30}
-      className="hover:opacity-70 transition"
-    />
-  </a>
+        {/* ===== BOTTOM SECTION: SOCIAL & COPYRIGHT ===== */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 mt-10 pt-8">
+          {/* Social Icons */}
+          <div className="md:col-span-5 lg:col-span-6 flex gap-6 items-center">
+            <a href="#" className="opacity-80 hover:opacity-100 transition">
+              <Image src={LinkedInIcon} alt="LinkedIn" width={24} height={24} />
+            </a>
+            <a href="#" className="opacity-80 hover:opacity-100 transition">
+              <Image src={InstagramIcon} alt="Instagram" width={24} height={24} />
+            </a>
+            <a href="#" className="opacity-80 hover:opacity-100 transition">
+              <Image src={WhatsAppIcon} alt="WhatsApp" width={24} height={24} />
+            </a>
+            <a href="#" className="opacity-80 hover:opacity-100 transition">
+              <Image src={SocialIcon} alt="X" width={22} height={22} />
+            </a>
+          </div>
 
-  <a href="#" aria-label="Social">
-    <Image
-      src={SocialIcon}
-      alt="Social"
-      width={30}
-      height={30}
-      className="hover:opacity-70 transition"
-    />
-  </a>
-</div>
-<div className="text-start text-gray-700 mt-5">
-          © 2025 Gdigital. All rights reserved.
+          {/* Copyright */}
+          <div className="md:col-span-7 lg:col-span-6">
+            <p className="text-[#333e48] font-semibold text-lg">
+              © 2025 Gdigital. All rights reserved.
+            </p>
+          </div>
         </div>
-        </div>
-        {/* ===== COPYRIGHT ===== */}
-       
+        
       </div>
     </footer>
   );

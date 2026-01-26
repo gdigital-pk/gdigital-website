@@ -15,17 +15,27 @@ export default function Services() {
     <>
     <Navbar/>
     <section id="services" className="py-20 bg-white">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
+    <div className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+
         {/* Header */}
         <div className="flex items-start w-full mb-16 mt-8">
-        <h2 className="text-3xl sm:text-4xl md:text-[60px] font-bold text-gray-900 mb-4 leading-snug">
+        <h2 className="
+  text-2xl
+  sm:text-3xl
+  md:text-4xl
+  lg:text-5xl
+  xl:text-[60px]
+  font-bold
+  text-gray-900
+  leading-tight
+">
             Future-ready products designed <br/> for scale. Strategy-first.<br/>
             Experience- <span className="text-[#23A654]">driven</span>.
           </h2>
         </div>
 
         {/* Process Flow Diagram */}
-        <div className="mb-20 flex items-center justify-center">
+        <div className="mb-12 sm:mb-16 lg:mb-20 flex items-center justify-center px-2">
   <Image
     src="/servicesImg.png"
     alt="Services"
@@ -37,22 +47,30 @@ export default function Services() {
 
         {/* Our Services Section */}
         <div className="mb-20">
-        <h3 className="text-[45px] font-bold text-[#23A654] text-start">
-           Our Services.
-        </h3>
-          <h3 className="text-[45px] font-bold text-gray-900 text-start">
-            From Start to Finish!
-          </h3>
-          <p className="text-lg text-gray-600 text-start max-w-[500px] mb-8">
+        <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#23A654]">
+  Our Services.
+</h3>
+<h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-gray-900">
+  From Start to Finish!
+</h3>
+<p className="
+  text-base
+  sm:text-lg
+  text-gray-600
+  max-w-full
+  sm:max-w-[500px]
+  mb-8
+">
           We combine strategy, design, and development into
            seamless digital experiences that people love, trust, and remember.
            </p>
-          <div className="grid md:grid-cols-3 gap-0">
+           <div className="grid grid-cols-1 md:grid-cols-3">
             {/* Strategy */}
-            <div className="bg-gray-50 p-8 border-t border-b border-r border-gray-300">
-              <h4 className="text-[30px] font-semibold text-gray-900 mb-4">Strategy</h4>
-              <h6 className="text-[20px] font-semibold text-gray-900">Descovery</h6>
-              <ul className="space-y-2 text-gray-600">
+            {/* <div className="bg-gray-50 p-8 border-t border-b border-r border-gray-300"> */}
+            <div className="bg-gray-50 p-6 sm:p-8 border border-gray-300 md:border-l-0">
+              <h4 className="text-xl sm:text-2xl lg:text-[30px] font-semibold mb-4 text-gray-900">Strategy</h4>
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Descovery</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>Product auditing
@@ -68,8 +86,8 @@ export default function Services() {
                   <span>PUser research</span>
                 </li>
               </ul>
-              <h6 className="text-[20px] font-semibold text-gray-900 mt-5">Product Definition</h6>
-              <ul className="space-y-2 text-gray-600">
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Product Definition</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>Product strategy
@@ -88,8 +106,8 @@ export default function Services() {
                   <span>Conversion rate optimisation</span>
                 </li>
               </ul>
-              <h6 className="text-[20px] font-semibold text-gray-900 mt-5">Operations</h6>
-              <ul className="space-y-2 text-gray-600">
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Operations</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>Product management
@@ -102,10 +120,10 @@ export default function Services() {
             </div>
 
             {/* Design */}
-            <div className="bg-gray-50 p-8 border-t border-b border-r border-gray-300">
-              <h4 className="text-[30px] font-semibold text-gray-900 mb-4">Design</h4>
-              <h6 className="text-[20px] font-semibold text-gray-900">Interface</h6>
-              <ul className="space-y-2 text-gray-600">
+            <div className="bg-gray-50 p-6 sm:p-8 border border-gray-300 md:border-l-0">
+             <h4 className="text-xl sm:text-2xl lg:text-[30px] font-semibold mb-4 text-gray-900">Design</h4>
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Interface</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>User experience strategy
@@ -124,8 +142,8 @@ export default function Services() {
                   <span>User testing</span>
                 </li>
               </ul>
-              <h6 className="text-[20px] font-semibold text-gray-900 mt-5">Brand</h6>
-              <ul className="space-y-2 text-gray-600">
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Brand</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>Brand strategy
@@ -141,8 +159,8 @@ export default function Services() {
                   <span>Brand guidelines</span>
                 </li>
               </ul>
-              <h6 className="text-[20px] font-semibold text-gray-900 mt-5">Multimedia</h6>
-              <ul className="space-y-2 text-gray-600">
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Multimedia</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>Illustration
@@ -155,10 +173,10 @@ export default function Services() {
             </div>
 
             {/* Development */}
-            <div className="bg-gray-50 p-8 border-t border-b border-gray-300">
-              <h4 className="text-[30px] font-semibold text-gray-900 mb-4">Development</h4>
-              <h6 className="text-[20px] font-semibold text-gray-900">Front-end</h6>
-              <ul className="space-y-2 text-gray-600">
+            <div className="bg-gray-50 p-6 sm:p-8 border border-gray-300 md:border-l-0 md:border-r-0">
+              <h4 className="text-xl sm:text-2xl lg:text-[30px] font-semibold mb-4 text-gray-900">Development</h4>
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Front-end</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>React
@@ -180,8 +198,8 @@ export default function Services() {
                   <span>Kotlin</span>
                 </li>
               </ul>
-              <h6 className="text-[20px] font-semibold text-gray-900 mt-5">Back-end</h6>
-              <ul className="space-y-2 text-gray-600">
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Back-end</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>Elixir
@@ -194,8 +212,8 @@ export default function Services() {
                   <span>Node</span>
                 </li>
               </ul>
-              <h6 className="text-[20px] font-semibold text-gray-900 mt-5">DevOps</h6>
-              <ul className="space-y-2 text-gray-600">
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">DevOps</h6>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
                   <span>Hosting and maintenance
@@ -210,23 +228,23 @@ export default function Services() {
         </div>
 
         {/* Deliverables Section */}
-        <div className="flex flex-col md:flex-row items-start md:items-stretch gap-10 mb-20">
+      {/* Deliverables Section */}
+<div className="flex flex-col lg:flex-row gap-12 mb-20">
 
-{/* Left side - headings */}
-<div className="flex items-start w-full">
+<div className="flex flex-col sm:flex-col lg:flex-row w-full gap-8">
 
-  {/* Left side */}
-  <div className="md:w-1/3">
-    <h3 className="text-[45px] font-bold text-[#23A654] text-start">
+  {/* Left side - headings */}
+  <div className="lg:w-1/3">
+    <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#23A654]">
       Deliverables.
     </h3>
-    <h3 className="text-[45px] font-bold text-gray-900 text-start mt-2">
-      Including but not <br /> limited to.
+    <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-gray-900 mt-2">
+      Including but not <br className="hidden sm:block" /> limited to.
     </h3>
   </div>
 
-  <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-
+  {/* Right side - grid */}
+  <div className="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-2 gap-6">
     {[
       { icon: MultimediaIcon1, title: "Multimedia" },
       { icon: MultimediaIcon2, title: "Multimedia" },
@@ -235,32 +253,31 @@ export default function Services() {
       { icon: MultimediaIcon5, title: "Multimedia" },
       { icon: MultimediaIcon6, title: "Multimedia" },
     ].map((item, index) => (
-      <div
-        key={index}
-        className="text-center p-4"
-      >
-        <div className="text-start mb-2">
+      <div key={index} className="p-4 sm:p-6">
+        <div className="mb-2">
           <Image
             src={item.icon}
             alt={item.title}
-            width={50}
-            height={50}
-            className="object-contain"
+            width={40}
+            height={40}
+            className="sm:w-[50px]"
           />
         </div>
 
-        <h4 className="text-[22px] font-bold text-gray-900 mt-3 text-start">
+        <h4 className="text-lg sm:text-[22px] font-bold text-gray-900 mt-3">
           {item.title}
         </h4>
 
-        <p className="text-md text-gray-600 text-start mt-2">
+        <p className="text-sm sm:text-base text-gray-600 mt-2">
           The online shop where you can sell your products.
         </p>
       </div>
     ))}
   </div>
+
 </div>
 </div>
+
 
       </div>
     </section>
