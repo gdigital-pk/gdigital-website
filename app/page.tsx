@@ -1,10 +1,10 @@
 
-import Services from "../app/services/page";
+import Landing from "../app/landing/page";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Services />
+      <Landing />
     </main>
   );
 }
