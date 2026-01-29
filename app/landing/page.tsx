@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
-import { ArrowRight, Instagram, Linkedin, Twitter, Youtube, MoveRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Your imports
 import Landingicon1 from "../../component/assets/Icons/Landingicon1.png";
@@ -10,6 +10,7 @@ import LandingIcon2 from "../../component/assets/Icons/LandingIcon2.png";
 import LandingIcon3 from "../../component/assets/Icons/LandingIcon3.png";
 import LandingIcon4 from "../../component/assets/Icons/LandingIcon4.png";
 import LandingIcon5 from "../../component/assets/Icons/LandingIcon5.png";
+import LandingIcon6 from "../../component/assets/Icons/LandingIcon6.png";
 import PsImg from "../../component/assets/Images/PsImg.png";
 import LandingImg1 from "../../component/assets/Images/LandingImg1.png";
 import InfluencerImg from "../../component/assets/Images/InfluencerImg.png";
@@ -54,29 +55,119 @@ export default function LandingPage() {
         { id: 4, isVents: false, brand: "Rolling Stone", title: "Gdigital: Driving Brand Success through Comprehensive Operational and PR Solutions", source: "Rolling Stone" },
       ];
 
+  
   return (
     <div className="min-h-screen bg-white font-sans text-[#333]">
           <Navbar />
 
+   <div className="bg-[#333333]  min-h-screen bg-[#333333] rounded-[60px] md:rounded-[80px] lg:flex-row items-center gap-10 pt-10">
       {/* --- HERO SECTION --- */}
-      <section className="bg-[#00B86B] pt-20 pb-40 px-10 rounded-b-[100px] relative">
+      <section 
+  className="relative pt-10 pb-40 px-6 md:px-16 rounded-b-[100px] md:rounded-b-[140px] z-20"
+  style={{ 
+    background: 'linear-gradient(144.63deg, #079669 23.69%, #23E9AA 66.82%, #8DDA7D 113.32%)' 
+  }}
+>
+        
+
+        {/* Massive Headline */}
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-white text-7xl md:text-8xl font-black leading-[1.1] uppercase italic tracking-tighter">
-            Create. Build.<br />Launch. Grow.<br />Evolve.
+          <h1 className="text-white text-3xl
+        sm:text-3xl md:text-[95px] leading-[0.82] font-[800] italic uppercase tracking-[-0.06em] mt-10" 
+              style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            Create. Build.<br />
+            Launch. Grow.<br />
+            Evolve.
           </h1>
         </div>
       </section>
 
-      {/* --- TRUSTED BRANDS --- */}
-      <section className="bg-[#333] py-10 mx-10 rounded-3xl flex flex-wrap items-center justify-center gap-12 px-10">
-        <p className="text-gray-400 text-sm max-w-[150px]">Trusted By Brands we Have Help Shaped.</p>
-        {[Landingicon1, LandingIcon2, LandingIcon3, LandingIcon4, LandingIcon5].map((icon, idx) => (
-          <div key={idx} className="bg-white p-4 rounded-md w-32 h-16 flex items-center justify-center">
-            <Image src={icon} alt="brand" className="object-contain" />
-          </div>
-        ))}
-      </section>
+      {/* --- TRUSTED BRANDS SECTION --- */}
+      {/* Use a negative margin to pull this up into the green area */}
+      {/* <section className="px-4 md:px-10 -mt-24 relative z-10 pb-20"> */}
+      <div className="bg-[#333333] rounded-[60px] md:rounded-[80px] p-10 md:p-16 
+                flex flex-col lg:flex-row items-center lg:items-start gap-12">
 
+  {/* LEFT TEXT */}
+  <p className="text-gray-400 text-md md:text-lg font-semibold leading-tight mt-10
+              max-w-[200px] text-justify lg:text-justify shrink-0">
+  Trusted By Brands we have Help Shaped.
+</p>
+
+  {/* RIGHT LOGOS */}
+  <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-end gap-6">
+
+  <div className="bg-white rounded-xl w-[180px] h-42 flex flex-col items-center justify-center shadow-2xl gap-2">
+  <Image
+    src={Landingicon1}
+    alt="Brand logo 1"
+    className="object-contain"
+    width={90}
+    height={60}
+    priority
+  />
+  
+  <Image
+    src={LandingIcon6}  // <-- second image
+    alt="Brand logo 2"
+    className="object-contain"
+    width={100}
+    height={60}
+    priority
+  />
+</div>
+
+<div className="bg-white rounded-xl w-[180px] h-42 flex items-center justify-center shadow-2xl">
+  <Image
+    src={LandingIcon2}
+    alt="Brand logo 2"
+    className="object-contain"
+    width={130}
+    height={100}
+    priority
+  />
+</div>
+
+<div className="bg-white rounded-xl w-[180px] h-42 flex items-center justify-center p-6 shadow-2xl">
+  <Image
+    src={LandingIcon3}
+    alt="Brand logo 3"
+    className="object-contain"
+    width={120}
+    height={50}
+    priority
+  />
+</div>
+
+<div className="bg-white rounded-xl w-[180px] h-42 flex items-center justify-center p-6 shadow-2xl">
+  <Image
+    src={LandingIcon4}
+    alt="Brand logo 3"
+    className="object-contain"
+    width={150}
+    height={80}
+    priority
+  />
+</div>
+
+<div className="bg-white rounded-xl w-[180px] h-42 flex items-center justify-center p-6 shadow-2xl">
+  <Image
+    src={LandingIcon5}
+    alt="Brand logo 3"
+    className="object-contain"
+    width={150}
+    height={80}
+    priority
+  />
+</div>
+
+{/* Add more logos as needed in the same format */}
+
+</div>
+
+</div>
+      {/* </section> */}
+    </div>
       {/* --- PORTFOLIO HEADER --- */}
       <section className="max-w-7xl mx-auto px-10 py-20 grid md:grid-cols-2 gap-10 items-start">
         <div>
@@ -149,8 +240,8 @@ export default function LandingPage() {
           <Image src={PsImg} alt="Services" className="w-full max-w-md" />
         </div>
         <div className="flex-1">
-          <span className="text-2xl sm:text-3xl lg:text-[45px] text-[#23A654]">Our Services.</span>
-          <h2 className="text-5xl font-semibold text-[#333] mt-2 mb-6 leading-tight">Design-Led Digital Products.</h2>
+          <span className="text-xl sm:text-2xl lg:text-[45px] text-[#23A654]">Our Services.</span>
+          <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] mt-2 mb-6 leading-tight">Design-Led Digital Products.</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px] mb-8">
             We believe exceptional digital experiences are never the result of shortcuts. Every project begins with deep research 
             and thoughtful experimentation, where each detail is explored to guide data-driven choices. From there, we design 
@@ -168,8 +259,8 @@ export default function LandingPage() {
           <Image src={LandingImg1} alt="Hosting" className="w-full" />
         </div>
         <div className="flex-1">
-          <span className="text-2xl sm:text-3xl lg:text-[45px] text-[#23A654]">Our Hosting.</span>
-          <h2 className="text-5xl font-semibold text-[#333] mt-2 mb-6 leading-tight">Fast. Secure. Scalable.</h2>
+          <span className="text-xl sm:text-2xl lg:text-[45px] text-[#23A654]">Our Hosting.</span>
+          <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] mt-2 mb-6 leading-tight">Fast. Secure. Scalable.</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px] mb-8">
             We deliver high-performance hosting built for modern software and digital products. Our infrastructure is optimized 
             for speed, reliability, and security—so your applications stay online, load faster, and scale effortlessly as your business 
@@ -183,24 +274,30 @@ export default function LandingPage() {
 
       {/* --- INFLUENCERS SECTION --- */}
       <section className="max-w-7xl mx-auto px-10 py-20">
-        <h2 className="text-5xl font-semibold text-[#333] leading-tight mb-12">People We Have Worked<br />With<span className="text-[#00B86B]">.</span></h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="relative h-[400px] rounded-2xl overflow-hidden">
-              <Image src={InfluencerImg} alt="Influencer" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-6 flex flex-col justify-end">
-                <p className="text-white font-bold">Rumaisa Khan.</p>
-                <p className="text-white/60 text-xs">Influencer / Youtuber</p>
-              </div>
-            </div>
-          ))}
+  <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] leading-tight mb-12">
+    People We Have Worked<br />With
+    <span className="text-[#00B86B]">.</span>
+  </h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {[1, 2, 3, 4].map((i) => (
+      <div key={i} className="relative h-[400px] rounded-2xl overflow-hidden">
+        <Image src={InfluencerImg} alt="Influencer" fill className="object-cover" />
+
+        {/* Bottom white fade overlay */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent p-6 flex flex-col justify-end">
+          <p className="text-gray-900 font-bold">Rumaisa Khan.</p>
+          <p className="text-gray-500 text-xs">Influencer / Youtuber</p>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* --- ARTICLES SECTION --- */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-24">
       {/* Heading */}
-      <h2 className="text-[52px] font-bold text-[#333] mb-14 tracking-tight">
+      <h2 className=" text-3xl sm:text-3xl lg:text-[52px] font-bold text-[#333] mb-14 tracking-tight">
         Articles About <span className="text-[#129F68]">GDigital</span>
       </h2>
 
@@ -250,72 +347,74 @@ export default function LandingPage() {
 
       {/* --- TESTIMONIALS --- */}
       <section className="bg-gray-50 py-24 px-10">
-      <div className="flex max-w-7xl mx-auto px-6 py-24 gap-12">
+  <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-6 gap-12">
 
-{/* Left Section → Title + Arrows */}
-<div className="flex flex-col justify-start gap-2 w-2/3">
-<h3 className="text-2xl md:text-2xl font-bold mt-30 text-[#23A654]">Testimonials</h3>
-  <h2 className="text-4xl md:text-5xl font-bold">
-    <span className="text-gray-900">What Our Customer</span> <br />
-    <span className="text-gray-900">Says About US</span>
-  </h2>
+    {/* Title Section → Always top on mobile */}
+    <div className="flex flex-col gap-2 w-full md:w-2/3">
+      <h3 className="text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
+      <h2 className="text-4xl md:text-5xl font-bold">
+        <span className="text-gray-900">What Our Customer</span> <br />
+        <span className="text-gray-900">Says About US</span>
+      </h2>
 
-  {/* Navigation Arrows */}
-  <div className="flex gap-3 mt-4">
-    <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
-      <ChevronLeft size={20} />
-    </button>
-    <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
-      <ChevronRight size={20} />
-    </button>
-  </div>
-</div>
-
-{/* Right Section → Zig-Zag Testimonials */}
-<div className="flex flex-col gap-8 w-2/3 relative">
-
-  {/* 1st Card → Center */}
-  <div className="flex justify-center">
-    <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
-      <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-      <div>
-        <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-        <p className="text-gray-700 text-mdtext-md">
-          The online shop where you can sell your products.
-        </p>
+      {/* Navigation Arrows */}
+      <div className="flex gap-3 mt-4">
+        <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
+          <ChevronLeft size={20} />
+        </button>
+        <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
+          <ChevronRight size={20} />
+        </button>
       </div>
     </div>
-  </div>
 
-  {/* 2nd Card → Right + Green Border */}
-  <div className="flex justify-end">
-    <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
-      <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-      <div>
-        <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-        <p className="text-gray-700 text-md">
-          Amazing customer support and smooth shopping experience.
-        </p>
+    {/* Cards Section → Zig-Zag Testimonials */}
+    <div className="flex flex-col gap-8 w-full md:w-2/3 mt-8 md:mt-0">
+
+      {/* 1st Card → Center */}
+      <div className="flex justify-center md:justify-start">
+        <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
+          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+            <p className="text-gray-700 text-md">
+              The online shop where you can sell your products.
+            </p>
+          </div>
+        </div>
       </div>
+
+      {/* 2nd Card → Right */}
+      <div className="flex justify-center md:justify-center">
+        <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
+          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+            <p className="text-gray-700 text-md">
+              Amazing customer support and smooth shopping experience.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 3rd Card → Center */}
+      <div className="flex justify-center md:justify-start">
+        <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
+          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+            <p className="text-gray-700 text-md">
+              Loved the products, will definitely order again!
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+</section>
 
-  {/* 3rd Card → Center */}
-  <div className="flex justify-center">
-    <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
-      <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-      <div>
-        <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-        <p className="text-gray-700 text-md">
-          Loved the products, will definitely order again!
-        </p>
-      </div>
-    </div>
-  </div>
 
-</div>
-</div>
-      </section>
       {/* --- FOOTER --- */}
       <Footer />
     </div>
