@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Link } from "lucide-react";
+import Articles from "../articles/page";
 
 // Your imports
 import Landingicon1 from "../../component/assets/Icons/Landingicon1.png";
@@ -21,6 +22,10 @@ import logo1 from "../../component/assets/Icons/logo1.png";
 import logo2 from "../../component/assets/Icons/logo2.png";
 import logo3 from "../../component/assets/Icons/logo3.png";
 import Avatar from "../../component/assets/Icons/Avatar.png";
+import ArticleIcon1 from "../../component/assets/Icons/ArticleIcon1.png";
+import ArticleIcon2 from "../../component/assets/Icons/ArticleIcon2.png";
+import ArticleIcon3 from "../../component/assets/Icons/ArticleIcon3.png";
+import ArticleIcon4 from "../../component/assets/Icons/ArticleIcon4.png";
 
 export default function LandingPage() {
 
@@ -49,10 +54,42 @@ export default function LandingPage() {
       ];
 
       const articles = [
-        { id: 1, isVents: true, brand: "Rolling Stone", title: "Gdigital: Driving Brand Success through Comprehensive Operational and PR Solutions", source: "Rolling Stone" },
-        { id: 2, isVents: false, brand: "Rolling Stone", title: "Gdigital: Driving Brand Success through Comprehensive Operational and PR Solutions", source: "Rolling Stone" },
-        { id: 3, isVents: false, brand: "Rolling Stone", title: "Gdigital: Driving Brand Success through Comprehensive Operational and PR Solutions", source: "Rolling Stone" },
-        { id: 4, isVents: false, brand: "Rolling Stone", title: "Gdigital: Driving Brand Success through Comprehensive Operational and PR Solutions", source: "Rolling Stone" },
+        {
+          id: 1,
+          isVents: true,
+          brand: "Rolling Stone",
+          title: "Gdigital: Driving Brand Success through Comprehensive Operational and PR Solutions",
+          source: "Rolling Stone",
+          url: "https://www.rollingstone.co.uk/culture/gdigital-driving-brand-success-through-comprehensive-operational-and-pr-solutions-42877/",
+          icon: ArticleIcon1
+        },
+        {
+          id: 2,
+          isVents: false,
+          brand: "Independent",
+          title: "Gdigital: empowering brands, creators, and public figures with comprehensive operational and PR solutions",
+          source: "Independent",
+          url: "https://www.independent.co.uk/news/business/gdigital-brands-creators-pr-social-media-b2603181.html",
+          icon: ArticleIcon2
+        },
+        {
+          id: 3,
+          isVents: false,
+          brand: "US TIMES NOW",
+          title: "Gdigital: Revolutionizing Brand Success with Comprehensive Operational and PR Solutions",
+          source: "US TIMES NOW",
+          url: "https://www.ustimesnow.com/gdigital-revolutionizing-brand-success-with-comprehensive-operational-and-pr-solutions/",
+          icon: ArticleIcon3
+        },
+        {
+          id: 4,
+          isVents: false,
+          brand: "Daily Caller",
+          title: "Gdigital: Revolutionizing Brand Success with Comprehensive Operational and PR Solutions",
+          source: "Daily Caller",
+          url: "https://dailycaller.com/2023/11/05/gdigital-revolutionizing-brand-success-with-comprehensive-operational-and-pr-solutions/",
+          icon: ArticleIcon4
+        },
       ];
 
   
@@ -71,9 +108,9 @@ export default function LandingPage() {
         
 
         {/* Massive Headline */}
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto min-h-[70vh]">
           <h1 className="text-white text-3xl
-        sm:text-3xl md:text-[95px] leading-[0.82] font-[800] italic uppercase tracking-[-0.06em] mt-10" 
+        sm:text-3xl md:text-[95px] leading-[0.82] font-[800] italic uppercase tracking-[-0.06em] mt-20" 
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             Create. Build.<br />
             Launch. Grow.<br />
@@ -303,46 +340,66 @@ export default function LandingPage() {
 
       {/* Articles List */}
       <div className="border-t border-gray-300">
-        {articles.map((item) => (
-          <div 
-            key={item.id} 
-            className="flex flex-col md:flex-row items-start md:items-center justify-between py-10 border-b border-gray-300 gap-8 group cursor-pointer hover:bg-gray-50 transition-all px-4"
-          >
-            {/* Column 1: Brand Logo & Name */}
-            <div className="flex items-center gap-5 w-full md:w-[25%]">
-              <div className={`w-14 h-14 rounded-full flex items-center justify-center shrink-0 ${item.isVents ? "bg-[#E31E24]" : "bg-[#666]"}`}>
-                {item.isVents ? (
-                  <div className="text-white text-center leading-[0.8]">
-                    <span className="text-[10px] font-black block tracking-tighter">VENTS</span>
-                    <span className="text-[6px] font-bold block uppercase tracking-widest">Magazine</span>
-                  </div>
-                ) : null}
-              </div>
-              <span className="text-lg font-bold text-[#333]">{item.brand}</span>
-            </div>
+  {articles.map((item) => (
+    <a
+      key={item.id}
+      href={item.url}           // external URL
+      target="_blank"           // opens in new tab
+      rel="noopener noreferrer" // security best practice
+      className="block"
+    >
+      <div
+        className="flex flex-col md:flex-row items-start md:items-center
+                   justify-between py-10 border-b border-gray-300
+                   gap-8 group cursor-pointer hover:bg-gray-50
+                   transition-all px-4"
+      >
+        {/* Column 1: Brand Logo & Name */}
+        <div className="flex items-center gap-5 w-full md:w-[25%]">
+        <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 bg-gray-300">
+  <Image
+    src={item.icon}
+    alt={item.brand}
+    width={60}   // adjust size to fit nicely in circle
+    height={60}
+    className="object-contain"
+  />
+</div>
+          <span className="text-lg font-bold text-[#333]">{item.brand}</span>
+        </div>
 
-            {/* Column 2: Title and Source */}
-            <div className="flex-1 max-w-2xl">
-              <h3 className="text-[22px] font-bold text-[#333] leading-[1.3] mb-2 group-hover:text-[#129F68] transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-gray-500 text-base">{item.source}</p>
-            </div>
+        {/* Column 2: Title and Source */}
+        <div className="flex-1 max-w-2xl">
+          <h3 className="text-[22px] font-bold text-[#333] leading-[1.3] mb-2
+                         group-hover:text-[#129F68] transition-colors">
+            {item.title}
+          </h3>
+          <p className="text-gray-500 text-base">{item.source}</p>
+        </div>
 
-            {/* Column 3: Arrow Button */}
-            <div className="flex justify-end items-center w-full md:w-auto">
-              <div className="w-10 h-10 bg-[#333] text-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                <ChevronRight size={20} strokeWidth={3} />
-              </div>
-            </div>
+        {/* Column 3: Arrow Button */}
+        <div className="flex justify-end items-center w-full md:w-auto">
+          <div className="w-10 h-10 bg-[#333] text-white rounded-full
+                          flex items-center justify-center
+                          transition-transform duration-300
+                          group-hover:scale-110">
+            <ChevronRight size={20} strokeWidth={3} />
           </div>
-        ))}
+        </div>
       </div>
+    </a>
+  ))}
+</div>
 
       {/* CTA Button */}
-      <button className="mt-12 bg-[#129F68] text-white px-7 py-3.5 rounded-full flex items-center gap-2 font-bold text-sm hover:bg-[#0e8557] transition-colors">
-        Read More <ArrowRight size={16} strokeWidth={3} />
-      </button>
+      <a
+  href="/articles"
+  className="mt-12 inline-flex items-center gap-2
+             bg-[#129F68] text-white px-7 py-3.5 rounded-full
+             font-bold text-sm hover:bg-[#0e8557] transition-colors"
+>
+  Read More <ArrowRight size={16} strokeWidth={3} />
+</a>
     </section>
 
       {/* --- TESTIMONIALS --- */}
