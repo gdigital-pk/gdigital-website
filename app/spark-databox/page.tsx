@@ -13,6 +13,7 @@ import DataboxImg2 from "../../component/assets/Images/DataboxImg2.png";
 import DataboxImg3 from "../../component/assets/Images/DataboxImg3.png";
 import DataboxImg4 from "../../component/assets/Images/DataboxImg4.png";
 import DataboxImg5 from "../../component/assets/Images/DataboxImg5.png";
+import DataboxImg6 from "../../component/assets/Images/DataboxImg6.png";
 import logo1 from "../../component/assets/Icons/logo1.png";
 import logo2 from "../../component/assets/Icons/logo2.png";
 import logo3 from "../../component/assets/Icons/logo3.png";
@@ -23,27 +24,52 @@ export default function SparkDataboxPage() {
     <div className="bg-white min-h-screen font-sans text-gray-900">
       <Navbar />
 
-      {/* 1. Hero Section */}
-      <section className="bg-[#004d61] pt-20 pb-40 px-6 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12">
-          Power — your website with <br /> blazing-fast hosting
-        </h1>
-        <div className="relative max-w-5xl mx-auto">
-          {/* Overlapping Mockups */}
-          <div className="flex justify-center items-center gap-4">
-             <div className="w-1/4 transform -rotate-6 translate-y-8 opacity-80">
-                <Image src={PortfolioImg1} alt="Mockup Left" className="rounded-lg shadow-2xl" />
-             </div>
-             <div className="w-2/4 z-10 relative">
-                <Image src={PortfolioImg1} alt="Main Mockup" className="rounded-xl shadow-2xl border-4 border-gray-800" />
-             </div>
-             <div className="w-1/4 transform rotate-6 translate-y-8 opacity-80">
-                <Image src={PortfolioImg1} alt="Mockup Right" className="rounded-lg shadow-2xl" />
-             </div>
+      <section className="pt-24 px-6 text-center text-white
+  bg-[linear-gradient(180deg,#045C85_0%,#023B56_100%)]">
+      {/* 1. Heading */}
+      <h1 className="text-4xl md:text-6xl font-bold mb-20 leading-tight">
+        Power — your website with <br /> 
+        <span className="opacity-90">blazing-fast hosting</span>
+      </h1>
+
+      {/* 2. Mockup Container */}
+      <div className="relative max-w-6xl mx-auto h-[300px] md:h-[500px] flex justify-center items-center">
+        
+        {/* Left Image (DataboxImg1) */}
+        <div className="absolute left-0 md:left-[5%] z-10 w-[45%] md:w-[30%] transform translate-y-12">
+          <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
+            <Image 
+                src={DataboxImg1} 
+                alt="Mockup Left" 
+                className="w-full h-auto object-cover"
+            />
           </div>
         </div>
-      </section>
 
+        {/* Right Image (DataboxImg2) */}
+        <div className="absolute right-0 md:right-[5%] z-10 w-[45%] md:w-[30%] transform translate-y-12">
+          <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
+            <Image 
+                src={DataboxImg2} 
+                alt="Mockup Right" 
+                className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Main Center Image (DataboxImg3) */}
+        <div className="relative z-20 w-[65%] md:w-[75%]">
+          <div className="rounded-3xl border-[8px] mt-25 border-slate-900 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] overflow-hidden bg-white">
+            <Image 
+                src={DataboxImg3} 
+                alt="Main Mockup" 
+                className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
       {/* 2. Client Info Section */}
       <section className="max-w-6xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div>
@@ -61,35 +87,63 @@ export default function SparkDataboxPage() {
       </section>
 
       {/* 3. Mobile Mockup Section */}
-      <section className="max-w-6xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="bg-[#a78bfa] rounded-3xl p-8 flex justify-center">
-             <Image src={PortfolioImg2} alt="Mobile App" className="w-64 drop-shadow-2xl" />
-        </div>
-        <div>
-          <p className="text-gray-700 text-lg leading-relaxed font-medium">
-            We believe exceptional digital experiences are never the result of shortcuts. Every project begins with deep research and thoughtful experimentation, where each detail is explored to guide data-driven choices. From there, we design and develop solutions from the ground up—crafted precisely around what users truly need.
-          </p>
-        </div>
-      </section>
+    <section className="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  
+  {/* Left column */}
+  <div className="rounded-3xl p-8 flex justify-center">
+    <Image
+      src={DataboxImg4}
+      alt="Mobile App"
+      className="w-100 drop-shadow-2xl"
+    />
+  </div>
+
+  {/* Right column */}
+  <div className="flex items-end md:items-end h-full">
+    <p className="text-gray-700 text-lg leading-relaxed font-medium mb-10">
+      We believe exceptional digital experiences are never the result of shortcuts.
+      Every project begins with deep research and thoughtful experimentation, where
+      each detail is explored to guide data-driven choices. From there, we design
+      and develop solutions from the ground up—crafted precisely around what users
+      truly need.
+    </p>
+  </div>
+
+</section>
+
 
       {/* 4. Large Banner Section */}
-      <section className="max-w-7xl mx-auto py-12 px-6">
+      <section className="max-w-8xl mx-auto py-12 px-6">
         <div className="rounded-3xl overflow-hidden shadow-xl">
-          <Image src={PortfolioImg3} alt="Conference Display" className="w-full h-auto object-cover" />
+          <Image src={DataboxImg6} alt="Conference Display" className="w-full h-auto object-cover" />
         </div>
       </section>
 
       {/* 5. Tablet Mockup Section */}
       <section className="max-w-6xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="order-2 md:order-1">
-          <p className="text-gray-700 text-lg leading-relaxed font-medium">
-            We believe exceptional digital experiences are never the result of shortcuts. Every project begins with deep research and thoughtful experimentation, where each detail is explored to guide data-driven choices. From there, we design and develop solutions from the ground up—crafted precisely around what users truly need.
-          </p>
-        </div>
-        <div className="bg-[#c2410c] rounded-3xl p-8 flex justify-center order-1 md:order-2">
-             <Image src={PortfolioImg4} alt="Tablet Mockup" className="w-80 drop-shadow-2xl" />
-        </div>
-      </section>
+  
+  {/* Left column (text) */}
+  <div className="order-2 md:order-1 flex items-end h-full">
+    <p className="text-gray-700 text-lg leading-relaxed font-medium mb-10">
+      We believe exceptional digital experiences are never the result of shortcuts.
+      Every project begins with deep research and thoughtful experimentation, where
+      each detail is explored to guide data-driven choices. From there, we design and
+      develop solutions from the ground up—crafted precisely around what users truly
+      need.
+    </p>
+  </div>
+
+  {/* Right column (image) */}
+  <div className="rounded-3xl p-8 flex justify-center order-1 md:order-2">
+    <Image
+      src={DataboxImg5}
+      alt="Tablet Mockup"
+      className="w-100 drop-shadow-2xl"
+    />
+  </div>
+
+</section>
+
 
       {/* 6. More Of Our Work (The Cards) */}
       <section className="max-w-7xl mx-auto py-20 px-6">
