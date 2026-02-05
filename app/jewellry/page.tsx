@@ -7,24 +7,20 @@ import Footer from "../../component/layout/Footer";
 import PortfolioImg1 from "../../component/assets/Images/PortfolioImg1.png";
 import PortfolioImg2 from "../../component/assets/Images/PortfolioImg2.png";
 import PortfolioImg3 from "../../component/assets/Images/PortfolioImg3.png";
-import DataboxImg1 from "../../component/assets/Images/DataboxImg1.png";
-import DataboxImg2 from "../../component/assets/Images/DataboxImg2.png";
-import DataboxImg3 from "../../component/assets/Images/DataboxImg3.png";
-import DataboxImg4 from "../../component/assets/Images/DataboxImg4.png";
-import DataboxImg5 from "../../component/assets/Images/DataboxImg5.png";
-import DataboxImg6 from "../../component/assets/Images/DataboxImg6.png";
+import JewellryImg1 from "../../component/assets/Images/jewellry-img1.png";
+import JewellryImg2 from "../../component/assets/Images/jewellry-img2.png";
+import JewellryImg3 from "../../component/assets/Images/jewellry-img3.png";
+import LaptopImg from "../../component/assets/Images/laptop-img.png";
 import logo1 from "../../component/assets/Icons/logo1.png";
 import logo2 from "../../component/assets/Icons/logo2.png";
 import logo3 from "../../component/assets/Icons/logo3.png";
 
 
-export default function SparkDataboxPage() {
+export default function JewellryPage() {
   return (
     <div className="bg-white min-h-screen font-sans text-gray-900">
       <Navbar />
-
-      <section className="pt-34 px-6 text-center text-white
-  bg-[linear-gradient(180deg,#045C85_0%,#023B56_100%)]">
+      <section className="pt-34 px-6 text-center text-white bg-[#079669]">
       {/* 1. Heading */}
       <h1 className="text-4xl md:text-6xl font-bold mb-20 leading-tight">
         Power — your website with <br /> 
@@ -32,41 +28,19 @@ export default function SparkDataboxPage() {
       </h1>
 
       {/* 2. Mockup Container */}
-      <div className="relative max-w-6xl mx-auto h-[300px] md:h-[500px] flex justify-center items-end">
-
-        
-        {/* Left Image (DataboxImg1) */}
-        <div className="absolute left-0 md:left-[5%] bottom-0 z-10 w-[45%] md:w-[30%]">
-          <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
-            <Image 
-                src={DataboxImg1} 
-                alt="Mockup Left" 
-                className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Right Image (DataboxImg2) */}
-        <div className="absolute right-0 md:right-[5%] bottom-0 z-10 w-[45%] md:w-[30%]">
-          <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
-            <Image 
-                src={DataboxImg2} 
-                alt="Mockup Right" 
-                className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
+      <div className="relative max-w-6xl mx-auto h-[300px] md:h-[500px] flex justify-center items-center">
+      
 
         {/* Main Center Image (DataboxImg3) */}
-        <div className="relative z-20 w-[65%] md:w-[75%] translate-y-12">
-  <div className="rounded-3xl border-[8px] border-slate-900 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] overflow-hidden bg-white">
-    <Image 
-        src={DataboxImg3} 
-        alt="Main Mockup" 
-        className="w-full h-auto object-cover"
-    />
-  </div>
-</div>
+        <div className="relative z-20 ">
+          <div className=" mt-25">
+            <Image 
+                src={LaptopImg} 
+                alt="Main Mockup" 
+                className=""
+            />
+          </div>
+        </div>
 
       </div>
     </section>
@@ -92,7 +66,7 @@ export default function SparkDataboxPage() {
   {/* Left column */}
   <div className="rounded-3xl p-8 flex justify-center">
     <Image
-      src={DataboxImg4}
+      src={JewellryImg1}
       alt="Mobile App"
       className="w-100 drop-shadow-2xl"
     />
@@ -115,7 +89,7 @@ export default function SparkDataboxPage() {
       {/* 4. Large Banner Section */}
       <section className="max-w-8xl mx-auto py-12 px-6">
         <div className="rounded-3xl overflow-hidden shadow-xl">
-          <Image src={DataboxImg6} alt="Conference Display" className="w-full h-auto object-cover" />
+          <Image src={JewellryImg2} alt="Conference Display" className="w-full h-auto object-cover" />
         </div>
       </section>
 
@@ -136,7 +110,7 @@ export default function SparkDataboxPage() {
   {/* Right column (image) */}
   <div className="rounded-3xl p-8 flex justify-center order-1 md:order-2">
     <Image
-      src={DataboxImg5}
+      src={JewellryImg3}
       alt="Tablet Mockup"
       className="w-100 drop-shadow-2xl"
     />
