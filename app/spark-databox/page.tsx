@@ -71,23 +71,34 @@ export default function SparkDataboxPage() {
       </div>
     </section>
       {/* 2. Client Info Section */}
-      <section className="max-w-6xl mx-auto mt-20 py-16 px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        <div>
-          <h4 className="text-lg font-semibold text-gray-500 uppercase tracking-wider">Client</h4>
-          <p className="text-xl font-bold">Spark Databox</p>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold text-gray-500 uppercase tracking-wider">What We Did</h4>
-          <p className="text-xl font-bold">Spark Databox</p>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold text-gray-500 uppercase tracking-wider">Sector</h4>
-          <p className="text-xl font-bold">Eductaion</p>
-        </div>
-      </section>
+      <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 mt-20 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+  
+  <div className="flex flex-col items-center">
+    <h4 className="text-lg font-semibold text-gray-500 uppercase tracking-wider">
+      Client
+    </h4>
+    <p className="text-xl font-bold">Spark Databox</p>
+  </div>
+
+  <div className="flex flex-col items-center">
+    <h4 className="text-lg font-semibold text-gray-500 uppercase tracking-wider">
+      What We Did
+    </h4>
+    <p className="text-xl font-bold">Spark Databox</p>
+  </div>
+
+  <div className="flex flex-col items-center">
+    <h4 className="text-lg font-semibold text-gray-500 uppercase tracking-wider">
+      Sector
+    </h4>
+    <p className="text-xl font-bold">Education</p>
+  </div>
+
+</section>
+
 
       {/* 3. Mobile Mockup Section */}
-    <section className="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   
   {/* Left column */}
   <div className="rounded-3xl p-8 flex justify-center">
@@ -113,14 +124,14 @@ export default function SparkDataboxPage() {
 
 
       {/* 4. Large Banner Section */}
-      <section className="max-w-8xl mx-auto py-12 px-6">
+      <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="rounded-3xl overflow-hidden shadow-xl">
           <Image src={DataboxImg6} alt="Conference Display" className="w-full h-auto object-cover" />
         </div>
       </section>
 
       {/* 5. Tablet Mockup Section */}
-      <section className="max-w-6xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   
   {/* Left column (text) */}
   <div className="order-2 md:order-1 flex items-end h-full">
@@ -146,7 +157,7 @@ export default function SparkDataboxPage() {
 
 
       {/* 6. More Of Our Work (The Cards) */}
-      <section className="max-w-7xl mx-auto py-20 px-6">
+      <section className="2xl:max-w-[1600px] mx-auto px-6 sm:px-6 lg:px-12 py-20">
         <h2 className="text-4xl font-bold mb-4">More OF Our Work</h2>
         <p className="text-gray-600 mb-12 max-w-xl">
           Whether you're launching a new site or scaling your business, our plans are built to deliver speed, security, and value.
@@ -157,10 +168,18 @@ export default function SparkDataboxPage() {
           <div className="relative group overflow-hidden rounded-2xl h-[450px]">
             <Image src={PortfolioImg1} layout="fill" objectFit="cover" alt="Work 1" />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all p-8 flex flex-col justify-between text-white">
-              <Image src={logo1} alt="Logo" width={100} height={40} className="brightness-0 invert" />
+            <div className="flex justify-center items-center">
+      <Image
+        src={logo1}
+        alt="Logo"
+        width={120}
+        height={60}
+        className="brightness-0 invert"
+      />
+    </div>
               <div>
                 <h3 className="text-xl font-bold">Gdigital: Driving Brand Success through Comprehensive</h3>
-                <p className="mt-2 text-sm opacity-80">CEO Transport Ltd</p>
+                <p className="mt-2 text-md opacity-80">CEO Transport Ltd</p>
               </div>
             </div>
           </div>
@@ -169,10 +188,18 @@ export default function SparkDataboxPage() {
           <div className="relative group overflow-hidden rounded-2xl h-[450px]">
             <Image src={PortfolioImg2} layout="fill" objectFit="cover" alt="Work 2" />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all p-8 flex flex-col justify-between text-white">
-              <Image src={logo2} alt="Logo" width={120} height={40} className="brightness-0 invert" />
+            <div className="flex justify-center items-center">
+      <Image
+        src={logo2}
+        alt="Logo"
+        width={150}
+        height={80}
+        className="brightness-0 invert"
+      />
+    </div>
               <div>
                 <h3 className="text-xl font-bold">Gdigital: Driving Brand Success through Comprehensive</h3>
-                <p className="mt-2 text-sm opacity-80">CEO Transport Ltd</p>
+                <p className="mt-2 text-md opacity-80">CEO Transport Ltd</p>
               </div>
             </div>
           </div>
@@ -181,10 +208,18 @@ export default function SparkDataboxPage() {
           <div className="relative group overflow-hidden rounded-2xl h-[450px]">
             <Image src={PortfolioImg3} layout="fill" objectFit="cover" alt="Work 3" />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all p-8 flex flex-col justify-between text-white">
-              <Image src={logo3} alt="Logo" width={120} height={40} className="brightness-0 invert" />
+            <div className="flex justify-center items-center">
+      <Image
+        src={logo3}
+        alt="Logo"
+        width={150}
+        height={80}
+        className="brightness-0 invert"
+      />
+    </div>
               <div>
                 <h3 className="text-xl font-bold">Gdigital: Driving Brand Success through Comprehensive</h3>
-                <p className="mt-2 text-sm opacity-80">SparkDatabox</p>
+                <p className="mt-2 text-md opacity-80">SparkDatabox</p>
               </div>
             </div>
           </div>

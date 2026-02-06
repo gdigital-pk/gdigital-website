@@ -13,15 +13,6 @@ import logo2 from "../../component/assets/Icons/logo2.png";
 import logo3 from "../../component/assets/Icons/logo3.png";
 
 export default function PortfolioPage() {
-  // Data array for the grid items to keep code clean
-  const portfolioItems = [
-    { id: 1, img: PortfolioImg2, logo: logo1, title: "Gdigital: Driving Brand Success", subtitle: "CEO Transport Ltd" },
-    { id: 2, img: PortfolioImg3, logo: logo2, title: "Gdigital: Driving Brand Success", subtitle: "Spark Databox" },
-    { id: 3, img: PortfolioImg4, logo: logo3, title: "Gdigital: Driving Brand Success", subtitle: "Face FWD AI" },
-    { id: 4, img: PortfolioImg2, logo: logo1, title: "Gdigital: Driving Brand Success", subtitle: "CEO Transport Ltd" },
-    { id: 5, img: PortfolioImg3, logo: logo2, title: "Gdigital: Driving Brand Success", subtitle: "Spark Databox" },
-    { id: 6, img: PortfolioImg4, logo: logo3, title: "Gdigital: Driving Brand Success", subtitle: "Face FWD AI" },
-  ];
 
   return (
     <>
@@ -65,37 +56,165 @@ export default function PortfolioPage() {
           </div>
 
           {/* Grid Section (3 Columns) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {portfolioItems.map((item) => (
-              <div 
-                key={item.id} 
-                className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer"
-              >
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-500 group-hover:scale-110"
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                
-                {/* Logo */}
-                <div className="absolute top-8 left-1/2 -translate-x-1/2">
-                   <Image src={item.logo} alt="logo" width={150} height={60} className="brightness-0 invert" />
-                </div>
+         {/* Grid Section (3 Columns) */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                {/* Text Content */}
-                <div className="absolute bottom-8 left-6 right-6 text-white">
-                  <h4 className="text-lg font-semibold leading-tight mb-1">
-                    {item.title} through Comprehensive
-                  </h4>
-                  <p className="text-sm opacity-80">{item.subtitle}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+{/* Card 1 */}
+<a href="/spark-databox" className="block">
+<div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
+  <Image
+    src={PortfolioImg2}
+    alt="Gdigital Project"
+    layout="fill"
+    objectFit="cover"
+    className="transition-transform duration-500 group-hover:scale-110"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+  <div className="absolute top-8 left-1/2 -translate-x-1/2">
+    <Image src={logo1} alt="logo" width={150} height={60} className="brightness-0 invert" />
+  </div>
+
+  <div className="absolute bottom-8 left-6 right-6 text-white">
+    <h4 className="text-lg font-semibold mb-1">
+      Gdigital: Driving Brand Success through Comprehensive
+    </h4>
+    <p className="text-md opacity-80">CEO Transport Ltd</p>
+  </div>
+</div>
+</a>
+
+<a href="/jewellry" className="block">
+{/* Card 2 */}
+<div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
+  <Image
+    src={PortfolioImg3}
+    alt="Spark Databox"
+    layout="fill"
+    objectFit="cover"
+    className="transition-transform duration-500 group-hover:scale-110"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+  <div className="absolute top-8 left-1/2 -translate-x-1/2">
+    <Image src={logo2} alt="logo" width={180} height={80} className="brightness-0 invert" />
+  </div>
+
+  <div className="absolute bottom-8 left-6 right-6 text-white">
+    <h4 className="text-lg font-semibold mb-1">
+      Gdigital: Driving Brand Success through Comprehensive
+    </h4>
+    <p className="text-md opacity-80">Spark Databox</p>
+  </div>
+</div>
+</a>
+
+<a href="/spark-databox" className="block">
+{/* Card 3 */}
+<div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
+  <Image
+    src={PortfolioImg4}
+    alt="Face FWD AI"
+    layout="fill"
+    objectFit="cover"
+    className="transition-transform duration-500 group-hover:scale-110"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+  <div className="absolute top-8 left-1/2 -translate-x-1/2">
+    <Image src={logo3} alt="logo" width={180} height={80} className="brightness-0 invert" />
+  </div>
+
+  <div className="absolute bottom-8 left-6 right-6 text-white">
+    <h4 className="text-lg font-semibold mb-1">
+      Gdigital: Driving Brand Success through Comprehensive
+    </h4>
+    <p className="text-md opacity-80">Face FWD AI</p>
+  </div>
+</div>
+</a>
+</div>
+{/* Grid Section (3 Columns) */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
+
+<a href="/jewellry" className="block">
+  {/* Card 1 */}
+  <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
+    <Image
+      src={PortfolioImg2}
+      alt="Gdigital Project"
+      layout="fill"
+      objectFit="cover"
+      className="transition-transform duration-500 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+    <div className="absolute top-8 left-1/2 -translate-x-1/2">
+      <Image src={logo1} alt="logo" width={150} height={60} className="brightness-0 invert" />
+    </div>
+
+    <div className="absolute bottom-8 left-6 right-6 text-white">
+      <h4 className="text-lg font-semibold mb-1">
+        Gdigital: Driving Brand Success through Comprehensive
+      </h4>
+      <p className="text-md opacity-80">CEO Transport Ltd</p>
+    </div>
+  </div>
+  </a>
+
+  <a href="/spark-databox" className="block">
+  {/* Card 2 */}
+  <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
+    <Image
+      src={PortfolioImg3}
+      alt="Spark Databox"
+      layout="fill"
+      objectFit="cover"
+      className="transition-transform duration-500 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+    <div className="absolute top-8 left-1/2 -translate-x-1/2">
+      <Image src={logo2} alt="logo" width={180} height={80} className="brightness-0 invert" />
+    </div>
+
+    <div className="absolute bottom-8 left-6 right-6 text-white">
+      <h4 className="text-lg font-semibold mb-1">
+        Gdigital: Driving Brand Success through Comprehensive
+      </h4>
+      <p className="text-md opacity-80">Spark Databox</p>
+    </div>
+  </div>
+  </a>
+
+ {/* Card 3 */}
+  <a href="/jewellry" className="block">
+  <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
+    <Image
+      src={PortfolioImg4}
+      alt="Face FWD AI"
+      layout="fill"
+      objectFit="cover"
+      className="transition-transform duration-500 group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+    <div className="absolute top-8 left-1/2 -translate-x-1/2">
+      <Image src={logo3} alt="logo" width={180} height={80} className="brightness-0 invert" />
+    </div>
+
+    <div className="absolute bottom-8 left-6 right-6 text-white">
+      <h4 className="text-lg font-semibold mb-1">
+        Gdigital: Driving Brand Success through Comprehensive
+      </h4>
+      <p className="text-md opacity-80">Face FWD AI</p>
+    </div>
+  </div>
+  </a>
+
+
+</div>
+
 
         </div>
       </section>
