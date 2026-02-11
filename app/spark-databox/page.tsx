@@ -25,51 +25,63 @@ export default function SparkDataboxPage() {
 
       <section className="pt-34 px-6 text-center text-white
   bg-[linear-gradient(180deg,#045C85_0%,#023B56_100%)]">
-      {/* 1. Heading */}
-      <h1 className="text-4xl md:text-6xl font-bold mb-20 leading-tight">
-        Power — your website with <br /> 
-        <span className="opacity-90">blazing-fast hosting</span>
-      </h1>
 
-      {/* 2. Mockup Container */}
-      <div className="relative max-w-6xl mx-auto h-[300px] md:h-[500px] flex justify-center items-end">
+  {/* Heading */}
+  <h1 className="mb-20
+  sm:text-3xl
+  md:text-4xl
+  lg:text-5xl
+  xl:text-[60px]
+  font-bold
+  leading-tight">
+    Power — your website with <br />
+    <span className="opacity-90 sm:text-3xl
+  md:text-4xl
+  lg:text-5xl
+  xl:text-[60px]
+  font-bold
+  leading-tight">blazing-fast hosting</span>
+  </h1>
 
-        
-        {/* Left Image (DataboxImg1) */}
-        <div className="absolute left-0 md:left-[5%] bottom-0 z-10 w-[45%] md:w-[30%]">
-          <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
-            <Image 
-                src={DataboxImg1} 
-                alt="Mockup Left" 
-                className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
+  {/* Mockup Container */}
+  <div className="relative max-w-6xl mx-auto h-[420px] md:h-[520px] flex justify-center items-end">
 
-        {/* Right Image (DataboxImg2) */}
-        <div className="absolute right-0 md:right-[5%] bottom-0 z-10 w-[45%] md:w-[30%]">
-          <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
-            <Image 
-                src={DataboxImg2} 
-                alt="Mockup Right" 
-                className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Main Center Image (DataboxImg3) */}
-        <div className="relative z-20 w-[65%] md:w-[75%] translate-y-12">
-  <div className="rounded-3xl border-[8px] border-slate-900 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] overflow-hidden bg-white">
-    <Image 
-        src={DataboxImg3} 
-        alt="Main Mockup" 
-        className="w-full h-auto object-cover"
-    />
-  </div>
-</div>
-
+    {/* Left Image */}
+    <div className="
+      absolute bottom-0
+      w-[70%]
+      md:w-[28%]
+      md:left-[6%]
+      hidden md:block
+    ">
+      <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
+        <Image src={DataboxImg1} alt="Mockup Left" className="w-full h-auto" />
       </div>
-    </section>
+    </div>
+
+    {/* Right Image */}
+    <div className="
+      absolute bottom-0
+      w-[70%]
+      md:w-[28%]
+      md:right-[6%]
+      hidden md:block
+    ">
+      <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
+        <Image src={DataboxImg2} alt="Mockup Right" className="w-full h-auto" />
+      </div>
+    </div>
+
+    {/* Center Image */}
+    <div className="relative z-20 w-[90%] md:w-[72%] translate-y-12">
+      <div className="rounded-3xl border-[8px] border-slate-900 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] overflow-hidden bg-white">
+        <Image src={DataboxImg3} alt="Main Mockup" className="w-full h-auto" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
       {/* 2. Client Info Section */}
       <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 mt-20 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
   

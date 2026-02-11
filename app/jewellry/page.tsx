@@ -22,9 +22,19 @@ export default function JewellryPage() {
       <Navbar />
       <section className="pt-34 px-6 text-center text-white bg-[#079669]">
       {/* 1. Heading */}
-      <h1 className="text-4xl md:text-6xl font-bold mb-20 leading-tight">
+      <h1 className="  sm:text-3xl
+  md:text-4xl
+  lg:text-5xl
+  xl:text-[60px]
+  font-bold
+  leading-tight mb-20">
         Power — your website with <br /> 
-        <span className="opacity-90">blazing-fast hosting</span>
+        <span className="opacity-90 sm:text-3xl
+  md:text-4xl
+  lg:text-5xl
+  xl:text-[60px]
+  font-bold
+  leading-tight">blazing-fast hosting</span>
       </h1>
 
       {/* 2. Mockup Container */}

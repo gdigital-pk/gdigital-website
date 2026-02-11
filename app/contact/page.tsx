@@ -16,12 +16,29 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+  
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+    
+      const data = await res.json();
+      if (res.ok) {
+        alert(data.message);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert(data.message || "Something went wrong");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message");
+    }
   };
+  
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -64,7 +81,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Name"
-                  className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#23A654] placeholder-gray-400 transition-all"
+                  className="w-full px-4 text-black py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#23A654] placeholder-gray-400 transition-all"
                 />
 
                 <input
@@ -74,7 +91,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Email"
-                  className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#23A654] placeholder-gray-400 transition-all"
+                  className="w-full text-black px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#23A654] placeholder-gray-400 transition-all"
                 />
 
                 <textarea
@@ -84,7 +101,7 @@ export default function Contact() {
                   required
                   rows={3}
                   placeholder="How we can help you?"
-                  className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#23A654] placeholder-gray-400 transition-all resize-none"
+                  className="w-full text-black px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#23A654] placeholder-gray-400 transition-all resize-none"
                 />
 
                 <div className="flex justify-end">
