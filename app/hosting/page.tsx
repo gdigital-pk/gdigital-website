@@ -70,29 +70,37 @@ export default function Hosting() {
 
 {/* Text content on top of image */}
 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div className="absolute bottom-8 left-8 right-8 flex items-end gap-10">
+  <div className="absolute bottom-8 left-8 right-8 
+                  flex flex-col md:flex-row 
+                  items-start md:items-end 
+                  gap-6 md:gap-10">
     
     {/* LEFT SIDE */}
-    <h2 className="text-4xl md:text-7xl font-bold text-gray-900 max-w-lg">
+    <h2 className="text-3xl
+        sm:text-3xl md:text-[70px]
+                   font-bold text-gray-900 
+                   w-full md:max-w-lg">
       Everything your website needs.
     </h2>
 
     {/* RIGHT SIDE */}
-    <div>
-      <h6 className="text-lg md:text-2xl text-gray-700 font-bold mb-5">
+    <div className="w-full">
+      <h6 className="text-lg md:text-2xl text-gray-700 font-bold mb-3 md:mb-5">
         Domain, hosting, and email — made easy.
       </h6>
 
-      <p className="text-lg text-gray-600 mb-10">
+      <p className="text-base sm:text-lg md:text-lg text-gray-600 mb-6 md:mb-10">
         Reliable performance, secure servers, and everything you need — from
         domain registration to professional email — all in one affordable
         package.
       </p>
     </div>
+
   </div>
 </div>
 
-<div className="mb-20 grid md:grid-cols-2 gap-12 items-center pt-40">
+
+<div className="mb-20 grid md:grid-cols-2 gap-12 items-center pt-60">
 
   {/* LEFT SIDE – IMAGE */}
   <div className="order-2 md:order-1 flex items-center justify-center">
@@ -107,7 +115,8 @@ export default function Hosting() {
 
   {/* RIGHT SIDE – TEXT */}
   <div className="order-1 md:order-2">
-    <h3 className="text-4xl font-bold text-gray-900 mb-5">
+    <h3 className="text-3xl
+        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
       Built for the Digital Future
     </h3>
 
@@ -125,7 +134,8 @@ export default function Hosting() {
 
   {/* LEFT SIDE – TEXT */}
   <div className="order-1 md:order-1">
-    <h3 className="text-4xl font-bold text-gray-900 mb-5">
+    <h3 className="text-3xl
+        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
     Make your website in minutes
     </h3>
 
@@ -168,7 +178,8 @@ export default function Hosting() {
 
   {/* RIGHT SIDE – TEXT */}
   <div className="order-1 md:order-2">
-    <h3 className="text-4xl font-bold text-gray-900 mb-5">
+    <h3 className="text-3xl
+        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
     WordPress without the complexity
     </h3>
 
@@ -187,7 +198,8 @@ export default function Hosting() {
         {/* Make your website in minutes */}
         <div className=" grid md:grid-cols-3 gap-12 items-center pt-20 pb-7">
           <div>
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">Hosting Packages
+            <h3 className="text-3xl
+        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Hosting Packages
             Made for You</h3>
             <p className="text-lg text-gray-600 mb-6">
             Whether you’re launching a new site or scaling your 
@@ -221,10 +233,12 @@ export default function Hosting() {
 
             {/* Content starts with margin to account for the overlapping icon */}
             <div className="mt-8 w-full">
-              <h4 className="text-5xl text-gray-800 font-medium mb-1">{plan.name}</h4>
+              <h4 className="text-3xl
+        sm:text-3xl lg:text-5xl text-gray-800 font-medium mb-1">{plan.name}</h4>
               <p className="text-base text-gray-500 mb-10 font-medium">(Basic Package)</p>
 
-              <p className="text-5xl text-gray-800 font-bold mb-10">{plan.price}</p>
+              <p className="text-3xl
+        sm:text-3xl lg:text-5xl text-gray-800 font-bold mb-10">{plan.price}</p>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8 pr-4">
                 For individuals and small teams who need credibility without complexity.
@@ -292,55 +306,71 @@ export default function Hosting() {
     </div>
 
 
-<div className="max-w-7xl mx-auto mt-24 px-6 pb-10">
-<div className="bg-[#FDFCFE] border border-[#EAE9E9] rounded-2xl pt-20 px-10">
+    <div className="max-w-7xl mx-auto mt-16 lg:mt-24 px-4 sm:px-6 pb-10">
+  <div className="bg-[#FDFCFE] border border-[#EAE9E9] 
+                  rounded-2xl 
+                  py-12 lg:pt-20 
+                  px-6 lg:px-10">
 
-    {/* Content Wrapper */}
-    <div className="max-w-3xl pl-20">
+    {/* Flex Wrapper */}
+    <div className="flex flex-col lg:flex-row 
+                    items-center 
+                    gap-12">
 
-      {/* Heading */}
-      <h2 className="text-4xl font-bold text-gray-900 mb-6 ">
-        Build trust with a professional business email
-      </h2>
+      {/* Content */}
+      <div className="w-full lg:w-1/2 
+                      text-center lg:text-left">
 
-      {/* Paragraph */}
-      <p className="text-xl text-gray-600 mb-10">
-        Polish your brand, protect your inbox, and grow your business with tools
-        that keep you in the driver's seat.
-      </p>
+        {/* Heading */}
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl 
+                       font-bold text-gray-900 mb-6">
+          Build trust with a professional business email
+        </h2>
 
-      {/* Check List */}
-      <ul className="space-y-4 text-lg text-gray-600">
-        <li className="flex items-start gap-3">
-          <span className="text-green-600 text-xl font-bold mt-1">✓</span>
-          <span>Build trust with a branded business email</span>
-        </li>
+        {/* Paragraph */}
+        <p className="text-base sm:text-lg lg:text-xl 
+                      text-gray-600 mb-8">
+          Polish your brand, protect your inbox, and grow your business with tools
+          that keep you in the driver's seat.
+        </p>
 
-        <li className="flex items-start gap-3">
-          <span className="text-green-600 text-xl font-bold mt-1">✓</span>
-          <span>Seamless email access across all apps and devices</span>
-        </li>
+        {/* Check List */}
+        <ul className="space-y-4 text-base sm:text-lg text-gray-600 
+                       inline-block text-left">
 
-        <li className="flex items-start gap-3">
-          <span className="text-green-600 text-xl font-bold mt-1">✓</span>
-          <span>Private, protected, and always online</span>
-        </li>
-      </ul>
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 font-bold mt-1">✓</span>
+            <span>Build trust with a branded business email</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 font-bold mt-1">✓</span>
+            <span>Seamless email access across all apps and devices</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <span className="text-green-600 font-bold mt-1">✓</span>
+            <span>Private, protected, and always online</span>
+          </li>
+
+        </ul>
+      </div>
+
+      {/* Image */}
+      <div className="w-full lg:w-1/2 flex justify-center">
+        <Image
+          src={BusinessImg}
+          alt="Business Email"
+          width={1000}
+          height={700}
+          className="object-contain w-full max-w-lg"
+        />
+      </div>
+
     </div>
-
-    {/* Image */}
-    <div className="flex justify-center">
-      <Image
-        src={BusinessImg}
-        alt="Business Email"
-        width={1300}
-        height={900}
-        className="object-contain"
-      />
-    </div>
-
   </div>
 </div>
+
 
 
 <div className="max-w-9xl mx-auto mt-32 px-6 ">
@@ -350,7 +380,8 @@ export default function Hosting() {
 
     {/* Top Content */}
     <div className="max-w-3xl mb-20">
-      <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+      <h2 className="text-3xl
+        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
         Why Choose <br /> G Digital Hosting?
       </h2>
 
@@ -418,7 +449,8 @@ export default function Hosting() {
 
 {/* Top Content */}
 <div className="text-center max-w-xl mx-auto mb-20 px-6">
-  <h2 className="text-5xl font-bold text-white mb-6">
+  <h2 className="text-3xl
+        sm:text-3xl lg:text-5xl font-bold text-white mb-6">
     Made With Gdigital
   </h2>
 
@@ -465,70 +497,96 @@ export default function Hosting() {
 
 </div>
 
-<div className="flex max-w-7xl mx-auto px-6 py-24 gap-12">
+<section className="bg-gray-50 py-24 px-10">
+  <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-6 gap-12">
 
-  {/* Left Section → Title + Arrows */}
-  <div className="flex flex-col justify-start gap-6 w-2/3">
-    <h2 className="text-4xl md:text-5xl font-bold mt-30">
-      <span className="text-[#23A654]">What Our Customer</span> <br />
-      <span className="text-gray-900">Says About US</span>
-    </h2>
+    {/* Title Section → Always top on mobile */}
+    <div className="flex flex-col gap-2 w-full md:w-2/3">
+      <h3 className="text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
+      <h2 className="text-4xl md:text-5xl font-bold">
+        <span className="text-gray-900">What Our Customer</span> <br />
+        <span className="text-gray-900">Says About US</span>
+      </h2>
 
-    {/* Navigation Arrows */}
-    <div className="flex gap-3 mt-4">
-      <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
-        <ChevronLeft size={20} />
-      </button>
-      <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
-        <ChevronRight size={20} />
-      </button>
+      {/* Navigation Arrows */}
+      <div className="flex gap-3 mt-4">
+        <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
+          <ChevronLeft size={20} />
+        </button>
+        <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
+          <ChevronRight size={20} />
+        </button>
+      </div>
+    </div>
+
+    {/* Cards Section → Zig-Zag Testimonials */}
+    <div className="flex flex-col gap-8 w-full md:w-2/3 mt-8 md:mt-0">
+
+      {/* 1st Card → Center */}
+      <div className="flex justify-center">
+      <div className="flex items-start
+                  bg-white rounded-xl shadow-md 
+                  p-6 gap-4 w-full max-w-md
+                  border-l-4 border-transparent 
+                  hover:border-[#23A654]
+                  transition-all duration-500 ease-in-out
+                  md:translate-x-10 
+                  md:hover:translate-x-0">
+          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+            <p className="text-gray-700 text-md">
+              The online shop where you can sell your products.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 2nd Card → Right */}
+      <div className="flex justify-center">
+      <div className="flex items-start
+                  bg-white rounded-xl shadow-md 
+                  p-6 gap-4 w-full max-w-md
+                  border-l-4 border-transparent 
+                  hover:border-[#23A654]
+                  transition-all duration-500 ease-in-out
+                  md:translate-x-10 
+                  md:hover:translate-x-0">
+
+          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+            <p className="text-gray-700 text-md">
+              Amazing customer support and smooth shopping experience.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 3rd Card → Center */}
+      <div className="flex justify-center">
+      <div className="flex items-start
+                  bg-white rounded-xl shadow-md 
+                  p-6 gap-4 w-full max-w-md
+                  border-l-4 border-transparent 
+                  hover:border-[#23A654]
+                  transition-all duration-500 ease-in-out
+                  md:translate-x-10 
+                  md:hover:translate-x-0">
+                    
+          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
+            <p className="text-gray-700 text-md">
+              Loved the products, will definitely order again!
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-
-  {/* Right Section → Zig-Zag Testimonials */}
-  <div className="flex flex-col gap-8 w-2/3 relative">
-
-    {/* 1st Card → Center */}
-    <div className="flex justify-center">
-      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
-        <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-        <div>
-          <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-          <p className="text-gray-700 text-mdtext-md">
-            The online shop where you can sell your products.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    {/* 2nd Card → Right + Green Border */}
-    <div className="flex justify-end">
-      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
-        <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-        <div>
-          <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-          <p className="text-gray-700 text-md">
-            Amazing customer support and smooth shopping experience.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    {/* 3rd Card → Center */}
-    <div className="flex justify-center">
-      <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
-        <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-        <div>
-          <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-          <p className="text-gray-700 text-md">
-            Loved the products, will definitely order again!
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
+</section>
 
 
 

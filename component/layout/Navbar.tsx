@@ -23,7 +23,9 @@ export default function Navbar() {
         <div className="flex items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={LogoDesign.src} alt="Logo" />
+          <Link href="/landing">
+            <img src={LogoDesign.src} alt="Logo" className="cursor-pointer" />
+            </Link>
           </div>
 
           {/* Push rest to right */}

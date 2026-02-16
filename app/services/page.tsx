@@ -69,7 +69,7 @@ export default function Services() {
             {/* <div className="bg-gray-50 p-8 border-t border-b border-r border-gray-300"> */}
             <div className="bg-gray-50 p-6 sm:p-8 border border-gray-300 md:border-l-0">
               <h4 className="text-xl sm:text-2xl lg:text-[30px] font-semibold mb-4 text-gray-900">Strategy</h4>
-              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Descovery</h6>
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Dscovery</h6>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 
@@ -245,35 +245,62 @@ export default function Services() {
 
   {/* Right side - grid */}
   <div className="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-2 gap-6">
-    {[
-      { icon: MultimediaIcon1, title: "Multimedia" },
-      { icon: MultimediaIcon2, title: "Multimedia" },
-      { icon: MultimediaIcon3, title: "Multimedia" },
-      { icon: MultimediaIcon4, title: "Multimedia" },
-      { icon: MultimediaIcon5, title: "Multimedia" },
-      { icon: MultimediaIcon6, title: "Multimedia" },
-    ].map((item, index) => (
-      <div key={index} className="p-4 sm:p-6">
-        <div className="mb-2">
-          <Image
-            src={item.icon}
-            alt={item.title}
-            width={40}
-            height={40}
-            className="sm:w-[50px]"
-          />
-        </div>
-
-        <h4 className="text-lg sm:text-[22px] font-bold text-gray-900 mt-3">
-          {item.title}
-        </h4>
-
-        <p className="text-sm sm:text-base text-gray-600 mt-2">
-          The online shop where you can sell your products.
-        </p>
+  {[
+    { 
+      icon: MultimediaIcon1, 
+      title: "Ecommerce",
+      desc: "We build custom online stores for your growing business."
+    },
+    { 
+      icon: MultimediaIcon2, 
+      title: "Experience",
+      desc: "We create intuitive digital interfaces for your target users."
+    },
+    { 
+      icon: MultimediaIcon3, 
+      title: "Web Applications",
+      desc: "We develop scalable web applications for your enterprise platform."
+    },
+    { 
+      icon: MultimediaIcon4, 
+      title: "Mobile App",
+      desc: "We engineer high-performance mobile apps for iOS and Android."
+    },
+    { 
+      icon: MultimediaIcon5, 
+      title: "Hosting Solutions",
+      desc: "We provide secure cloud infrastructure for your digital products."
+    },
+    { 
+      icon: MultimediaIcon6, 
+      title: "Digital Product",
+      desc: "We design strategic growth plans for your business success."
+    },
+  ].map((item, index) => (
+    <div key={index} className="p-4 sm:p-6">
+      
+      <div className="mb-2">
+        <Image
+          src={item.icon}
+          alt={item.title}
+          width={40}
+          height={40}
+          className="sm:w-[50px]"
+        />
       </div>
-    ))}
-  </div>
+
+      <h4 className="text-lg sm:text-[22px] font-bold text-gray-900 mt-3">
+        {item.title}
+      </h4>
+
+      <p className="text-sm sm:text-base text-gray-600 mt-2">
+        {item.desc}
+      </p>
+
+    </div>
+  ))}
+</div>
+
 
 </div>
 </div>

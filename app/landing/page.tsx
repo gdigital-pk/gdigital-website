@@ -429,8 +429,15 @@ export default function LandingPage() {
     <div className="flex flex-col gap-8 w-full md:w-2/3 mt-8 md:mt-0">
 
       {/* 1st Card → Center */}
-      <div className="flex justify-center md:justify-start">
-        <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
+      <div className="flex justify-center">
+      <div className="flex items-start
+                  bg-white rounded-xl shadow-md 
+                  p-6 gap-4 w-full max-w-md
+                  border-l-4 border-transparent 
+                  hover:border-[#23A654]
+                  transition-all duration-500 ease-in-out
+                  md:translate-x-10 
+                  md:hover:translate-x-0">
           <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
           <div>
             <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
@@ -442,8 +449,16 @@ export default function LandingPage() {
       </div>
 
       {/* 2nd Card → Right */}
-      <div className="flex justify-center md:justify-center">
-        <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
+      <div className="flex justify-center">
+      <div className="flex items-start
+                  bg-white rounded-xl shadow-md 
+                  p-6 gap-4 w-full max-w-md
+                  border-l-4 border-transparent 
+                  hover:border-[#23A654]
+                  transition-all duration-500 ease-in-out
+                  md:translate-x-10 
+                  md:hover:translate-x-0">
+
           <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
           <div>
             <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
@@ -455,8 +470,16 @@ export default function LandingPage() {
       </div>
 
       {/* 3rd Card → Center */}
-      <div className="flex justify-center md:justify-start">
-        <div className="flex items-center bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md border-l-4 border-transparent hover:border-[#23A654] transition-all duration-300">
+      <div className="flex justify-center">
+      <div className="flex items-start
+                  bg-white rounded-xl shadow-md 
+                  p-6 gap-4 w-full max-w-md
+                  border-l-4 border-transparent 
+                  hover:border-[#23A654]
+                  transition-all duration-500 ease-in-out
+                  md:translate-x-10 
+                  md:hover:translate-x-0">
+                    
           <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
           <div>
             <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
