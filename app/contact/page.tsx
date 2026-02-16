@@ -54,7 +54,7 @@ export default function Contact() {
       <Navbar />
 
       <section id="contact" className="py-30 bg-white">
-        <div className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
           {/* Header Section */}
           <div className="flex flex-col md:flex-row items-start gap-10 md:gap-20">
             {/* Left Text */}

@@ -95,8 +95,8 @@ export default function Articles() {
     <Navbar/>
 
       {/* --- ARTICLES SECTION --- */}
-      <section className="max-w-8xl mx-auto px-6 md:px-10 py-20 bg-white">
-      <div className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+      <section className="px-6 md:px-10 py-20 bg-white">
+      <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
       {/* Heading */}
       <h2 className=" text-3xl sm:text-3xl lg:text-[52px] font-bold text-[#333] mb-14 tracking-tight mt-8">
         Articles About <span className="text-[#129F68]">GDigital</span>

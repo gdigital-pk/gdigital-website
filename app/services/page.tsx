@@ -15,7 +15,7 @@ export default function Services() {
     <>
     <Navbar/>
     <section id="services" className="py-20 bg-white">
-    <div className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+    <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
 
         {/* Header */}
         <div className="flex items-start w-full mb-16 mt-8">
@@ -69,7 +69,7 @@ export default function Services() {
             {/* <div className="bg-gray-50 p-8 border-t border-b border-r border-gray-300"> */}
             <div className="bg-gray-50 p-6 sm:p-8 border border-gray-300 md:border-l-0">
               <h4 className="text-xl sm:text-2xl lg:text-[30px] font-semibold mb-4 text-gray-900">Strategy</h4>
-              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Dscovery</h6>
+              <h6 className="text-base sm:text-lg lg:text-[20px] font-semibold mt-5 text-gray-900">Discovery</h6>
               <ul className="space-y-2 text-sm sm:text-base text-gray-600">
                 <li className="flex items-start">
 

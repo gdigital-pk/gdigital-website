@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import CountUp from "react-countup";
 import Image from "next/image";
 import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
@@ -20,7 +21,7 @@ export default function About() {
       <Navbar />
 
       <section id="about" className="py-20 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
 
           {/* Header */}
           <div className="mb-20 sm:mb-30 mt-8">
@@ -85,23 +86,36 @@ export default function About() {
 
           {/* Statistics */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-20 md:mb-40 text-center">
-            <div>
-              <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900">20+</div>
-              <div className="text-gray-600 mt-1">Years of Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900">100+</div>
-              <div className="text-gray-600 mt-1">Project Done</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900">300+</div>
-              <div className="text-gray-600 mt-1">Satisfied Clients</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900">64</div>
-              <div className="text-gray-600 mt-1">Certified Awards</div>
-            </div>
-          </div>
+  
+  <div>
+    <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900">
+      <CountUp end={20} duration={2} enableScrollSpy scrollSpyOnce />+
+    </div>
+    <div className="text-gray-600 mt-1">Years of Experience</div>
+  </div>
+
+  <div>
+    <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900">
+      <CountUp end={1000} duration={2} enableScrollSpy scrollSpyOnce />+
+    </div>
+    <div className="text-gray-600 mt-1">Project Done</div>
+  </div>
+
+  <div>
+    <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900">
+      <CountUp end={300} duration={2} enableScrollSpy scrollSpyOnce />+
+    </div>
+    <div className="text-gray-600 mt-1">Satisfied Clients</div>
+  </div>
+
+  <div>
+    <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900">
+      <CountUp end={64} duration={2} enableScrollSpy scrollSpyOnce />
+    </div>
+    <div className="text-gray-600 mt-1">Certified Awards</div>
+  </div>
+
+</div>
 
           {/* Innovation Cards */}
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 mb-20">

@@ -20,70 +20,75 @@ import logo3 from "../../component/assets/Icons/logo3.png";
 
 export default function SparkDataboxPage() {
   return (
-    <div className="bg-white min-h-screen font-sans text-gray-900">
+    <div className="bg-white font-sans text-gray-900">
       <Navbar />
+      <section
+  className=" max-w-7xl 2xl:max-w-[1200px] mx-auto pt-34 px-6 text-center text-white
+  bg-[linear-gradient(180deg,#045C85_0%,#023B56_100%)]"
+>
+  {/* Container */}
+  <div className="mx-auto w-full max-w-7xl 2xl:max-w-[1200px]">
 
-      <section className="pt-34 px-6 text-center text-white
-  bg-[linear-gradient(180deg,#045C85_0%,#023B56_100%)]">
+    {/* Heading */}
+    <h1
+      className="mb-20
+      sm:text-3xl
+      md:text-4xl
+      lg:text-5xl
+      xl:text-[60px]
+      font-bold
+      leading-tight"
+    >
+      Power — your website with <br />
+      <span className="opacity-90">
+        blazing-fast hosting
+      </span>
+    </h1>
 
-  {/* Heading */}
-  <h1 className="mb-20
-  sm:text-3xl
-  md:text-4xl
-  lg:text-5xl
-  xl:text-[60px]
-  font-bold
-  leading-tight">
-    Power — your website with <br />
-    <span className="opacity-90 sm:text-3xl
-  md:text-4xl
-  lg:text-5xl
-  xl:text-[60px]
-  font-bold
-  leading-tight">blazing-fast hosting</span>
-  </h1>
+    {/* Mockup Container */}
+    <div className="relative mx-auto h-[420px] md:h-[500px] flex justify-center items-end">
 
-  {/* Mockup Container */}
-  <div className="relative max-w-6xl mx-auto h-[420px] md:h-[520px] flex justify-center items-end">
-
-    {/* Left Image */}
-    <div className="
-      absolute bottom-0
-      w-[70%]
-      md:w-[28%]
-      md:left-[6%]
-      hidden md:block
-    ">
-      <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
-        <Image src={DataboxImg1} alt="Mockup Left" className="w-full h-auto" />
+      {/* Left Image */}
+      <div className="
+        absolute bottom-0
+        w-[60%]
+        md:w-[22%]
+        md:left-[10%]
+        hidden md:block
+      ">
+        <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
+          <Image src={DataboxImg1} alt="Mockup Left" className="w-full h-auto" />
+        </div>
       </div>
-    </div>
 
-    {/* Right Image */}
-    <div className="
-      absolute bottom-0
-      w-[70%]
-      md:w-[28%]
-      md:right-[6%]
-      hidden md:block
-    ">
-      <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
-        <Image src={DataboxImg2} alt="Mockup Right" className="w-full h-auto" />
+      {/* Right Image */}
+      <div className="
+        absolute bottom-0
+        w-[60%]
+        md:w-[22%]
+        md:right-[10%]
+        hidden md:block
+      ">
+        <div className="rounded-2xl border-[6px] border-slate-900 shadow-2xl overflow-hidden bg-white">
+          <Image src={DataboxImg2} alt="Mockup Right" className="w-full h-auto" />
+        </div>
       </div>
-    </div>
 
-    {/* Center Image */}
-    <div className="relative z-20 w-[90%] md:w-[72%] translate-y-12">
-      <div className="rounded-3xl border-[8px] border-slate-900 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] overflow-hidden bg-white">
-        <Image src={DataboxImg3} alt="Main Mockup" className="w-full h-auto" />
+      {/* Center Image */}
+      <div className="relative z-20 w-[80%] md:w-[60%] translate-y-12">
+        <div className="rounded-3xl border-[8px] border-slate-900 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] overflow-hidden bg-white">
+          <Image src={DataboxImg3} alt="Main Mockup" className="w-full h-auto" />
+        </div>
       </div>
+
     </div>
 
   </div>
 </section>
 
+
       {/* 2. Client Info Section */}
-      <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 mt-20 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <section className="2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 mt-20 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
   
   <div className="flex flex-col items-center">
     <h4 className="text-lg font-semibold text-gray-500 uppercase tracking-wider">
@@ -110,7 +115,7 @@ export default function SparkDataboxPage() {
 
 
       {/* 3. Mobile Mockup Section */}
-    <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   
   {/* Left column */}
   <div className="rounded-3xl p-8 flex justify-center">
@@ -136,14 +141,14 @@ export default function SparkDataboxPage() {
 
 
       {/* 4. Large Banner Section */}
-      <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+      <section className="2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="rounded-3xl overflow-hidden shadow-xl">
           <Image src={DataboxImg6} alt="Conference Display" className="w-full h-auto object-cover" />
         </div>
       </section>
 
       {/* 5. Tablet Mockup Section */}
-      <section className="2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   
   {/* Left column (text) */}
   <div className="order-2 md:order-1 flex items-end h-full">
@@ -169,7 +174,7 @@ export default function SparkDataboxPage() {
 
 
       {/* 6. More Of Our Work (The Cards) */}
-      <section className="2xl:max-w-[1600px] mx-auto px-6 sm:px-6 lg:px-12 py-20">
+      <section className="2xl:max-w-[1200px] mx-auto px-6 sm:px-6 lg:px-12 py-20">
         <h2 className="text-4xl font-bold mb-4">More OF Our Work</h2>
         <p className="text-gray-600 mb-12 max-w-xl">
           Whether you're launching a new site or scaling your business, our plans are built to deliver speed, security, and value.

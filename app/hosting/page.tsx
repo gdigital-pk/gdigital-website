@@ -54,22 +54,19 @@ export default function Hosting() {
   return (
     <>
       <Navbar />
-    <section id="hosting" className="bg-[#F9F9F9]">
-      <div className="py-20">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20 mt-170">
+    <section id="hosting" className="bg-[#F9F9F9] py-20">
+      <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-20 mt-170">
         {/* Header */} 
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 flex justify-center">
   <img
     src={HostingBackground.src}
     alt="Hosting Background"
-    className="w-full h-full object-cover"
+    className="max-w-7xl 2xl:max-w-[1200px] h-full object-cover"
   />
-  {/* Optional overlay */}
-  <div className="absolute inset-0 "></div>
 </div>
 
 {/* Text content on top of image */}
-<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="relative max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
   <div className="absolute bottom-8 left-8 right-8 
                   flex flex-col md:flex-row 
                   items-start md:items-end 
@@ -100,7 +97,7 @@ export default function Hosting() {
 </div>
 
 
-<div className="mb-20 grid md:grid-cols-2 gap-12 items-center pt-60">
+<div className="mb-20 grid md:grid-cols-2 gap-12 items-center pt-40">
 
   {/* LEFT SIDE – IMAGE */}
   <div className="order-2 md:order-1 flex items-center justify-center">
@@ -208,7 +205,7 @@ export default function Hosting() {
           </div>
         </div>
         
-  <div className="max-w-9xl mx-auto relative px-4 py-20">
+  <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto relative px-4 py-20">
       {/* Main Grid Container */}
       <div className="grid md:grid-cols-3 border-t border-b border-gray-200">
         {plans.map((plan, i) => (
@@ -306,7 +303,7 @@ export default function Hosting() {
     </div>
 
 
-    <div className="max-w-7xl mx-auto mt-16 lg:mt-24 px-4 sm:px-6 pb-10">
+    <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto mt-16 lg:mt-24 px-4 sm:px-6 pb-10">
   <div className="bg-[#FDFCFE] border border-[#EAE9E9] 
                   rounded-2xl 
                   py-12 lg:pt-20 
@@ -373,7 +370,7 @@ export default function Hosting() {
 
 
 
-<div className="max-w-9xl mx-auto mt-32 px-6 ">
+<div className="max-w-7xl 2xl:max-w-[1200px] mx-auto mt-32 px-6 ">
 <div className="bg-white rounded-3xl px-14 py-20 pl-20
   border border-gray-100 
   shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
@@ -433,13 +430,13 @@ export default function Hosting() {
     </div>
   </div>
 </div>
-</div>
+{/* </div> */}
 
     {/* Made With Gdigital Section */}
     <div
   className="
 
- max-w-10xl mx-auto
+ max-w-7xl 2xl:max-w-[1400px] mx-auto
   pt-30
   mt-32
   bg-[#079669]

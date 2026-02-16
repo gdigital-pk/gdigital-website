@@ -31,7 +31,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-white pt-10 pb-12">
-      <div className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Schedule Consultation Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-transparent pb-16">
           <div className="max-w-3xl">
@@ -94,12 +94,35 @@ export default function Footer() {
             <div>
               <h6 className="text-xl font-bold text-[#333e48] mb-6">Company</h6>
               <ul className="space-y-3 text-gray-400 font-medium">
-                <li className="hover:text-[#00966C] cursor-pointer">About Us</li>
-                <li className="hover:text-[#00966C] cursor-pointer">Careers</li>
-                <li className="hover:text-[#00966C] cursor-pointer">
-                  What We Do
-                </li>
-              </ul>
+
+    <li>
+      <Link
+        href="/about"
+        className="hover:text-[#00966C] transition-colors"
+      >
+        About Us
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/our-works"
+        className="hover:text-[#00966C] transition-colors"
+      >
+        Careers
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/services"
+        className="hover:text-[#00966C] transition-colors"
+      >
+        What We Do
+      </Link>
+    </li>
+
+  </ul>
             </div>
             <div>
               <h6 className="text-xl font-bold text-[#333e48] mb-6">
@@ -121,12 +144,23 @@ export default function Footer() {
         {/* Social Links & Copyright */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 mt-10 pt-8">
           <div className="md:col-span-5 lg:col-span-6 flex gap-6 items-center">
-            <a href="#" className="opacity-80 hover:opacity-100 transition">
-              <Image src={LinkedIn} alt="LinkedIn" width={24} height={24} />
-            </a>
-            <a href="#" className="opacity-80 hover:opacity-100 transition">
-              <Image src={Instagram} alt="Instagram" width={24} height={24} />
-            </a>
+          <a
+      href="https://www.linkedin.com/company/gdigitalpk"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="opacity-80 hover:opacity-100 transition"
+    >
+      <Image src={LinkedIn} alt="LinkedIn" width={24} height={24} />
+    </a>
+
+    <a
+      href="https://www.instagram.com/gdigital.pk"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="opacity-80 hover:opacity-100 transition"
+    >
+      <Image src={Instagram} alt="Instagram" width={24} height={24} />
+    </a>
             <a href="#" className="opacity-80 hover:opacity-100 transition">
               <Image src={WhatsApp} alt="WhatsApp" width={24} height={24} />
             </a>

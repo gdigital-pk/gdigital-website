@@ -1,9 +1,18 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
+import Influencer  from "../../component/Influencer";
 import { ArrowRight, ChevronLeft, ChevronRight, Link } from "lucide-react";
 import Articles from "../articles/page";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+
+import { Navigation, Autoplay } from "swiper/modules";
 
 // Your imports
 import Landingicon1 from "../../component/assets/Icons/Landingicon1.png";
@@ -15,6 +24,20 @@ import LandingIcon6 from "../../component/assets/Icons/LandingIcon6.png";
 import PsImg from "../../component/assets/Images/PsImg.png";
 import LandingImg1 from "../../component/assets/Images/LandingImg1.png";
 import InfluencerImg from "../../component/assets/Images/InfluencerImg.png";
+import wajahat from "../../component/assets/Images/wajahat.png";
+import bajwa from "../../component/assets/Images/bajwa.png";
+import siddiqui from "../../component/assets/Images/siddiqui.png";
+import nayel from "../../component/assets/Images/nayel.png";
+import shazia from "../../component/assets/Images/shazia.png";
+import arslan from "../../component/assets/Images/arslan.png";
+import shahzad from "../../component/assets/Images/shahzad.png";
+import laiba from "../../component/assets/Images/laiba.png";
+import romaisa from "../../component/assets/Images/romaisa.png";
+import mustafa from "../../component/assets/Images/mustafa.png";
+import adeel from "../../component/assets/Images/adeel.png";
+import aashir from "../../component/assets/Images/aashir.png";
+import alishba from "../../component/assets/Images/alishba.png";
+import melika from "../../component/assets/Images/melika.png";
 import PortfolioImg1 from "../../component/assets/Images/PortfolioImg1.png";
 import PortfolioImg2 from "../../component/assets/Images/PortfolioImg2.png";
 import PortfolioImg3 from "../../component/assets/Images/PortfolioImg3.png";
@@ -92,12 +115,30 @@ export default function LandingPage() {
         },
       ];
 
+      const people = [
+        { img: wajahat, name: "Wajahat Rauf", role: "Film Director" },
+        { img: bajwa, name: "Alba Bajwa", role: "Influencer / Model" },
+        { img: siddiqui, name: "Walid Siddiqui", role: "Influencer / Model" },
+        { img: nayel, name: "Nayel Wajahat", role: "Musician" },
+        { img: shazia, name: "Shazia Wajahat", role: "Films Director" },
+        { img: arslan, name: "Arslan Ash", role: "Digital Creator" },
+        { img: shahzad, name: "Shahzad Sheikh", role: "Influencer / Actor" },
+        { img: laiba, name: "Laiba Khurram", role: "Influencer / Model" },
+        { img: romaisa, name: "Romaisa Khan", role: "Influencer / Model" },
+        { img: mustafa, name: "Mustafa Taifoor", role: "Influencer / Model" },
+        { img: adeel, name: "Adeel Chaudry", role: "Influencer" },
+        { img: aashir, name: "Aashir Wajahat", role: "Influencer / Model" },
+        { img: alishba, name: "Alishba Anjum", role: "Influencer / Model" },
+        { img: melika, name: "Melika Najafizadeh", role: "Influencer / Model" },
+      ];
+
   
   return (
-    <div className="min-h-screen bg-white font-sans text-[#333]">
+    <div className="bg-white font-sans text-[#333]">
           <Navbar />
 
-   <div className="bg-[#333333]  min-h-screen bg-[#333333] rounded-[60px] md:rounded-[80px] lg:flex-row items-center gap-10 pt-10">
+   <div className="mx-auto w-full max-w-7xl 2xl:max-w-[1200px] bg-[#333333] rounded-[60px] md:rounded-[80px] lg:flex-row items-center gap-10 pt-10">
+
       {/* --- HERO SECTION --- */}
       <section 
   className="relative pt-10 pb-40 px-6 md:px-16 rounded-b-[100px] md:rounded-b-[140px] z-20"
@@ -110,7 +151,7 @@ export default function LandingPage() {
         {/* Massive Headline */}
         <div className="max-w-7xl mx-auto min-h-[70vh]">
           <h1 className="text-white text-3xl
-        sm:text-3xl md:text-[95px] leading-[0.82] font-[800] italic uppercase tracking-[-0.06em] mt-20" 
+        sm:text-3xl md:text-[80px] leading-[0.82] font-[800] italic uppercase tracking-[-0.06em] mt-30" 
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             Create. Build.<br />
             Launch. Grow.<br />
@@ -118,14 +159,9 @@ export default function LandingPage() {
           </h1>
         </div>
       </section>
-
-      {/* --- TRUSTED BRANDS SECTION --- */}
-      {/* Use a negative margin to pull this up into the green area */}
-      {/* <section className="px-4 md:px-10 -mt-24 relative z-10 pb-20"> */}
       <div className="bg-[#333333] rounded-[60px] md:rounded-[80px] p-10 md:p-16 
                 flex flex-col lg:flex-row items-center lg:items-start gap-12">
 
-  {/* LEFT TEXT */}
   <p className="text-gray-400 text-md md:text-lg font-semibold leading-tight mt-10
               max-w-[200px] text-justify lg:text-justify shrink-0">
   Trusted By Brands we have Help Shaped.
@@ -134,13 +170,13 @@ export default function LandingPage() {
   {/* RIGHT LOGOS */}
   <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-end gap-6">
 
-  <div className="bg-white rounded-xl w-[180px] h-42 flex flex-col items-center justify-center shadow-2xl gap-2">
+  <div className="bg-white rounded-xl w-[140px] h-32 flex flex-col items-center justify-center shadow-2xl gap-2">
   <Image
     src={Landingicon1}
     alt="Brand logo 1"
     className="object-contain"
-    width={90}
-    height={60}
+    width={50}
+    height={40}
     priority
   />
   
@@ -148,35 +184,35 @@ export default function LandingPage() {
     src={LandingIcon6}  // <-- second image
     alt="Brand logo 2"
     className="object-contain"
-    width={100}
+    width={70}
     height={60}
     priority
   />
 </div>
 
-<div className="bg-white rounded-xl w-[180px] h-42 flex items-center justify-center shadow-2xl">
+<div className="bg-white rounded-xl w-[142px] h-32 flex items-center justify-center shadow-2xl">
   <Image
     src={LandingIcon2}
     alt="Brand logo 2"
     className="object-contain"
-    width={130}
-    height={100}
+    width={110}
+    height={80}
     priority
   />
 </div>
 
-<div className="bg-white rounded-xl w-[180px] h-42 flex items-center justify-center p-6 shadow-2xl">
+<div className="bg-white rounded-xl w-[142px] h-32 flex items-center justify-center p-6 shadow-2xl">
   <Image
     src={LandingIcon3}
     alt="Brand logo 3"
     className="object-contain"
-    width={120}
-    height={50}
+    width={110}
+    height={40}
     priority
   />
 </div>
 
-<div className="bg-white rounded-xl w-[180px] h-42 flex items-center justify-center p-6 shadow-2xl">
+<div className="bg-white rounded-xl w-[142px] h-32 flex items-center justify-center p-6 shadow-2xl">
   <Image
     src={LandingIcon4}
     alt="Brand logo 3"
@@ -187,26 +223,23 @@ export default function LandingPage() {
   />
 </div>
 
-<div className="bg-white rounded-xl w-[180px] h-42 flex items-center justify-center p-6 shadow-2xl">
+<div className="bg-white rounded-xl w-[142px] h-32 flex items-center justify-center p-6 shadow-2xl">
   <Image
     src={LandingIcon5}
     alt="Brand logo 3"
     className="object-contain"
-    width={150}
-    height={80}
+    width={120}
+    height={60}
     priority
   />
 </div>
-
-{/* Add more logos as needed in the same format */}
-
 </div>
 
 </div>
       {/* </section> */}
     </div>
       {/* --- PORTFOLIO HEADER --- */}
-      <section className="max-w-7xl mx-auto px-10 py-20 grid md:grid-cols-2 gap-10 items-start">
+      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20 grid md:grid-cols-2 gap-10 items-start">
         <div>
           <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold  text-[#23A654]">
             Where Ideas Become<br /><span className="text-[#333]">Digital Products</span>
@@ -230,7 +263,7 @@ export default function LandingPage() {
       </section>
 
       {/* --- PORTFOLIO GRID --- */}
-      <section className="max-w-8xl mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-20">
+      <section className="max-w-7xl 2xl:max-w-[1300px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-20">
       {portfolioData.map((item, i) => (
         <div
           key={i}
@@ -272,7 +305,7 @@ export default function LandingPage() {
     </section>
 
       {/* --- SERVICES SECTION --- */}
-      <section className="max-w-7xl mx-auto px-10 py-20 flex flex-col md:flex-row items-center gap-20">
+      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20 flex flex-col md:flex-row items-center gap-20">
         <div className="flex-1">
           <Image src={PsImg} alt="Services" className="w-full max-w-md" />
         </div>
@@ -291,7 +324,7 @@ export default function LandingPage() {
       </section>
 
       {/* --- HOSTING SECTION --- */}
-      <section className="max-w-7xl mx-auto px-10 py-20 flex flex-col md:flex-row-reverse items-center gap-20">
+      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20 flex flex-col md:flex-row-reverse items-center gap-20">
         <div className="flex-1">
           <Image src={LandingImg1} alt="Hosting" className="w-full" />
         </div>
@@ -310,29 +343,17 @@ export default function LandingPage() {
       </section>
 
       {/* --- INFLUENCERS SECTION --- */}
-      <section className="max-w-7xl mx-auto px-10 py-20">
+      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20">
   <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] leading-tight mb-12">
     People We Have Worked<br />With
     <span className="text-[#00B86B]">.</span>
   </h2>
 
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-    {[1, 2, 3, 4].map((i) => (
-      <div key={i} className="relative h-[400px] rounded-2xl overflow-hidden">
-        <Image src={InfluencerImg} alt="Influencer" fill className="object-cover" />
-
-        {/* Bottom white fade overlay */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent p-6 flex flex-col justify-end">
-          <p className="text-gray-900 font-bold">Rumaisa Khan.</p>
-          <p className="text-gray-500 text-xs">Influencer / Youtuber</p>
-        </div>
-      </div>
-    ))}
-  </div>
+  <Influencer people={people} />
 </section>
 
       {/* --- ARTICLES SECTION --- */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-24">
+      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-6 md:px-10 py-24">
       {/* Heading */}
       <h2 className=" text-3xl sm:text-3xl lg:text-[52px] font-bold text-[#333] mb-14 tracking-tight">
         Articles About <span className="text-[#129F68]">GDigital</span>
@@ -404,7 +425,7 @@ export default function LandingPage() {
 
       {/* --- TESTIMONIALS --- */}
       <section className="bg-gray-50 py-24 px-10">
-  <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-6 gap-12">
+  <div className="flex flex-col md:flex-row max-w-7xl 2xl:max-w-[1200px] mx-auto px-6 gap-12">
 
     {/* Title Section → Always top on mobile */}
     <div className="flex flex-col gap-2 w-full md:w-2/3">
@@ -479,7 +500,7 @@ export default function LandingPage() {
                   transition-all duration-500 ease-in-out
                   md:translate-x-10 
                   md:hover:translate-x-0">
-                    
+
           <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
           <div>
             <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
