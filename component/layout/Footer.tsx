@@ -1,28 +1,43 @@
-import React from "react";
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from 'lucide-react';
-// Icons (assuming paths are correct)
-import ConsultationIcon from "../assets/Icons/consultrationIcon.png";
-import MessageIcon from "../assets/Icons/Message.png";
-import PhoneIcon from "../assets/Icons/Phone.png";
-import LinkedInIcon from "../assets/Icons/LinkedIn.png";
-import InstagramIcon from "../assets/Icons/Instagram.png";
-import WhatsAppIcon from "../assets/Icons/WhatsApp.png";
-import SocialIcon from "../assets/Icons/Social.png"; // This will be the 'X' icon
-import LogoDesign from "../../public/logoDesign.png";
+import { useState, useEffect } from "react";
+import Message from "../assets/Icons/Message.png";
+import Phone from "../assets/Icons/Phone.png";
+import logoDesign from "../assets/Images/logoDesign.png";
+import LinkedIn from "../assets/Icons/LinkedIn.png";
+import Instagram from "../assets/Icons/Instagram.png";
+import WhatsApp from "../assets/Icons/WhatsApp.png";
+import Social from "../assets/Icons/Social.png";
+import consultrationIcon from "../assets/Images/consultrationIcon.png";
+import { ArrowRight } from "lucide-react";
+
+interface VersionInfo {
+  version: string;
+  commit: string;
+  buildDate: string;
+}
 
 export default function Footer() {
+  const [version, setVersion] = useState<VersionInfo | null>(null);
+
+  useEffect(() => {
+    fetch('/api/version')
+      .then(res => res.json())
+      .then(data => setVersion(data))
+      .catch(() => setVersion(null));
+  }, []);
+
   return (
     <footer className="bg-white pt-10 pb-12">
       <div className="max-w-8xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
-        
-        {/* ===== TOP SECTION: CTA ===== */}
+        {/* Schedule Consultation Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-transparent pb-16">
           <div className="max-w-3xl">
             <div className="flex items-center gap-4 mb-4">
               <Image
-                src={ConsultationIcon}
+                src={consultrationIcon}
                 alt="Consultation"
                 width={48}
                 height={48}
@@ -32,17 +47,14 @@ export default function Footer() {
                 Schedule a Free Consultation
               </h2>
             </div>
-
             <p className="text-xl text-[#333e48] font-medium mb-3">
               Or apply as a digital accessibility expert
             </p>
-
             <p className="text-gray-400 text-base max-w-md leading-relaxed">
-              We are an accessible workplace. People with disabilities are welcome
-              to apply.
+              We are an accessible workplace. People with disabilities are
+              welcome to apply.
             </p>
           </div>
-
           <div className="mt-8 md:mt-0">
             <Link
               href="/contact"
@@ -54,13 +66,12 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ===== MIDDLE SECTION: LOGO & LINKS ===== */}
+        {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8">
-          
-          {/* Column 1: Logo & Contact */}
+          {/* Company Info */}
           <div className="md:col-span-5 lg:col-span-6">
             <Image
-              src={LogoDesign}
+              src={logoDesign}
               alt="GDigital"
               width={140}
               height={50}
@@ -68,67 +79,79 @@ export default function Footer() {
             />
             <div className="space-y-5 text-[#333e48] font-medium">
               <div className="flex items-center gap-4">
-                <Image src={MessageIcon} alt="Email" width={24} height={24} />
-                <a href="mailto:hello@gdigital.com" className="hover:text-[#00966C]">hello@gdigital.com</a>
+                <Image src={Message} alt="Email" width={24} height={24} />
+                <a
+                  href="mailto:hello@gdigital.com"
+                  className="hover:text-[#00966C]"
+                >
+                  hello@gdigital.com
+                </a>
               </div>
               <div className="flex items-center gap-4">
-                <Image src={PhoneIcon} alt="Phone" width={24} height={24} />
-                <a href="tel:+4560475264" className="hover:text-[#00966C]">+45 60 47 52 64</a>
+                <Image src={Phone} alt="Phone" width={24} height={24} />
+                <a href="tel:+4560475264" className="hover:text-[#00966C]">
+                  +45 60 47 52 64
+                </a>
               </div>
             </div>
           </div>
 
-        {/* Company & Resources Wrapper (Side-by-side on mobile) */}
-        <div className="md:col-span-6 grid grid-cols-2 gap-4">
-            {/* Company Column */}
+          {/* Links */}
+          <div className="md:col-span-6 grid grid-cols-2 gap-4">
             <div>
               <h6 className="text-xl font-bold text-[#333e48] mb-6">Company</h6>
               <ul className="space-y-3 text-gray-400 font-medium">
                 <li className="hover:text-[#00966C] cursor-pointer">About Us</li>
                 <li className="hover:text-[#00966C] cursor-pointer">Careers</li>
-                <li className="hover:text-[#00966C] cursor-pointer">What We Do</li>
+                <li className="hover:text-[#00966C] cursor-pointer">
+                  What We Do
+                </li>
               </ul>
             </div>
-
-            {/* Resources Column */}
             <div>
-              <h6 className="text-xl font-bold text-[#333e48] mb-6">Resources</h6>
+              <h6 className="text-xl font-bold text-[#333e48] mb-6">
+                Resources
+              </h6>
               <ul className="space-y-3 text-gray-400 font-medium">
-                <li className="hover:text-[#00966C] cursor-pointer">Privacy Policy</li>
+                <li className="hover:text-[#00966C] cursor-pointer">
+                  Privacy Policy
+                </li>
                 <li className="hover:text-[#00966C] cursor-pointer">Cookies</li>
-                <li className="hover:text-[#00966C] cursor-pointer">Terms & Conditions</li>
+                <li className="hover:text-[#00966C] cursor-pointer">
+                  Terms & Conditions
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-
-        {/* ===== BOTTOM SECTION: SOCIAL & COPYRIGHT ===== */}
+        {/* Social Links & Copyright */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 mt-10 pt-8">
-          {/* Social Icons */}
           <div className="md:col-span-5 lg:col-span-6 flex gap-6 items-center">
             <a href="#" className="opacity-80 hover:opacity-100 transition">
-              <Image src={LinkedInIcon} alt="LinkedIn" width={24} height={24} />
+              <Image src={LinkedIn} alt="LinkedIn" width={24} height={24} />
             </a>
             <a href="#" className="opacity-80 hover:opacity-100 transition">
-              <Image src={InstagramIcon} alt="Instagram" width={24} height={24} />
+              <Image src={Instagram} alt="Instagram" width={24} height={24} />
             </a>
             <a href="#" className="opacity-80 hover:opacity-100 transition">
-              <Image src={WhatsAppIcon} alt="WhatsApp" width={24} height={24} />
+              <Image src={WhatsApp} alt="WhatsApp" width={24} height={24} />
             </a>
             <a href="#" className="opacity-80 hover:opacity-100 transition">
-              <Image src={SocialIcon} alt="X" width={22} height={22} />
+              <Image src={Social} alt="X" width={22} height={22} />
             </a>
           </div>
-
-          {/* Copyright */}
           <div className="md:col-span-7 lg:col-span-6">
             <p className="text-[#333e48] font-semibold text-lg">
               © 2025 Gdigital. All rights reserved.
             </p>
+            {version && (
+              <p className="text-gray-400 text-sm mt-2">
+                Version {version.version} • Build {version.commit} • {new Date(version.buildDate).toLocaleDateString()}
+              </p>
+            )}
           </div>
         </div>
-        
       </div>
     </footer>
   );
