@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Message from "../assets/Icons/Message.png";
 import Phone from "../assets/Icons/Phone.png";
-import logoDesign from "../assets/Images/logoDesign.png";
+import logoDesign from "../../public/logoDesign.png";
 import LinkedIn from "../assets/Icons/LinkedIn.png";
 import Instagram from "../assets/Icons/Instagram.png";
 import WhatsApp from "../assets/Icons/WhatsApp.png";
 import Social from "../assets/Icons/Social.png";
-import consultrationIcon from "../assets/Images/consultrationIcon.png";
+import consultrationIcon from "../assets/Icons/consultrationIcon.png";
 import { ArrowRight } from "lucide-react";
 
 interface VersionInfo {
