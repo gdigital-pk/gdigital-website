@@ -6,7 +6,19 @@ import "swiper/css/free-mode";
 import Image from "next/image";
 import { Autoplay, FreeMode } from "swiper/modules";
 
-export default function Influencer({ people }) {
+import { StaticImageData } from "next/image";
+
+type Person = {
+  img: string | StaticImageData; // <-- allow imported images
+  name: string;
+  role: string;
+};
+
+type InfluencerProps = {
+  people: Person[];
+};
+
+export default function Influencer({ people }: InfluencerProps) {
   return (
     <Swiper
       modules={[Autoplay, FreeMode]}
@@ -14,11 +26,8 @@ export default function Influencer({ people }) {
       spaceBetween={20}
       loop={true}
       freeMode={true}
-      speed={4000} // Controls smoothness (higher = smoother)
-      autoplay={{
-        delay: 0,
-        disableOnInteraction: false,
-      }}
+      speed={4000}
+      autoplay={{ delay: 0, disableOnInteraction: false }}
       breakpoints={{
         320: { slidesPerView: 1.2 },
         640: { slidesPerView: 2 },
@@ -35,7 +44,6 @@ export default function Influencer({ people }) {
               fill
               className="object-cover"
             />
-
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent p-6 flex flex-col justify-end">
               <p className="text-gray-900 text-lg font-bold">{person.name}</p>
               <p className="text-[#129F68] text-md">{person.role}</p>
