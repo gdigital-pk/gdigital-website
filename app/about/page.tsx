@@ -32,6 +32,7 @@ export default function About() {
   lg:text-5xl
   xl:text-[60px]
   font-bold
+  font-circular
   text-gray-900
   leading-tight
 ">
@@ -58,10 +59,10 @@ export default function About() {
           {/* Who We Are */}
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start mb-12">
             <div className="md:w-1/2">
-            <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#23A654]">
+            <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-circular leading-tight font-bold text-[#23A654]">
                 Who We Are
               </h3>
-              <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-gray-900">
+              <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-circular leading-tight font-bold text-gray-900">
                 Driven by Purpose <br /> Always.
               </h3>
             </div>
@@ -119,11 +120,11 @@ export default function About() {
 
           {/* Innovation Cards */}
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 mb-20">
-            <div className="md:w-1/3">
-              <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#23A654]">
+            <div className="md:w-1/2">
+              <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-circular leading-tight font-bold text-[#23A654]">
                 Innovation.
               </h3>
-              <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-gray-900">
+              <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-circular leading-tight font-bold text-gray-900">
                 Driven by people.
               </h3>
             </div>

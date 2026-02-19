@@ -195,7 +195,7 @@ export default function SparkDataboxPage() {
       />
     </div>
               <div>
-                <h3 className="text-xl font-bold">Gdigital: Driving Brand Success through Comprehensive</h3>
+                <h3 className="text-xl font-bold">Smart logistics and fleet management solution</h3>
                 <p className="mt-2 text-md opacity-80">CEO Transport Ltd</p>
               </div>
             </div>

@@ -7,14 +7,11 @@ import Image from "next/image";
 import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
 import Influencer  from "../../component/Influencer";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-import { Navigation, Autoplay } from "swiper/modules";
-
-// Your imports
 import Landingicon1 from "../../component/assets/Icons/Landingicon1.png";
 import LandingIcon2 from "../../component/assets/Icons/LandingIcon2.png";
 import LandingIcon3 from "../../component/assets/Icons/LandingIcon3.png";
@@ -254,11 +251,12 @@ export default function LandingPage() {
       <section className="max-w-7xl 2xl:max-w-[1300px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-20">
 
 {/* Card 1 */}
+<a href="/spark-databox" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg2} alt="work" fill className="object-cover" />
 
   <div className="absolute left-0 right-0 top-[78px] flex justify-center">
-    <div className="relative w-58 h-25">
+    <div className="relative w-55 h-25">
       <Image
         src={logo1}
         alt="Logo"
@@ -277,8 +275,10 @@ export default function LandingPage() {
     </p>
   </div>
 </div>
+</a>
 
 {/* Card 2 */}
+<a href="/jewellry" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg3} alt="work" fill className="object-cover" />
 
@@ -302,8 +302,10 @@ export default function LandingPage() {
     </p>
   </div>
 </div>
+</a>
 
 {/* Card 3 */}
+<a href="/spark-databox" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg4} alt="work" fill className="object-cover" />
 
@@ -327,7 +329,7 @@ export default function LandingPage() {
     </p>
   </div>
 </div>
-
+</a>
 </section>
 
       {/* --- SERVICES SECTION --- */}
@@ -353,9 +355,11 @@ export default function LandingPage() {
           choices. From there, we design and develop solutions from the ground
           up—crafted precisely around what users truly need.
         </p>
+        <Link href="/hosting">
         <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2">
           Read More <ArrowRight size={18} />
         </button>
+        </Link>
       </div>
     </section>
 
@@ -392,19 +396,17 @@ export default function LandingPage() {
 
       {/* --- ARTICLES SECTION --- */}
       <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-6 md:px-10 py-24">
-      {/* Heading */}
       <h2 className=" text-3xl sm:text-3xl lg:text-[52px] font-bold text-[#333] mb-14 tracking-tight">
         Articles About <span className="text-[#129F68]">GDigital</span>
       </h2>
 
-      {/* Articles List */}
       <div className="border-t border-gray-300">
   {articles.map((item) => (
     <a
       key={item.id}
-      href={item.url}           // external URL
-      target="_blank"           // opens in new tab
-      rel="noopener noreferrer" // security best practice
+      href={item.url}     
+      target="_blank"        
+      rel="noopener noreferrer" 
       className="block"
     >
       <div
@@ -413,13 +415,13 @@ export default function LandingPage() {
                    gap-8 group cursor-pointer hover:bg-gray-50
                    transition-all px-4"
       >
-        {/* Column 1: Brand Logo & Name */}
+   
         <div className="flex items-center gap-5 w-full md:w-[25%]">
         <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 bg-gray-300">
   <Image
     src={item.icon}
     alt={item.brand}
-    width={60}   // adjust size to fit nicely in circle
+    width={60}   
     height={60}
     className="object-contain"
   />
@@ -427,7 +429,6 @@ export default function LandingPage() {
           <span className="text-lg font-bold text-[#333]">{item.brand}</span>
         </div>
 
-        {/* Column 2: Title and Source */}
         <div className="flex-1 max-w-2xl">
           <h3 className="text-[22px] font-bold text-[#333] leading-[1.3] mb-2
                          group-hover:text-[#129F68] transition-colors">
@@ -436,7 +437,6 @@ export default function LandingPage() {
           <p className="text-gray-500 text-base">{item.source}</p>
         </div>
 
-        {/* Column 3: Arrow Button */}
         <div className="flex justify-end items-center w-full md:w-auto">
           <div className="w-10 h-10 bg-[#333] text-white rounded-full
                           flex items-center justify-center
@@ -449,8 +449,6 @@ export default function LandingPage() {
     </a>
   ))}
 </div>
-
-      {/* CTA Button */}
       <a
   href="/articles"
   className="mt-12 inline-flex items-center gap-2
@@ -465,29 +463,16 @@ export default function LandingPage() {
       <section className="bg-gray-50 py-24 px-10">
   <div className="flex flex-col md:flex-row max-w-7xl 2xl:max-w-[1200px] mx-auto px-6 gap-12">
 
-    {/* Title Section → Always top on mobile */}
     <div className="flex flex-col gap-2 w-full md:w-2/3">
       <h3 className="text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
       <h2 className="text-4xl md:text-5xl font-bold">
         <span className="text-gray-900">What Our Customer</span> <br />
         <span className="text-gray-900">Says About US</span>
       </h2>
-
-      {/* Navigation Arrows */}
-      <div className="flex gap-3 mt-4">
-        <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
-          <ChevronLeft size={20} />
-        </button>
-        <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
-          <ChevronRight size={20} />
-        </button>
-      </div>
     </div>
 
-    {/* Cards Section → Zig-Zag Testimonials */}
     <div className="flex flex-col gap-8 w-full md:w-2/3 mt-8 md:mt-0">
 
-      {/* 1st Card → Center */}
       <div className="flex justify-center">
       <div className="flex items-start
                   bg-white rounded-xl shadow-md 
@@ -507,7 +492,6 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* 2nd Card → Right */}
       <div className="flex justify-center">
       <div className="flex items-start
                   bg-white rounded-xl shadow-md 
@@ -528,7 +512,6 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* 3rd Card → Center */}
       <div className="flex justify-center">
       <div className="flex items-start
                   bg-white rounded-xl shadow-md 
@@ -548,7 +531,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>

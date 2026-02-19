@@ -22,7 +22,7 @@ export default function PortfolioPage() {
           
           {/* Header Section */}
           <div className="mb-16 mt-8">
-            <h2 className="text-4xl md:text-[60px] font-bold text-gray-900 leading-tight max-w-5xl">
+            <h2 className="text-4xl md:text-[60px] font-bold text-gray-900 font-circular leading-tight max-w-5xl">
               Solutions we’ve designed and built to solve real{" "}
               <span className="text-[#23A654]">business challenges</span>.
             </h2>
@@ -42,16 +42,7 @@ export default function PortfolioPage() {
             
             {/* Logo at top */}
             <div className="absolute top-20 left-1/2 -translate-x-1/2">
-               <Image src={logo1} alt="logo" width={160} height={70} className="brightness-0 invert" />
-            </div>
-
-            {/* Text at bottom */}
-            <div className="absolute bottom-20 left-10 text-white">
-              <p className="text-xl font-bold mb-2 tracking-widest">Featured Project</p>
-              <h3 className="text-3xl md:text-2xl font-bold max-w-3xl">
-                Gdigital: Driving Brand Success through Comprehensive
-              </h3>
-              <p className="mt-2 text-xl opacity-90">CEO Transport Ltd</p>
+               <Image src={logo1} alt="logo" width={180} height={90} className="brightness-0 invert" />
             </div>
           </div>
 
@@ -77,7 +68,7 @@ export default function PortfolioPage() {
 
   <div className="absolute bottom-8 left-6 right-6 text-white">
     <h4 className="text-lg font-semibold mb-1">
-      Gdigital: Driving Brand Success through Comprehensive
+    Smart logistics and fleet management solution
     </h4>
     <p className="text-md opacity-80">CEO Transport Ltd</p>
   </div>
@@ -97,12 +88,12 @@ export default function PortfolioPage() {
   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
   <div className="absolute top-8 left-1/2 -translate-x-1/2">
-    <Image src={logo2} alt="logo" width={180} height={80} className="brightness-0 invert" />
+    <Image src={logo2} alt="logo" width={200} height={100} className="brightness-0 invert" />
   </div>
 
   <div className="absolute bottom-8 left-6 right-6 text-white">
     <h4 className="text-lg font-semibold mb-1">
-      Gdigital: Driving Brand Success through Comprehensive
+    Data analytics platform for smarter decisions
     </h4>
     <p className="text-md opacity-80">Spark Databox</p>
   </div>
@@ -122,14 +113,14 @@ export default function PortfolioPage() {
   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
   <div className="absolute top-8 left-1/2 -translate-x-1/2">
-    <Image src={logo3} alt="logo" width={180} height={80} className="brightness-0 invert" />
+    <Image src={logo3} alt="logo" width={200} height={100} className="brightness-0 invert" />
   </div>
 
   <div className="absolute bottom-8 left-6 right-6 text-white">
     <h4 className="text-lg font-semibold mb-1">
-      Gdigital: Driving Brand Success through Comprehensive
+    AI-powered facial recognition and automation
     </h4>
-    <p className="text-md opacity-80">Face FWD AI</p>
+    <p className="text-md opacity-80">FACE FWD AI</p>
   </div>
 </div>
 </a>
@@ -155,7 +146,7 @@ export default function PortfolioPage() {
 
     <div className="absolute bottom-8 left-6 right-6 text-white">
       <h4 className="text-lg font-semibold mb-1">
-        Gdigital: Driving Brand Success through Comprehensive
+      Smart logistics and fleet management solution
       </h4>
       <p className="text-md opacity-80">CEO Transport Ltd</p>
     </div>
@@ -175,12 +166,12 @@ export default function PortfolioPage() {
     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
     <div className="absolute top-8 left-1/2 -translate-x-1/2">
-      <Image src={logo2} alt="logo" width={180} height={80} className="brightness-0 invert" />
+      <Image src={logo2} alt="logo" width={200} height={100} className="brightness-0 invert" />
     </div>
 
     <div className="absolute bottom-8 left-6 right-6 text-white">
       <h4 className="text-lg font-semibold mb-1">
-        Gdigital: Driving Brand Success through Comprehensive
+      Data analytics platform for smarter decisions
       </h4>
       <p className="text-md opacity-80">Spark Databox</p>
     </div>
@@ -200,14 +191,14 @@ export default function PortfolioPage() {
     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
     <div className="absolute top-8 left-1/2 -translate-x-1/2">
-      <Image src={logo3} alt="logo" width={180} height={80} className="brightness-0 invert" />
+      <Image src={logo3} alt="logo" width={200} height={100} className="brightness-0 invert" />
     </div>
 
     <div className="absolute bottom-8 left-6 right-6 text-white">
       <h4 className="text-lg font-semibold mb-1">
-        Gdigital: Driving Brand Success through Comprehensive
+      AI-powered facial recognition and automation
       </h4>
-      <p className="text-md opacity-80">Face FWD AI</p>
+      <p className="text-md opacity-80">FACE FWD AI</p>
     </div>
   </div>
   </a>

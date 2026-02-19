@@ -70,19 +70,19 @@ export default function Hosting() {
   <div className="absolute bottom-8 left-8 right-8 
                   flex flex-col md:flex-row 
                   items-start md:items-end 
-                  gap-6 md:gap-10">
+                  gap-6 md:gap-20">
     
     {/* LEFT SIDE */}
     <h2 className="text-3xl
-        sm:text-3xl md:text-[70px]
-                   font-bold text-gray-900 
-                   w-full md:max-w-lg">
+        sm:text-3xl md:text-[48px]
+                   font-black font-circular text-[#3D3D3D]
+                   w-full md:max-w-sm leading-[0.98] mb-15">
       Everything your website needs.
     </h2>
 
     {/* RIGHT SIDE */}
     <div className="w-full">
-      <h6 className="text-lg md:text-2xl text-gray-700 font-bold mb-3 md:mb-5">
+      <h6 className="text-lg md:text-2xl text-gray-900 font-normal mb-3 md:mb-5">
         Domain, hosting, and email — made easy.
       </h6>
 
@@ -118,7 +118,7 @@ export default function Hosting() {
     </h3>
 
     <p className="text-lg text-gray-600 leading-relaxed">
-      At G Digital, we create the technology that drives tomorrow’s businesses.
+      At gdigital, we create the technology that drives tomorrow’s businesses.
       Our hosting solutions are crafted for speed, security, and scalability —
       empowering brands to grow, evolve, and lead in the digital age.
     </p>
@@ -504,16 +504,6 @@ export default function Hosting() {
         <span className="text-gray-900">What Our Customer</span> <br />
         <span className="text-gray-900">Says About US</span>
       </h2>
-
-      {/* Navigation Arrows */}
-      <div className="flex gap-3 mt-4">
-        <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
-          <ChevronLeft size={20} />
-        </button>
-        <button className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
-          <ChevronRight size={20} />
-        </button>
-      </div>
     </div>
 
     {/* Cards Section → Zig-Zag Testimonials */}

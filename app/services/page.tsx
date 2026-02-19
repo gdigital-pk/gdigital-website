@@ -20,18 +20,16 @@ export default function Services() {
         {/* Header */}
         <div className="flex items-start w-full mb-16 mt-8">
         <h2 className="
-  text-2xl
-  sm:text-3xl
-  md:text-4xl
-  lg:text-5xl
-  xl:text-[60px]
-  font-bold
+  font-circular
+  font-black
+text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]
   text-gray-900
   leading-tight
 ">
-            Future-ready products designed <br/> for scale. Strategy-first.<br/>
-            Experience- <span className="text-[#23A654]">driven</span>.
-          </h2>
+  Future-ready products designed <br />
+  for scale. Strategy-first.<br />
+  Experience- <span className="text-[#23A654]">driven</span>.
+</h2>
         </div>
 
         {/* Process Flow Diagram */}
@@ -47,20 +45,13 @@ export default function Services() {
 
         {/* Our Services Section */}
         <div className="mb-20">
-        <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#23A654]">
+        <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-circular leading-tight font-bold text-[#23A654]">
   Our Services.
 </h3>
-<h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-gray-900">
+<h3 className="text-2xl sm:text-3xl lg:text-[45px] font-circular leading-tight font-bold text-gray-900 mb-3">
   From Start to Finish!
 </h3>
-<p className="
-  text-base
-  sm:text-lg
-  text-gray-600
-  max-w-full
-  sm:max-w-[500px]
-  mb-8
-">
+<p className="text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px] mb-10">
           We combine strategy, design, and development into
            seamless digital experiences that people love, trust, and remember.
            </p>
@@ -234,11 +225,11 @@ export default function Services() {
 <div className="flex flex-col sm:flex-col lg:flex-row w-full gap-8">
 
   {/* Left side - headings */}
-  <div className="lg:w-1/3">
-    <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-[#23A654]">
+  <div className="lg:w-1/2">
+    <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-circular leading-tight font-bold text-[#23A654]">
       Deliverables.
     </h3>
-    <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold text-gray-900 mt-2">
+    <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-circular leading-tight font-bold text-gray-900 mt-2">
       Including but not <br className="hidden sm:block" /> limited to.
     </h3>
   </div>
