@@ -106,16 +106,16 @@ export default function Footer() {
 
     <li>
       <Link
-        href="/our-works"
+        href="/services"
         className="hover:text-[#00966C] transition-colors"
       >
-        Careers
+        Services
       </Link>
     </li>
 
     <li>
       <Link
-        href="/services"
+        href="/our-works"
         className="hover:text-[#00966C] transition-colors"
       >
         What We Do
@@ -143,14 +143,14 @@ export default function Footer() {
 
         {/* Social Links & Copyright */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 mt-10 pt-8">
-          <div className="md:col-span-5 lg:col-span-6 flex gap-6 items-center">
+          <div className="md:col-span-5 lg:col-span-6 flex gap-2 items-center">
           <a
       href="https://www.linkedin.com/company/gdigitalpk"
       target="_blank"
       rel="noopener noreferrer"
       className="opacity-80 hover:opacity-100 transition"
     >
-      <Image src={LinkedIn} alt="LinkedIn" width={24} height={24} />
+      <Image src={LinkedIn} alt="LinkedIn" width={30} height={30} />
     </a>
 
     <a
@@ -159,18 +159,12 @@ export default function Footer() {
       rel="noopener noreferrer"
       className="opacity-80 hover:opacity-100 transition"
     >
-      <Image src={Instagram} alt="Instagram" width={24} height={24} />
+      <Image src={Instagram} alt="Instagram" width={28} height={28} />
     </a>
-            <a href="#" className="opacity-80 hover:opacity-100 transition">
-              <Image src={WhatsApp} alt="WhatsApp" width={24} height={24} />
-            </a>
-            <a href="#" className="opacity-80 hover:opacity-100 transition">
-              <Image src={Social} alt="X" width={22} height={22} />
-            </a>
           </div>
           <div className="md:col-span-7 lg:col-span-6">
             <p className="text-[#333e48] font-semibold text-lg">
-              © 2025 Gdigital. All rights reserved.
+              © 2026 Gdigital. All rights reserved.
             </p>
             {version && (
               <p className="text-gray-400 text-sm mt-2">

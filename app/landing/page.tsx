@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
 import Influencer  from "../../component/Influencer";
-import { ArrowRight, ChevronLeft, ChevronRight, Link } from "lucide-react";
-import Articles from "../articles/page";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
@@ -21,9 +21,12 @@ import LandingIcon3 from "../../component/assets/Icons/LandingIcon3.png";
 import LandingIcon4 from "../../component/assets/Icons/LandingIcon4.png";
 import LandingIcon5 from "../../component/assets/Icons/LandingIcon5.png";
 import LandingIcon6 from "../../component/assets/Icons/LandingIcon6.png";
-import PsImg from "../../component/assets/Images/PsImg.png";
+import PsImg from "../../component/assets/Images/ps-img1.png";
+import PsImg2 from "../../component/assets/Images/ps-img2.jpg";
+import PsImg3 from "../../component/assets/Images/ps-img3.jpg";
+import PsImg4 from "../../component/assets/Images/ps-img4.jpg";
+import PsImg5 from "../../component/assets/Images/ps-img5.jpg";
 import LandingImg1 from "../../component/assets/Images/LandingImg1.png";
-import InfluencerImg from "../../component/assets/Images/InfluencerImg.png";
 import wajahat from "../../component/assets/Images/wajahat.png";
 import bajwa from "../../component/assets/Images/bajwa.png";
 import siddiqui from "../../component/assets/Images/siddiqui.png";
@@ -38,9 +41,9 @@ import adeel from "../../component/assets/Images/adeel.png";
 import aashir from "../../component/assets/Images/aashir.png";
 import alishba from "../../component/assets/Images/alishba.png";
 import melika from "../../component/assets/Images/melika.png";
-import PortfolioImg1 from "../../component/assets/Images/PortfolioImg1.png";
 import PortfolioImg2 from "../../component/assets/Images/PortfolioImg2.png";
 import PortfolioImg3 from "../../component/assets/Images/PortfolioImg3.png";
+import PortfolioImg4 from "../../component/assets/Images/PortfolioImg4.png";
 import logo1 from "../../component/assets/Icons/logo1.png";
 import logo2 from "../../component/assets/Icons/logo2.png";
 import logo3 from "../../component/assets/Icons/logo3.png";
@@ -52,29 +55,17 @@ import ArticleIcon4 from "../../component/assets/Icons/ArticleIcon4.png";
 
 export default function LandingPage() {
 
-    const portfolioData = [
-        {
-          img: PortfolioImg1,
-          logo: logo1,
-          title: "Gdigital: Driving Brand Success through Comprehensive",
-          client: "CEO Transport Ltd",
-          isTaller: false,
-        },
-        {
-          img: PortfolioImg2,
-          logo: logo2,
-          title: "Gdigital: Driving Brand Success through Comprehensive",
-          client: "CEO Transport Ltd",
-          isTaller: true, // This makes the middle card taller
-        },
-        {
-          img: PortfolioImg3,
-          logo: logo3,
-          title: "Gdigital: Driving Brand Success through Comprehensive",
-          client: "SparkDatabox",
-          isTaller: false,
-        },
-      ];
+  const images = [PsImg, PsImg2, PsImg3, PsImg4, PsImg5];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Change image every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
       const articles = [
         {
@@ -146,13 +137,8 @@ export default function LandingPage() {
     background: 'linear-gradient(144.63deg, #079669 23.69%, #23E9AA 66.82%, #8DDA7D 113.32%)' 
   }}
 >
-        
-
-        {/* Massive Headline */}
-        <div className="max-w-7xl mx-auto min-h-[70vh]">
-          <h1 className="text-white text-3xl
-        sm:text-3xl md:text-[80px] leading-[0.82] font-[800] italic uppercase tracking-[-0.06em] mt-30" 
-              style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+        <div className="max-w-7xl mx-auto min-h-[45vh]">
+        <h1 className="mt-25 text-white  text-3xl sm:text-3xl md:text-[80px] leading-[93px] font-black"style={{ fontFamily: "'Circular Std', sans-serif" }}>
             Create. Build.<br />
             Launch. Grow.<br />
             Evolve.
@@ -181,7 +167,7 @@ export default function LandingPage() {
   />
   
   <Image
-    src={LandingIcon6}  // <-- second image
+    src={LandingIcon6}  
     alt="Brand logo 2"
     className="object-contain"
     width={70}
@@ -255,73 +241,123 @@ export default function LandingPage() {
 
           <div className="flex justify-between items-center">
              <p className="text-base sm:text-lg font-bold text-gray-400">Let's Built something <br/> <span className="text-base sm:text-lg text-black">meaningful together</span></p>
-             <button className="bg-[#00B86B] text-white px-6 py-3 rounded-full flex items-center gap-2">
-               See Projects <ArrowRight size={18} />
-             </button>
+             <Link href="/our-work">
+        <button className="bg-[#00B86B] text-white px-6 py-3 rounded-full flex items-center gap-2">
+          See Projects <ArrowRight size={18} />
+        </button>
+      </Link>
           </div>
         </div>
       </section>
 
       {/* --- PORTFOLIO GRID --- */}
       <section className="max-w-7xl 2xl:max-w-[1300px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-20">
-      {portfolioData.map((item, i) => (
-        <div
-          key={i}
-          className={`relative rounded-[2.5rem] overflow-hidden group shadow-2xl transition-all duration-500 ${
-            item.isTaller ? "h-[650px]" : "h-[580px]"
-          }`}
-        >
-          {/* Background Image */}
-          <Image
-            src={item.img}
-            alt="work"
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
-          />
 
-          {/* Logo at the Top */}
-          <div className="absolute top-12 left-0 right-0 flex justify-center px-8">
-            <div className="relative w-48 h-20">
-              <Image
-                src={item.logo}
-                alt="Logo"
-                fill
-                className="object-contain brightness-0 invert" // Ensures logo is pure white
-              />
-            </div>
-          </div>
+{/* Card 1 */}
+<div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
+  <Image src={PortfolioImg2} alt="work" fill className="object-cover" />
 
-          {/* Text Content at the Bottom with Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-10 flex flex-col justify-end">
-            <h3 className="text-white font-bold text-2xl leading-tight mb-4 max-w-[90%]">
-              {item.title}
-            </h3>
-            <p className="text-white/80 text-lg font-medium">
-              {item.client}
-            </p>
-          </div>
-        </div>
-      ))}
-    </section>
+  <div className="absolute left-0 right-0 top-[78px] flex justify-center">
+    <div className="relative w-58 h-25">
+      <Image
+        src={logo1}
+        alt="Logo"
+        fill
+        className="object-contain brightness-0 invert"
+      />
+    </div>
+  </div>
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-10 flex flex-col justify-end">
+    <h4 className="text-white font-circular font-small text-2xl leading-[32px] mb-4 max-w-[90%]">
+      Smart logistics and fleet management solution
+    </h4>
+    <p className="text-white/80 font-circular font-small text-lg">
+      CEO Transport Ltd
+    </p>
+  </div>
+</div>
+
+{/* Card 2 */}
+<div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
+  <Image src={PortfolioImg3} alt="work" fill className="object-cover" />
+
+  <div className="absolute left-0 right-0 top-[55px] flex justify-center">
+    <div className="relative w-65 h-30">
+      <Image
+        src={logo2}
+        alt="Logo"
+        fill
+        className="object-contain brightness-0 invert"
+      />
+    </div>
+  </div>
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-10 flex flex-col justify-end">
+    <h4 className="text-white font-circular font-small text-2xl leading-[32px] mb-4 max-w-[90%]">
+      Data analytics platform for smarter decisions
+    </h4>
+    <p className="text-white/80 font-circular font-small text-lg">
+      Spark Databox
+    </p>
+  </div>
+</div>
+
+{/* Card 3 */}
+<div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
+  <Image src={PortfolioImg4} alt="work" fill className="object-cover" />
+
+  <div className="absolute left-0 right-0 top-[65px] flex justify-center">
+    <div className="relative w-65 h-30">
+      <Image
+        src={logo3}
+        alt="Logo"
+        fill
+        className="object-contain brightness-0 invert"
+      />
+    </div>
+  </div>
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-10 flex flex-col justify-end">
+    <h4 className="text-white font-circular font-small text-2xl leading-[32px] mb-4 max-w-[90%]">
+      AI-powered facial recognition and automation
+    </h4>
+    <p className="text-white/80 font-circular font-small text-lg">
+      FACE FWD AI
+    </p>
+  </div>
+</div>
+
+</section>
 
       {/* --- SERVICES SECTION --- */}
       <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20 flex flex-col md:flex-row items-center gap-20">
-        <div className="flex-1">
-          <Image src={PsImg} alt="Services" className="w-full max-w-md" />
-        </div>
-        <div className="flex-1">
-          <span className="text-xl sm:text-2xl lg:text-[45px] text-[#23A654]">Our Services.</span>
-          <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] mt-2 mb-6 leading-tight">Design-Led Digital Products.</h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px] mb-8">
-            We believe exceptional digital experiences are never the result of shortcuts. Every project begins with deep research 
-            and thoughtful experimentation, where each detail is explored to guide data-driven choices. From there, we design 
-            and develop solutions from the ground up—crafted precisely around what users truly need.
-          </p>
-          <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2">
-            Read More <ArrowRight size={18} />
-          </button>
-        </div>
-      </section>
+      <div className="flex-1">
+        <Image
+          src={images[currentImageIndex]}
+          alt="Services"
+          className="w-full max-w-md rounded-lg transition-all duration-700 ease-in-out"
+        />
+      </div>
+      <div className="flex-1">
+        <span className="text-xl sm:text-2xl lg:text-[45px] text-[#23A654]">
+          Our Services.
+        </span>
+        <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] mt-2 mb-6 leading-tight">
+          Design-Led Digital Products.
+        </h2>
+        <p className="text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px] mb-8">
+          We believe exceptional digital experiences are never the result of
+          shortcuts. Every project begins with deep research and thoughtful
+          experimentation, where each detail is explored to guide data-driven
+          choices. From there, we design and develop solutions from the ground
+          up—crafted precisely around what users truly need.
+        </p>
+        <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2">
+          Read More <ArrowRight size={18} />
+        </button>
+      </div>
+    </section>
 
       {/* --- HOSTING SECTION --- */}
       <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20 flex flex-col md:flex-row-reverse items-center gap-20">
@@ -336,9 +372,11 @@ export default function LandingPage() {
             for speed, reliability, and security—so your applications stay online, load faster, and scale effortlessly as your business 
             grows. From startups to enterprise platforms, our hosting is engineered to support real-world performance and long-term growth.
           </p>
+          <Link href="/hosting">
           <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2">
             View Hosting Plans <ArrowRight size={18} />
           </button>
+          </Link>
         </div>
       </section>
 
