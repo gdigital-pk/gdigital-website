@@ -21,7 +21,7 @@ export default function About() {
       <Navbar />
 
       <section id="about" className="py-20 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
 
           {/* Header */}
           <div className="mb-20 sm:mb-30 mt-8">

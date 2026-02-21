@@ -127,7 +127,7 @@ export default function LandingPage() {
     <div className="bg-white font-sans text-[#333]">
           <Navbar />
 
-   <div className="mx-auto w-full max-w-7xl 2xl:max-w-[1200px] bg-[#333333] rounded-[60px] md:rounded-[80px] lg:flex-row items-center gap-10 pt-10">
+   <div className="mx-auto w-full max-w-7xl 2xl:max-w-[1400px] bg-[#333333] rounded-[60px] md:rounded-[80px] lg:flex-row items-center gap-10 pt-10">
 
       {/* --- HERO SECTION --- */}
       <section 
@@ -224,7 +224,7 @@ export default function LandingPage() {
       {/* </section> */}
     </div>
       {/* --- PORTFOLIO HEADER --- */}
-      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20 grid md:grid-cols-2 gap-10 items-start">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 py-20 grid md:grid-cols-2 gap-10 items-start">
         <div>
           <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold  text-[#23A654]">
             Where Ideas Become<br /><span className="text-[#333]">Digital Products</span>
@@ -250,7 +250,7 @@ export default function LandingPage() {
       </section>
 
       {/* --- PORTFOLIO GRID --- */}
-      <section className="max-w-7xl 2xl:max-w-[1300px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-20">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-20">
 
 {/* Card 1 */}
 <a href="/spark-databox" className="block">
@@ -335,7 +335,7 @@ export default function LandingPage() {
 </section>
 
       {/* --- SERVICES SECTION --- */}
-      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20 flex flex-col md:flex-row items-center gap-20">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 py-20 flex flex-col md:flex-row items-center gap-20">
       <div className="flex-1">
         <Image
           src={images[currentImageIndex]}
@@ -379,7 +379,7 @@ export default function LandingPage() {
     </section>
 
       {/* --- HOSTING SECTION --- */}
-      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20 flex flex-col md:flex-row-reverse items-center gap-20">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 py-20 flex flex-col md:flex-row-reverse items-center gap-20">
         <div className="flex-1">
           <Image src={LandingImg1} alt="Hosting" className="w-full" />
         </div>
@@ -400,7 +400,7 @@ export default function LandingPage() {
       </section>
 
       {/* --- INFLUENCERS SECTION --- */}
-      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-10 py-20">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 py-20">
   <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] leading-tight mb-12">
     People We Have Worked<br />With
     <span className="text-[#00B86B]">.</span>
@@ -410,7 +410,7 @@ export default function LandingPage() {
 </section>
 
       {/* --- ARTICLES SECTION --- */}
-      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-6 md:px-10 py-24">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-6 md:px-10 py-24">
       <h2 className=" text-3xl sm:text-3xl lg:text-[52px] font-bold text-[#333] mb-14 tracking-tight">
         Articles About <span className="text-[#129F68]">GDigital</span>
       </h2>
@@ -476,7 +476,7 @@ export default function LandingPage() {
 
       {/* --- TESTIMONIALS --- */}
       <section className="bg-gray-50 py-24 px-10">
-  <div className="flex flex-col md:flex-row max-w-7xl 2xl:max-w-[1200px] mx-auto px-6 gap-12">
+  <div className="flex flex-col md:flex-row max-w-7xl 2xl:max-w-[1400px] mx-auto px-6 gap-12">
 
     <div className="flex flex-col gap-2 w-full md:w-2/3">
       <h3 className="text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>

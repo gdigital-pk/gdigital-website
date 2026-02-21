@@ -18,9 +18,7 @@ export default function PortfolioPage() {
     <>
       <Navbar />
       <section className="py-20 bg-white">
-        <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
-          
-          {/* Header Section */}
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="mb-16 mt-8">
             <h2 className="text-4xl md:text-[60px] font-bold text-gray-900 font-circular leading-tight max-w-5xl">
               Solutions we’ve designed and built to solve real{" "}
@@ -28,29 +26,15 @@ export default function PortfolioPage() {
             </h2>
           </div>
 
-          {/* Featured Project (Large Card) */}
           <div className="relative w-full h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden mb-8 group cursor-pointer">
-            <Image
-              src={PortfolioImg1}
-              alt="Featured Project"
-              layout="fill"
-              objectFit="cover"
-              className="transition-transform duration-500 group-hover:scale-105"
-            />
-            {/* Gradient Overlay */}
+            <Image src={PortfolioImg1} alt="Featured Project"layout="fill"objectFit="cover" className="transition-transform duration-500 group-hover:scale-105"/>
            <div className="absolute inset-0 bg-[linear-gradient(179.49deg,rgba(0,0,0,0.6)_8.99%,rgba(49,49,49,0)_57.75%,rgba(0,0,0,0.57)_90.93%)]" />
-            
-            {/* Logo at top */}
             <div className="absolute top-20 left-1/2 -translate-x-1/2">
                <Image src={logo1} alt="logo" width={180} height={90} className="brightness-0 invert" />
             </div>
           </div>
 
-          {/* Grid Section (3 Columns) */}
-         {/* Grid Section (3 Columns) */}
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-{/* Card 1 */}
 <a href="/spark-databox" className="block">
 <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
   <Image
@@ -76,7 +60,6 @@ export default function PortfolioPage() {
 </a>
 
 <a href="/jewellry" className="block">
-{/* Card 2 */}
 <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
   <Image
     src={PortfolioImg3}
@@ -101,7 +84,6 @@ export default function PortfolioPage() {
 </a>
 
 <a href="/spark-databox" className="block">
-{/* Card 3 */}
 <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
   <Image
     src={PortfolioImg4}
@@ -125,11 +107,10 @@ export default function PortfolioPage() {
 </div>
 </a>
 </div>
-{/* Grid Section (3 Columns) */}
+
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
 
 <a href="/jewellry" className="block">
-  {/* Card 1 */}
   <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
     <Image
       src={PortfolioImg2}
@@ -154,7 +135,7 @@ export default function PortfolioPage() {
   </a>
 
   <a href="/spark-databox" className="block">
-  {/* Card 2 */}
+
   <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
     <Image
       src={PortfolioImg3}
@@ -178,7 +159,6 @@ export default function PortfolioPage() {
   </div>
   </a>
 
- {/* Card 3 */}
   <a href="/jewellry" className="block">
   <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
     <Image
@@ -202,11 +182,7 @@ export default function PortfolioPage() {
     </div>
   </div>
   </a>
-
-
 </div>
-
-
         </div>
       </section>
       <Footer />

@@ -15,9 +15,8 @@ export default function Services() {
     <>
     <Navbar/>
     <section id="services" className="py-20 bg-white">
-    <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
+    <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
 
-        {/* Header */}
         <div className="flex items-start w-full mb-16 mt-8">
         <h2 className="
   font-circular
@@ -218,8 +217,6 @@ text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]
           </div>
         </div>
 
-        {/* Deliverables Section */}
-      {/* Deliverables Section */}
 <div className="flex flex-col lg:flex-row gap-12 mb-20">
 
 <div className="flex flex-col sm:flex-col lg:flex-row w-full gap-8">

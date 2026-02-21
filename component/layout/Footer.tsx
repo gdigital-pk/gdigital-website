@@ -31,7 +31,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-white pt-10 pb-12">
-      <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Schedule Consultation Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-transparent pb-16">
           <div className="max-w-3xl">

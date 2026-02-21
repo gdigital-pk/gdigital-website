@@ -20,7 +20,7 @@ export default function JewellryPage() {
   return (
     <div className="bg-white font-sans text-gray-900">
       <Navbar />
-      <section className="pt-34 text-center text-white bg-[#079669] max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
+      <section className="pt-34 text-center text-white bg-[#079669] max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20 ">
       {/* 1. Heading */}
       <h1 className="  sm:text-3xl
   md:text-4xl
@@ -55,7 +55,7 @@ export default function JewellryPage() {
       </div>
     </section>
       {/* 2. Client Info Section */}
-      <section className="2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 mt-20 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <section className="2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 mt-20 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
   
   <div className="flex flex-col items-center">
     <h4 className="text-lg font-semibold text-gray-500 uppercase tracking-wider">
@@ -80,10 +80,7 @@ export default function JewellryPage() {
 
 </section>
 
-      {/* 3. Mobile Mockup Section */}
-    <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-  
-  {/* Left column */}
+    <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   <div className="rounded-3xl p-8 flex justify-center">
     <Image
       src={JewellryImg1}
@@ -105,9 +102,7 @@ export default function JewellryPage() {
 
 </section>
 
-
-      {/* 4. Large Banner Section */}
-      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="rounded-3xl overflow-hidden shadow-xl">
           <Image src={JewellryImg2} alt="Conference Display" className="w-full h-auto object-cover" />
         </div>
@@ -140,7 +135,7 @@ export default function JewellryPage() {
 
 
       {/* 6. More Of Our Work (The Cards) */}
-      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 py-20">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-20">
         <h2 className="text-4xl font-bold mb-4">More OF Our Work</h2>
         <p className="text-gray-600 mb-12 max-w-xl">
           Whether you're launching a new site or scaling your business, our plans are built to deliver speed, security, and value.

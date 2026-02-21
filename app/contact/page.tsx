@@ -94,8 +94,7 @@ export default function Contact() {
       <Navbar />
 
       <section id="contact" className="py-30 bg-white">
-        <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
-          {/* Header Section */}
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-start gap-10 md:gap-20">
             <div className="md:w-1/2">
               <h2 className="text-2xl sm:text-3xl md:text-[45px] lg:text-5xlxl:text-[60px] font-bold text-[#23A654] mb-4 leading-tight">

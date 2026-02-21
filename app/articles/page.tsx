@@ -96,7 +96,7 @@ export default function Articles() {
 
       {/* --- ARTICLES SECTION --- */}
       <section className="px-6 md:px-10 py-20 bg-white">
-      <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
       {/* Heading */}
       <h2 className=" text-3xl sm:text-3xl lg:text-[52px] font-bold text-[#333] mb-14 tracking-tight mt-8">
         Articles About <span className="text-[#129F68]">GDigital</span>
@@ -107,24 +107,22 @@ export default function Articles() {
   {articles.map((item) => (
     <a
       key={item.id}
-      href={item.url}           // external URL
-      target="_blank"           // opens in new tab
-      rel="noopener noreferrer" // security best practice
+      href={item.url}    
+      target="_blank"          
+      rel="noopener noreferrer" 
       className="block"
     >
       <div
         className="flex flex-col md:flex-row items-start md:items-center
                    justify-between py-10 border-b border-gray-300
                    gap-8 group cursor-pointer hover:bg-gray-50
-                   transition-all px-4"
-      >
-        {/* Column 1: Brand Logo & Name */}
+                   transition-all px-4">
         <div className="flex items-center gap-5 w-full md:w-[25%]">
         <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 bg-gray-300">
   <Image
     src={item.icon}
     alt={item.brand}
-    width={60}   // adjust size to fit nicely in circle
+    width={60} 
     height={60}
     className="object-contain"
   />
@@ -154,7 +152,6 @@ export default function Articles() {
     </a>
   ))}
 </div>
-
 
       </div>
     </section>

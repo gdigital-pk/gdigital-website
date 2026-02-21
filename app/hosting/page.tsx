@@ -42,7 +42,7 @@ export default function Hosting() {
     {
       name: "Blaze",
       price: "$200",
-      icon: null, // No icon at the top for Blaze in the image
+      icon: null, 
     },
     {
       name: "Inferno",
@@ -55,18 +55,18 @@ export default function Hosting() {
     <>
       <Navbar />
     <section id="hosting" className="bg-[#F9F9F9] py-20">
-      <div className="max-w-9xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-20 mt-170">
+      <div className="max-w-9xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20 mt-170">
         {/* Header */} 
         <div className="absolute inset-0 flex justify-center">
   <img
     src={HostingBackground.src}
     alt="Hosting Background"
-    className="max-w-7xl 2xl:max-w-[1400px] h-full object-cover"
+    className="max-w-7xl 2xl:max-w-[1400px] h-full object-cover px-4 sm:px-6 lg:px-20"
   />
 </div>
 
 {/* Text content on top of image */}
-<div className="relative max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+<div className="relative max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
   <div className="absolute bottom-8 left-8 right-8 
                   flex flex-col md:flex-row 
                   items-start md:items-end 
@@ -83,7 +83,7 @@ export default function Hosting() {
     w-full md:max-w-sm 
     leading-[1.1] 
     tracking-wide
-mb-2  "
+mb-2  px-6"
 >
   Everything your website needs.
 </h2>
@@ -106,7 +106,6 @@ mb-2  "
 
 <div className="mb-20 grid md:grid-cols-2 gap-12 items-center pt-40">
 
-  {/* LEFT SIDE – IMAGE */}
   <div className="order-2 md:order-1 flex items-center justify-center">
     <Image
       src={DigitalFutureIcon}
@@ -117,7 +116,6 @@ mb-2  "
     />
   </div>
 
-  {/* RIGHT SIDE – TEXT */}
   <div className="order-1 md:order-2">
     <h3 className="text-3xl
         sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
@@ -130,13 +128,11 @@ mb-2  "
       empowering brands to grow, evolve, and lead in the digital age.
     </p>
   </div>
-
 </div>
 
 
 <div className="mb-20 grid md:grid-cols-2 gap-12 items-center pt-20">
 
-  {/* LEFT SIDE – TEXT */}
   <div className="order-1 md:order-1">
     <h3 className="text-3xl
         sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
@@ -165,11 +161,8 @@ mb-2  "
 
 </div>
 
-
-
 <div className="mb-30 grid md:grid-cols-2 gap-12 items-center pt-20">
 
-  {/* LEFT SIDE – IMAGE */}
   <div className="order-2 md:order-1 flex items-center justify-center">
     <Image
       src={WordpressImg}
@@ -197,9 +190,7 @@ mb-2  "
   </div>
 
 </div>
-    
 
-        {/* Make your website in minutes */}
         <div className=" grid md:grid-cols-3 gap-12 items-center pt-20 pb-7">
           <div>
             <h3 className="text-3xl
@@ -212,8 +203,7 @@ mb-2  "
           </div>
         </div>
         
-  <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto relative px-4 py-20">
-      {/* Main Grid Container */}
+  <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto relative px-4 py-20">
       <div className="grid md:grid-cols-3 border-t border-b border-gray-200">
         {plans.map((plan, i) => (
           <div
@@ -222,7 +212,6 @@ mb-2  "
               i !== 2 ? "md:border-r border-gray-200" : ""
             }`}
           >
-            {/* Top Icon Placement - Absolute positioning to overlap the top border */}
             <div className="absolute -top-12 left-1/2 -translate-x-1/2 md:left-14 md:translate-x-0">
               {plan.icon && (
                 <Image
@@ -235,7 +224,6 @@ mb-2  "
               )}
             </div>
 
-            {/* Content starts with margin to account for the overlapping icon */}
             <div className="mt-8 w-full">
               <h4 className="text-3xl
         sm:text-3xl lg:text-5xl text-gray-800 font-medium mb-1">{plan.name}</h4>
@@ -311,37 +299,20 @@ mb-2  "
 
 
     <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto mt-16 lg:mt-24 px-4 sm:px-6 pb-10">
-  <div className="bg-[#FDFCFE] border border-[#EAE9E9] 
-                  rounded-2xl 
-                  py-12 lg:pt-20 
-                  px-6 lg:px-10">
+  <div className="bg-[#FDFCFE] border border-[#EAE9E9] rounded-2xl py-12 lg:pt-20 px-6 lg:px-20">
 
     {/* Flex Wrapper */}
-    <div className="flex flex-col lg:flex-row 
-                    items-center 
-                    gap-12">
-
-      {/* Content */}
-      <div className="w-full lg:w-1/2 
-                      text-center lg:text-left">
-
-        {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl 
-                       font-bold text-gray-900 mb-6">
+    <div className="flex flex-col items-start gap-12">
+      <div className="text-start lg:text-left">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
           Build trust with a professional business email
         </h2>
-
-        {/* Paragraph */}
-        <p className="text-base sm:text-lg lg:text-xl 
-                      text-gray-600 mb-8">
+        <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-8">
           Polish your brand, protect your inbox, and grow your business with tools
           that keep you in the driver's seat.
         </p>
 
-        {/* Check List */}
-        <ul className="space-y-4 text-base sm:text-lg text-gray-600 
-                       inline-block text-left">
-
+        <ul className="space-y-4 text-base sm:text-lg text-gray-600 inline-block text-left">
           <li className="flex items-start gap-3">
             <span className="text-green-600 font-bold mt-1">✓</span>
             <span>Build trust with a branded business email</span>
@@ -360,28 +331,23 @@ mb-2  "
         </ul>
       </div>
 
-      {/* Image */}
-      <div className="w-full lg:w-1/2 flex justify-center">
+      <div className="flex justify-center">
         <Image
           src={BusinessImg}
           alt="Business Email"
-          width={1000}
-          height={700}
-          className="object-contain w-full max-w-lg"
+          width={1400}
+          height={1200}
+          className="object-contain"
         />
       </div>
-
     </div>
   </div>
 </div>
 
-<div className="max-w-7xl 2xl:max-w-[1500px] mx-auto mt-32 px-6 ">
-<div className="bg-white rounded-3xl px-14 py-20 pl-20
-  border border-gray-100 
-  shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+<div className="max-w-7xl 2xl:max-w-[1400px] mx-auto mt-25 px-6 ">
+<div className="bg-white rounded-3xl px-14 py-20 pl-20border border-gray-100 shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
 
-    {/* Top Content */}
-    <div className="max-w-3xl mb-20">
+    <div className="max-w-lg mb-20">
       <h2 className="text-3xl
         sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
         Why Choose <br /> G Digital Hosting?
@@ -393,10 +359,7 @@ mb-2  "
       </p>
     </div>
 
-    {/* Features Grid */}
     <div className="grid md:grid-cols-3 gap-16">
-
-      {/* Feature 1 */}
       <div>
         <Image src={CarIcon} alt="Fast Performance" width={60} height={50} className="mb-6" />
         <h4 className="text-2xl font-bold text-gray-900 mb-4">
@@ -408,7 +371,6 @@ mb-2  "
         </p>
       </div>
 
-      {/* Feature 2 */}
       <div>
         <Image src={WatchIcon} alt="Uptime" width={60} height={60} className="mb-3" />
         <h4 className="text-2xl font-bold text-gray-900 mb-4">
@@ -420,7 +382,6 @@ mb-2  "
         </p>
       </div>
 
-      {/* Feature 3 */}
       <div>
         <Image src={LockIcon} alt="Security" width={60} height={60} className="mb-3" />
         <h4 className="text-2xl font-bold text-gray-900 mb-4">
@@ -435,21 +396,9 @@ mb-2  "
     </div>
   </div>
 </div>
-{/* </div> */}
 
-    {/* Made With Gdigital Section */}
-    <div
-  className="
-
- max-w-7xl 2xl:max-w-[1400px] mx-auto
-  pt-30
-  mt-32
-  bg-[#079669]
-"
->
+    <div className=" max-w-7xl 2xl:max-w-[1400px] mx-auto pt-30 mt-32 bg-[#079669]">
 <div className="relative z-10 mx-auto">
-
-{/* Top Content */}
 <div className="text-center max-w-xl mx-auto mb-20 px-6">
   <h2 className="text-3xl
         sm:text-3xl lg:text-5xl font-bold text-white mb-6">
@@ -467,8 +416,7 @@ mb-2  "
   </button>
 </div>
 
-{/* Website Preview Grid */}
-<div className="relative max-w-9xl mx-auto">
+<div className="relative">
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
     {[
       HostingImg1,
@@ -493,7 +441,6 @@ mb-2  "
     ))}
   </div>
   </div>
-  {/* Bottom Fade (matches image) */}
   <div className="pointer-events-none absolute bottom-0 left-0 w-full h-50 bg-gradient-to-t from-[#0aa06e] to-transparent" />
 </div>
 
@@ -501,8 +448,6 @@ mb-2  "
 
 <section className="bg-gray-50 py-24 px-10">
   <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-6 gap-12">
-
-    {/* Title Section → Always top on mobile */}
     <div className="flex flex-col gap-2 w-full md:w-2/3">
       <h3 className="text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
       <h2 className="text-4xl md:text-5xl font-bold">
@@ -511,10 +456,7 @@ mb-2  "
       </h2>
     </div>
 
-    {/* Cards Section → Zig-Zag Testimonials */}
     <div className="flex flex-col gap-8 w-full md:w-2/3 mt-8 md:mt-0">
-
-      {/* 1st Card → Center */}
       <div className="flex justify-center">
       <div className="flex items-start
                   bg-white rounded-xl shadow-md 
