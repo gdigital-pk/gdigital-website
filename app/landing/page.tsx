@@ -49,6 +49,8 @@ import ArticleIcon1 from "../../component/assets/Icons/ArticleIcon1.png";
 import ArticleIcon2 from "../../component/assets/Icons/ArticleIcon2.png";
 import ArticleIcon3 from "../../component/assets/Icons/ArticleIcon3.png";
 import ArticleIcon4 from "../../component/assets/Icons/ArticleIcon4.png";
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
+
 
 export default function LandingPage() {
 
@@ -348,15 +350,28 @@ export default function LandingPage() {
         <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] mt-2 mb-6 leading-tight">
           Design-Led Digital Products.
         </h2>
-        <p className="text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px] mb-8">
+        <PointerHighlight
+  rectangleClassName="bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700 leading-loose"
+  pointerClassName="text-green-500 h-3 w-3"
+  containerClassName="inline-block"
+>
+  <span className="relative z-10 text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px]">
+    We believe exceptional digital experiences are never the result of
+    shortcuts. Every project begins with deep research and thoughtful
+    experimentation, where each detail is explored to guide data-driven
+    choices. From there, we design and develop solutions from the ground
+    up—crafted precisely around what users truly need.
+  </span>
+</PointerHighlight>
+        {/* <p className="text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px] mb-8">
           We believe exceptional digital experiences are never the result of
           shortcuts. Every project begins with deep research and thoughtful
           experimentation, where each detail is explored to guide data-driven
           choices. From there, we design and develop solutions from the ground
           up—crafted precisely around what users truly need.
-        </p>
+        </p> */}
         <Link href="/hosting">
-        <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2">
+        <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2 mt-4">
           Read More <ArrowRight size={18} />
         </button>
         </Link>

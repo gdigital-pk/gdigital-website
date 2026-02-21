@@ -55,13 +55,13 @@ export default function Hosting() {
     <>
       <Navbar />
     <section id="hosting" className="bg-[#F9F9F9] py-20">
-      <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-20 mt-170">
+      <div className="max-w-9xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-20 mt-170">
         {/* Header */} 
         <div className="absolute inset-0 flex justify-center">
   <img
     src={HostingBackground.src}
     alt="Hosting Background"
-    className="max-w-7xl 2xl:max-w-[1200px] h-full object-cover"
+    className="max-w-7xl 2xl:max-w-[1400px] h-full object-cover"
   />
 </div>
 
@@ -70,28 +70,35 @@ export default function Hosting() {
   <div className="absolute bottom-8 left-8 right-8 
                   flex flex-col md:flex-row 
                   items-start md:items-end 
-                  gap-6 md:gap-20">
+                  gap-6 md:gap-5">
     
     {/* LEFT SIDE */}
-    <h2 className="text-3xl
-        sm:text-3xl md:text-[48px]
-                   font-black font-circular text-[#3D3D3D]
-                   w-full md:max-w-sm leading-[0.98] mb-15">
-      Everything your website needs.
-    </h2>
+    <div className="w-full md:w-2/2 max-w-lg">
+    <h2
+  className="
+    text-3xl sm:text-4xl md:text-[48px] 
+    font-extrabold 
+    font-sans 
+    text-[#3D3D3D] 
+    w-full md:max-w-sm 
+    leading-[1.1] 
+    tracking-wide
+mb-2  "
+>
+  Everything your website needs.
+</h2>
+</div>
+    <div className="w-full md:w-3/3 lg:w-3/4">
+  <h6 className="text-[22px] md:text-[19px] font-medium text-gray-800 leading-[1.35] mb-4">
+    Domain, hosting, and email — made easy.
+  </h6>
 
-    {/* RIGHT SIDE */}
-    <div className="w-full">
-      <h6 className="text-lg md:text-2xl text-gray-900 font-normal mb-3 md:mb-5">
-        Domain, hosting, and email — made easy.
-      </h6>
-
-      <p className="text-base sm:text-lg md:text-lg text-gray-600 mb-6 md:mb-10">
-        Reliable performance, secure servers, and everything you need — from
-        domain registration to professional email — all in one affordable
-        package.
-      </p>
-    </div>
+  <p className="text-[16px] md:text-[18px] font-normal text-gray-600 leading-[1.6] mb-6">
+    Reliable performance, secure servers, and everything you need — from
+    domain registration to professional email — all in one affordable
+    package.
+  </p>
+</div>
 
   </div>
 </div>
@@ -368,9 +375,7 @@ export default function Hosting() {
   </div>
 </div>
 
-
-
-<div className="max-w-7xl 2xl:max-w-[1200px] mx-auto mt-32 px-6 ">
+<div className="max-w-7xl 2xl:max-w-[1500px] mx-auto mt-32 px-6 ">
 <div className="bg-white rounded-3xl px-14 py-20 pl-20
   border border-gray-100 
   shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
