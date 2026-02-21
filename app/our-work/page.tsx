@@ -20,7 +20,7 @@ export default function PortfolioPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="mb-16 mt-8">
-            <h2 className="text-4xl md:text-[60px] font-bold text-gray-900 font-circular leading-tight max-w-5xl">
+            <h2 className="text-2xl sm:text-3xlmd:text-4xl lg:text-5xl xl:text-[60px] font-bold text-gray-900 font-circular leading-tight max-w-5xl">
               Solutions we’ve designed and built to solve real{" "}
               <span className="text-[#23A654]">business challenges</span>.
             </h2>

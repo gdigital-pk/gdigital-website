@@ -57,7 +57,6 @@ export default function LandingPage() {
   const images = [PsImg, PsImg2, PsImg3, PsImg4, PsImg5];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Change image every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -129,15 +128,10 @@ export default function LandingPage() {
 
    <div className="mx-auto w-full max-w-7xl 2xl:max-w-[1400px] bg-[#333333] rounded-[60px] md:rounded-[80px] lg:flex-row items-center gap-10 pt-10">
 
-      {/* --- HERO SECTION --- */}
-      <section 
-  className="relative pt-10 pb-40 px-6 md:px-16 rounded-b-[100px] md:rounded-b-[140px] z-20"
-  style={{ 
-    background: 'linear-gradient(144.63deg, #079669 23.69%, #23E9AA 66.82%, #8DDA7D 113.32%)' 
-  }}
->
-        <div className="max-w-7xl mx-auto min-h-[45vh]">
-        <h1 className="mt-25 text-white  text-3xl sm:text-3xl md:text-[80px] leading-[93px] font-black"style={{ fontFamily: "'Circular Std', sans-serif" }}>
+      <section className="relative pt-10 pb-40 px-6 md:px-16 rounded-b-[100px] md:rounded-b-[140px] z-20"
+  style={{ background: 'linear-gradient(144.63deg, #079669 23.69%, #23E9AA 66.82%, #8DDA7D 113.32%)' }}>
+        <div className="max-w-7xl mx-auto md:min-h-[45vh]">
+        <h1 className="mt-25 text-white text-3xl md:text-[80px] leading-tight md:leading-[93px] font-black font-circular">
             Create. Build.<br />
             Launch. Grow.<br />
             Evolve.
@@ -152,7 +146,6 @@ export default function LandingPage() {
   Trusted By Brands we have Help Shaped.
 </p>
 
-  {/* RIGHT LOGOS */}
   <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-end gap-6">
 
   <div className="bg-white rounded-xl w-[140px] h-32 flex flex-col items-center justify-center shadow-2xl gap-2">
@@ -221,9 +214,8 @@ export default function LandingPage() {
 </div>
 
 </div>
-      {/* </section> */}
     </div>
-      {/* --- PORTFOLIO HEADER --- */}
+  
       <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 py-20 grid md:grid-cols-2 gap-10 items-start">
         <div>
           <h3 className="text-2xl sm:text-3xl lg:text-[45px] font-bold  text-[#23A654]">
@@ -241,18 +233,15 @@ export default function LandingPage() {
           <div className="flex justify-between items-center">
              <p className="text-base sm:text-lg font-bold text-gray-400">Let's Built something <br/> <span className="text-base sm:text-lg text-black">meaningful together</span></p>
              <Link href="/our-work">
-        <button className="bg-[#00B86B] text-white px-6 py-3 rounded-full flex items-center gap-2">
-          See Projects <ArrowRight size={18} />
-        </button>
+             <button className=" bg-[#00B86B] text-white px-4 py-2 text-sm md:px-6 md:py-3 md:text-base rounded-full flex items-center gap-2">
+  See Projects <ArrowRight size={16} className="md:w-[18px] md:h-[18px]" />
+</button>
       </Link>
           </div>
         </div>
       </section>
 
-      {/* --- PORTFOLIO GRID --- */}
       <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-20">
-
-{/* Card 1 */}
 <a href="/spark-databox" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg2} alt="work" fill className="object-cover" />
@@ -279,7 +268,6 @@ export default function LandingPage() {
 </div>
 </a>
 
-{/* Card 2 */}
 <a href="/jewellry" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg3} alt="work" fill className="object-cover" />
@@ -306,7 +294,6 @@ export default function LandingPage() {
 </div>
 </a>
 
-{/* Card 3 */}
 <a href="/spark-databox" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg4} alt="work" fill className="object-cover" />
@@ -334,7 +321,6 @@ export default function LandingPage() {
 </a>
 </section>
 
-      {/* --- SERVICES SECTION --- */}
       <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 py-20 flex flex-col md:flex-row items-center gap-20">
       <div className="flex-1">
         <Image
@@ -363,13 +349,6 @@ export default function LandingPage() {
     up—crafted precisely around what users truly need.
   </span>
 </PointerHighlight>
-        {/* <p className="text-base sm:text-lg text-gray-600 max-w-full sm:max-w-[500px] mb-8">
-          We believe exceptional digital experiences are never the result of
-          shortcuts. Every project begins with deep research and thoughtful
-          experimentation, where each detail is explored to guide data-driven
-          choices. From there, we design and develop solutions from the ground
-          up—crafted precisely around what users truly need.
-        </p> */}
         <Link href="/hosting">
         <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2 mt-4">
           Read More <ArrowRight size={18} />
@@ -378,7 +357,6 @@ export default function LandingPage() {
       </div>
     </section>
 
-      {/* --- HOSTING SECTION --- */}
       <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 py-20 flex flex-col md:flex-row-reverse items-center gap-20">
         <div className="flex-1">
           <Image src={LandingImg1} alt="Hosting" className="w-full" />
@@ -399,7 +377,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* --- INFLUENCERS SECTION --- */}
       <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 py-20">
   <h2 className="text-3xl sm:text-3xl lg:text-5xl font-semibold text-[#333] leading-tight mb-12">
     People We Have Worked<br />With
@@ -409,7 +386,6 @@ export default function LandingPage() {
   <Influencer people={people} />
 </section>
 
-      {/* --- ARTICLES SECTION --- */}
       <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-6 md:px-10 py-24">
       <h2 className=" text-3xl sm:text-3xl lg:text-[52px] font-bold text-[#333] mb-14 tracking-tight">
         Articles About <span className="text-[#129F68]">GDigital</span>
@@ -424,12 +400,8 @@ export default function LandingPage() {
       rel="noopener noreferrer" 
       className="block"
     >
-      <div
-        className="flex flex-col md:flex-row items-start md:items-center
-                   justify-between py-10 border-b border-gray-300
-                   gap-8 group cursor-pointer hover:bg-gray-50
-                   transition-all px-4"
-      >
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between py-10 border-b border-gray-300
+        gap-8 group cursor-pointer hover:bg-gray-50 transition-all px-4">
    
         <div className="flex items-center gap-5 w-full md:w-[25%]">
         <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 bg-gray-300">
@@ -445,18 +417,14 @@ export default function LandingPage() {
         </div>
 
         <div className="flex-1 max-w-2xl">
-          <h3 className="text-[22px] font-bold text-[#333] leading-[1.3] mb-2
-                         group-hover:text-[#129F68] transition-colors">
+          <h3 className="text-[22px] font-bold text-[#333] leading-[1.3] mb-2 group-hover:text-[#129F68] transition-colors">
             {item.title}
           </h3>
           <p className="text-gray-500 text-base">{item.source}</p>
         </div>
 
         <div className="flex justify-end items-center w-full md:w-auto">
-          <div className="w-10 h-10 bg-[#333] text-white rounded-full
-                          flex items-center justify-center
-                          transition-transform duration-300
-                          group-hover:scale-110">
+          <div className="w-10 h-10 bg-[#333] text-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
             <ChevronRight size={20} strokeWidth={3} />
           </div>
         </div>
@@ -464,23 +432,18 @@ export default function LandingPage() {
     </a>
   ))}
 </div>
-      <a
-  href="/articles"
-  className="mt-12 inline-flex items-center gap-2
-             bg-[#129F68] text-white px-7 py-3.5 rounded-full
-             font-bold text-sm hover:bg-[#0e8557] transition-colors"
->
+      <a href="/articles"
+  className="mt-12 inline-flex items-center gap-2 bg-[#129F68] text-white px-7 py-3.5 rounded-full font-bold text-sm hover:bg-[#0e8557] transition-colors">
   Read More <ArrowRight size={16} strokeWidth={3} />
 </a>
     </section>
 
-      {/* --- TESTIMONIALS --- */}
       <section className="bg-gray-50 py-24 px-10">
   <div className="flex flex-col md:flex-row max-w-7xl 2xl:max-w-[1400px] mx-auto px-6 gap-12">
 
     <div className="flex flex-col gap-2 w-full md:w-2/3">
-      <h3 className="text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
-      <h2 className="text-4xl md:text-5xl font-bold">
+      <h3 className="text-xl sm:text-xl md:text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
+      <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
         <span className="text-gray-900">What Our Customer</span> <br />
         <span className="text-gray-900">Says About US</span>
       </h2>
@@ -489,14 +452,9 @@ export default function LandingPage() {
     <div className="flex flex-col gap-8 w-full md:w-2/3 mt-8 md:mt-0">
 
       <div className="flex justify-center">
-      <div className="flex items-start
-                  bg-white rounded-xl shadow-md 
-                  p-6 gap-4 w-full max-w-md
-                  border-l-4 border-transparent 
-                  hover:border-[#23A654]
-                  transition-all duration-500 ease-in-out
-                  md:translate-x-10 
-                  md:hover:translate-x-0">
+      <div className="flex items-start bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md
+                  border-l-4 border-transparent hover:border-[#23A654] transition-all duration-500 ease-in-out
+                  md:translate-x-10 md:hover:translate-x-0">
           <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
           <div>
             <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
@@ -550,8 +508,6 @@ export default function LandingPage() {
   </div>
 </section>
 
-
-      {/* --- FOOTER --- */}
       <Footer />
     </div>
   );

@@ -35,9 +35,10 @@ export default function About() {
   font-circular
   text-gray-900
   leading-tight
+  w-full max-w-5xl
 ">
-              Innovators and problem-solvers <br />
-              building reliable software to help <br />
+              Innovators and problem-solvers 
+              building reliable software to help 
               businesses <span className="text-[#23A654]">grow</span>.
             </h2>
 
