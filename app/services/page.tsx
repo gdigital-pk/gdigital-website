@@ -19,9 +19,13 @@ export default function Services() {
 
         <div className="flex items-start w-full mb-16 mt-8">
         <h2 className="
+  text-2xl
+  sm:text-3xl
+  md:text-4xl
+  lg:text-5xl
+  xl:text-[60px]
+  font-bold
   font-circular
-  font-black
-text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]
   text-gray-900
   leading-tight
 ">
