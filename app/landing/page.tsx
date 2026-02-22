@@ -7,7 +7,7 @@ import Image from "next/image";
 import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
 import Influencer  from "../../component/Influencer";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
@@ -44,7 +44,14 @@ import PortfolioImg4 from "../../component/assets/Images/PortfolioImg4.png";
 import logo1 from "../../component/assets/Icons/logo1.png";
 import logo2 from "../../component/assets/Icons/logo2.png";
 import logo3 from "../../component/assets/Icons/logo3.png";
-import Avatar from "../../component/assets/Icons/Avatar.png";
+import aman from "../../component/assets/Icons/aman.png";
+import kivilcim from "../../component/assets/Icons/kivilcim.png";
+import jonathan from "../../component/assets/Icons/jonathan.png";
+import moraniC from "../../component/assets/Icons/moraniC.png";
+import stumpsin from "../../component/assets/Icons/stumpsin.png";
+import landynn from "../../component/assets/Icons/landynn.png";
+import leeKangseok from "../../component/assets/Icons/leeKangseok.png";
+import ragan from "../../component/assets/Icons/ragan.png";
 import ArticleIcon1 from "../../component/assets/Icons/ArticleIcon1.png";
 import ArticleIcon2 from "../../component/assets/Icons/ArticleIcon2.png";
 import ArticleIcon3 from "../../component/assets/Icons/ArticleIcon3.png";
@@ -121,6 +128,50 @@ export default function LandingPage() {
         { img: melika, name: "Melika Najafizadeh", role: "Influencer / Model" },
       ];
 
+
+      const testimonials = [
+        {
+          name: "Aman Kodwani",
+          avatar: aman,
+          text: "Highly recommend GDigital! Super quick service and an exceptional team that not only fixes glitches with apps but also works hard to correct any code issues. Really satisfied!",
+        },
+        {
+          name: "Jonathan Ruben",
+          avatar: jonathan,
+          text: "GDigital delivered with amazing speed and was incredibly easy to work with throughout the entire process.",
+        },
+        {
+          name: "Landyn",
+          avatar: landynn,
+          text: "GDigital delivered exactly what was promised and completed the work fast. They were easy to communicate with and made the entire experience hassle-free.",
+        },
+        {
+          name: "Kivilcimsez",
+          avatar: kivilcim,
+          text: "We highly recommend GDigital for website deployment. They efficiently deployed our website with great attention to detail. Their communication and expertise made the process seamless.",
+        },
+        {
+          name: "Morani C",
+          avatar: jonathan,
+          text: "We are absolutely thrilled with the exceptional service provided by GDigital. Their seamless integration of the Web3 SDK into our platform has truly elevated our user experience.",
+        },
+        {
+          name: "Stumpf Sinner",
+          avatar: stumpsin,
+          text: "Fast delivery and first-class support! :-)",
+        },
+        {
+          name: "Lee Kangseok",
+          avatar: leeKangseok,
+          text: "We asked GDigital for what we needed, and they went above and beyond, giving even better suggestions and making the whole process super easy.",
+        },
+        {
+          name: "Ragan J",
+          avatar: ragan,
+          text: "GDigital worked closely with us to accomplish our specific goals. Big thanks for making everything run so smoothly!",
+        },
+      ];
+      
   
   return (
     <div className="bg-white font-sans text-[#333]">
@@ -349,7 +400,7 @@ export default function LandingPage() {
     up—crafted precisely around what users truly need.
   </span>
 </PointerHighlight>
-        <Link href="/hosting">
+        <Link href="/services">
         <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2 mt-4">
           Read More <ArrowRight size={18} />
         </button>
@@ -438,75 +489,42 @@ export default function LandingPage() {
 </a>
     </section>
 
-      <section className="bg-gray-50 py-24 px-10">
-  <div className="flex flex-col md:flex-row max-w-7xl 2xl:max-w-[1400px] mx-auto px-6 gap-12">
+    <section className="bg-gray-50 py-24 px-10">
+      <div className="flex flex-col md:flex-row max-w-7xl 2xl:max-w-[1400px] mx-auto px-6 gap-12">
+        
+        {/* Left Side */}
+        <div className="flex flex-col gap-2 w-full md:w-2/3 md:justify-center">
+          <h3 className="text-xl sm:text-xl md:text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
+            <span className="text-gray-900">What Our Customer</span> <br />
+            <span className="text-gray-900">Says About US</span>
+          </h2>
+        </div>
 
-    <div className="flex flex-col gap-2 w-full md:w-2/3">
-      <h3 className="text-xl sm:text-xl md:text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
-      <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
-        <span className="text-gray-900">What Our Customer</span> <br />
-        <span className="text-gray-900">Says About US</span>
-      </h2>
-    </div>
+        {/* Right Side - Vertical scrolling container */}
+        <div className="w-full md:w-2/3 h-[600px] overflow-hidden relative">
+          <div className="animate-marquee flex flex-col gap-8 absolute top-0">
+            
+            {/* Duplicate array for smooth infinite scroll */}
+            {[...testimonials, ...testimonials].map((person, idx) => (
+              <div
+                key={idx}
+                className="flex items-start bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md
+                           border-l-4 border-transparent hover:border-[#23A654]
+                           transition-all duration-500 ease-in-out"
+              >
+                <Image src={person.avatar} alt={person.name} className="w-16 h-16 rounded-full object-cover" />
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900">{person.name}</h3>
+                  <p className="text-gray-700 text-md">{person.text}</p>
+                </div>
+              </div>
+            ))}
 
-    <div className="flex flex-col gap-8 w-full md:w-2/3 mt-8 md:mt-0">
-
-      <div className="flex justify-center">
-      <div className="flex items-start bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md
-                  border-l-4 border-transparent hover:border-[#23A654] transition-all duration-500 ease-in-out
-                  md:translate-x-10 md:hover:translate-x-0">
-          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-          <div>
-            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-            <p className="text-gray-700 text-md">
-              The online shop where you can sell your products.
-            </p>
           </div>
         </div>
       </div>
-
-      <div className="flex justify-center">
-      <div className="flex items-start
-                  bg-white rounded-xl shadow-md 
-                  p-6 gap-4 w-full max-w-md
-                  border-l-4 border-transparent 
-                  hover:border-[#23A654]
-                  transition-all duration-500 ease-in-out
-                  md:translate-x-10 
-                  md:hover:translate-x-0">
-
-          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-          <div>
-            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-            <p className="text-gray-700 text-md">
-              Amazing customer support and smooth shopping experience.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex justify-center">
-      <div className="flex items-start
-                  bg-white rounded-xl shadow-md 
-                  p-6 gap-4 w-full max-w-md
-                  border-l-4 border-transparent 
-                  hover:border-[#23A654]
-                  transition-all duration-500 ease-in-out
-                  md:translate-x-10 
-                  md:hover:translate-x-0">
-
-          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-          <div>
-            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-            <p className="text-gray-700 text-md">
-              Loved the products, will definitely order again!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
       <Footer />
     </div>
