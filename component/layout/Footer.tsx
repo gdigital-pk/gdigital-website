@@ -80,11 +80,11 @@ export default function Footer() {
             <div className="space-y-5 text-[#333e48] font-medium">
               <div className="flex items-center gap-4">
                 <Image src={Message} alt="Email" width={24} height={24} />
-                <a href="mailto:hello@gdigital.com" className="hover:text-[#00966C]">Hello@gdigital.com</a>
+                <a href="mailto:hello@gdigital.pk" className="hover:text-[#00966C]">hello@gdigital.pk</a>
               </div>
               <div className="flex items-center gap-4">
                 <Image src={Phone} alt="Phone" width={24} height={24} />
-                <a href="tel:+923215593827" className="hover:text-[#00966C]">+923215593827</a>
+                <a href="tel:+92 321 5593827" className="hover:text-[#00966C]">+92 321 5593827</a>
               </div>
             </div>
           </div>

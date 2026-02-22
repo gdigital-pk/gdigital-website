@@ -284,8 +284,13 @@ export default function LandingPage() {
           <div className="flex justify-between items-center">
              <p className="text-base sm:text-lg font-bold text-gray-400">Let's Built something <br/> <span className="text-base sm:text-lg text-black">meaningful together</span></p>
              <Link href="/our-work">
-             <button className=" bg-[#00B86B] text-white px-4 py-2 text-sm md:px-6 md:py-3 md:text-base rounded-full flex items-center gap-2">
-  See Projects <ArrowRight size={16} className="md:w-[18px] md:h-[18px]" />
+             <button
+  className="bg-[#00B86B] text-white px-4 py-2 text-sm md:px-6 md:py-3 md:text-base 
+             rounded-full flex items-center gap-2 
+             transition transform duration-300 hover:bg-green-600 hover:scale-105"
+>
+  See Projects 
+  <ArrowRight size={16} className="md:w-[18px] md:h-[18px]" />
 </button>
       </Link>
           </div>
@@ -401,7 +406,8 @@ export default function LandingPage() {
   </span>
 </PointerHighlight>
         <Link href="/services">
-        <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2 mt-4">
+        <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2 mt-4
+        transition transform duration-300 hover:bg-green-600 hover:scale-105">
           Read More <ArrowRight size={18} />
         </button>
         </Link>
@@ -421,7 +427,8 @@ export default function LandingPage() {
             grows. From startups to enterprise platforms, our hosting is engineered to support real-world performance and long-term growth.
           </p>
           <Link href="/hosting">
-          <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2">
+          <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2 
+          transition transform duration-300 hover:bg-green-600 hover:scale-105">
             View Hosting Plans <ArrowRight size={18} />
           </button>
           </Link>
