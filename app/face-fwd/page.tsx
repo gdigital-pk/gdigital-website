@@ -66,7 +66,7 @@ Client
 
 </section>
 
-    <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   <div className="rounded-3xl p-8 flex justify-center">
     <Image
       src={jewellryImg1}
@@ -93,7 +93,7 @@ Client
         </div>
       </section>
 
-      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   
       <div className="order-2 md:order-1 flex items-end h-full max-w-lg">
     <p className="text-gray-700 text-lg leading-relaxed font-medium mb-10 font-inter text-[#3D3D3D]">
