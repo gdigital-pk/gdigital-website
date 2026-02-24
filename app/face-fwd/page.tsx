@@ -20,47 +20,58 @@ export default function JewellryPage() {
   return (
     <div className="bg-white font-sans text-gray-900">
       <Navbar />
-    <section className="pt-24 max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20">
+      <section className="pt-24 max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20">
 
-  {/* Image Container */}
-  <div className="relative max-w-7xl mx-auto flex justify-center items-center">
-    <div className="relative">
-      <Image 
-        src={faceFwd} 
-        alt="Main Mockup" 
-        className="w-full max-w-[1400px] object-contain"
-      />
-    </div>
+{/* Image Container */}
+<div className="relative max-w-7xl mx-auto flex justify-center items-center">
+  
+  <div className="relative w-full">
+    
+    {/* FACE FWD Text Overlay */}
+    <h2 className="absolute top-6 left-6 md:top-20 md:left-20
+                   text-white text-2xl sm:text-3xl md:text-4xl 
+                   font-bold font-circular tracking-wide z-10">
+      FACE FWD
+    </h2>
+
+    <Image 
+      src={faceFwd} 
+      alt="Main Mockup" 
+      className="w-full max-w-[1400px] object-contain rounded-xl"
+    />
+    
+  </div>
+</div>
+
+{/* Bottom Info Section */}
+<div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+  <div className="flex flex-col items-center">
+    <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
+      Client
+    </h4>
+    <p className="text-lg md:text-xl font-normal mt-2">
+      Spark Databox
+    </p>
   </div>
 
-  <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+  <div className="flex flex-col items-center">
+    <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
+      What We Did
+    </h4>
+    <p className="text-lg md:text-xl font-normal mt-2">
+      Web Development
+    </p>
+  </div>
 
-<div className="flex flex-col items-center">
-<h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
-Client
-</h4>
-  <p className="text-lg md:text-xl font-normal mt-2">
-    Spark Databox
-  </p>
-</div>
-
-<div className="flex flex-col items-center">
-  <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
-    What We Did
-  </h4>
-  <p className="text-lg md:text-xl font-normal mt-2">
-    Web Development
-  </p>
-</div>
-
-<div className="flex flex-col items-center">
-  <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
-    Sector
-  </h4>
-  <p className="text-lg md:text-xl font-normal mt-2 ">
-    Education
-  </p>
-</div>
+  <div className="flex flex-col items-center">
+    <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
+      Sector
+    </h4>
+    <p className="text-lg md:text-xl font-normal mt-2">
+      Education
+    </p>
+  </div>
 
 </div>
 

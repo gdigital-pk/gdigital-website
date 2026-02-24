@@ -54,14 +54,14 @@ export default function Hosting() {
   return (
     <>
       <Navbar />
-    <section id="hosting" className="bg-[#F9F9F9] py-20">
+    <section id="hosting" className="bg-[#F9F9F9] md:py-20">
       <div className="max-w-9xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20 mt-170">
         {/* Header */} 
         <div className="absolute inset-0 flex justify-center">
   <img
     src={HostingBackground.src}
     alt="Hosting Background"
-    className="max-w-7xl 2xl:max-w-[1400px] h-full object-cover px-4 sm:px-6 lg:px-20"
+    className="2xl:max-w-[1400px]  h-190 lg:h-full object-cover px-4 sm:px-6 lg:px-20"
   />
 </div>
 
@@ -76,14 +76,14 @@ export default function Hosting() {
     <div className="w-full md:w-2/2 max-w-lg">
     <h2
   className="
-    text-3xl sm:text-4xl md:text-[48px] 
+    text-3xl sm:text-3xl md:text-[48px] 
     font-extrabold 
     font-sans 
     text-[#3D3D3D] 
     w-full md:max-w-sm 
     leading-[1.1] 
-    tracking-wide
-mb-2  px-6"
+    tracking-wide 
+mb-2 px-2 md:px-6"
 >
   Everything your website needs.
 </h2>
@@ -117,8 +117,8 @@ mb-2  px-6"
   </div>
 
   <div className="order-1 md:order-2">
-    <h3 className="text-3xl
-        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
+    <h3 className="text-2xl
+        sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-5">
       Built for the Digital Future
     </h3>
 
@@ -134,8 +134,8 @@ mb-2  px-6"
 <div className="mb-20 grid md:grid-cols-2 gap-12 items-center pt-20">
 
   <div className="order-1 md:order-1">
-    <h3 className="text-3xl
-        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
+    <h3 className="text-2xl
+        sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-5">
     Make your website in minutes
     </h3>
 
@@ -175,8 +175,8 @@ mb-2  px-6"
 
   {/* RIGHT SIDE – TEXT */}
   <div className="order-1 md:order-2">
-    <h3 className="text-3xl
-        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
+    <h3 className="text-2xl
+        sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-5">
     WordPress without the complexity
     </h3>
 
@@ -193,8 +193,8 @@ mb-2  px-6"
 
         <div className=" grid md:grid-cols-3 gap-12 items-center pt-20 pb-7">
           <div>
-            <h3 className="text-3xl
-        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Hosting Packages
+            <h3 className="text-2xl
+        sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-4">Hosting Packages
             Made for You</h3>
             <p className="text-lg text-gray-600 mb-6">
             Whether you’re launching a new site or scaling your 
@@ -225,12 +225,12 @@ mb-2  px-6"
             </div>
 
             <div className="mt-8 w-full">
-              <h4 className="text-3xl
-        sm:text-3xl lg:text-5xl text-gray-800 font-medium mb-1">{plan.name}</h4>
+              <h4 className="text-2xl
+        sm:text-2xl lg:text-5xl text-gray-800 font-medium mb-1">{plan.name}</h4>
               <p className="text-base text-gray-500 mb-10 font-medium">(Basic Package)</p>
 
-              <p className="text-3xl
-        sm:text-3xl lg:text-5xl text-gray-800 font-bold mb-10">{plan.price}</p>
+              <p className="text-2xl
+        sm:text-2xl lg:text-5xl text-gray-800 font-bold mb-10">{plan.price}</p>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8 pr-4">
                 For individuals and small teams who need credibility without complexity.
@@ -298,7 +298,7 @@ mb-2  px-6"
     </div>
 
 
-    <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto mt-16 lg:mt-24 px-4 sm:px-6 pb-10">
+    <div className="max-w-7xl 2xl:max-w-[1200px] mx-auto mt-10 lg:mt-24 px-4 sm:px-6 pb-10">
   <div className="bg-[#FDFCFE] border border-[#EAE9E9] rounded-2xl py-12 lg:pt-20 px-6 lg:px-20">
 
     {/* Flex Wrapper */}
@@ -344,13 +344,13 @@ mb-2  px-6"
   </div>
 </div>
 
-<div className="max-w-7xl 2xl:max-w-[1400px] mx-auto mt-25 px-6 ">
-<div className="bg-white rounded-3xl px-14 py-20 pl-20border border-gray-100 shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+<div className="max-w-7xl 2xl:max-w-[1400px] mx-auto mt-10 lg:mt-25 px-6 ">
+<div className="bg-white rounded-3xl px-14 py-20 pl-20 border border-gray-100 shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
 
     <div className="max-w-lg mb-20">
-      <h2 className="text-3xl
-        sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-        Why Choose <br /> G Digital Hosting?
+      <h2 className="text-2xl
+        sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+        Why Choose <br /> GDigital Hosting?
       </h2>
 
       <p className="text-xl text-gray-600 leading-relaxed">
@@ -400,8 +400,8 @@ mb-2  px-6"
     <div className=" max-w-7xl 2xl:max-w-[1400px] mx-auto pt-30 mt-32 bg-[#079669]">
 <div className="relative z-10 mx-auto">
 <div className="text-center max-w-xl mx-auto mb-20 px-6">
-  <h2 className="text-3xl
-        sm:text-3xl lg:text-5xl font-bold text-white mb-6">
+  <h2 className="text-2xl
+        sm:text-2xl lg:text-5xl font-bold text-white mb-6">
     Made With Gdigital
   </h2>
 
@@ -449,8 +449,8 @@ mb-2  px-6"
 <section className="bg-gray-50 py-24 px-10">
   <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-6 gap-12">
     <div className="flex flex-col gap-2 w-full md:w-2/3">
-      <h3 className="text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
-      <h2 className="text-4xl md:text-5xl font-bold">
+      <h3 className="text-xl lg:text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
+      <h2 className="text-2xl md:text-5xl font-bold">
         <span className="text-gray-900">What Our Customer</span> <br />
         <span className="text-gray-900">Says About US</span>
       </h2>

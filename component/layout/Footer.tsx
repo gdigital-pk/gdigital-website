@@ -43,7 +43,7 @@ export default function Footer() {
                 height={48}
                 className="w-10 h-10 md:w-12 md:h-12"
               />
-              <h2 className="text-2xl sm:text-3x md:text-5xl font-semibold text-[#333e48] tracking-tight">
+              <h2 className="text-2xl sm:text-3x md:text-4xl font-semibold  tracking-tight">
                 Schedule a Free Consultation
               </h2>
             </div>
