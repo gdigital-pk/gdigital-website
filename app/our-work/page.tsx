@@ -26,6 +26,7 @@ export default function PortfolioPage() {
             </h2>
           </div>
 
+          <a href="/limo-bermuda" className="block">
           <div className="relative w-full h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden mb-8 group cursor-pointer">
             <Image src={PortfolioImg1} alt="Featured Project"layout="fill"objectFit="cover" className="transition-transform duration-500 group-hover:scale-105"/>
            <div className="absolute inset-0 bg-[linear-gradient(179.49deg,rgba(0,0,0,0.6)_8.99%,rgba(49,49,49,0)_57.75%,rgba(0,0,0,0.57)_90.93%)]" />
@@ -33,9 +34,10 @@ export default function PortfolioPage() {
                <Image src={logo1} alt="logo" width={180} height={90} className="brightness-0 invert" />
             </div>
           </div>
+            </a>
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<a href="/spark-databox" className="block">
+<a href="/limo-bermuda" className="block">
 <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
   <Image
     src={PortfolioImg2}
@@ -59,7 +61,7 @@ export default function PortfolioPage() {
 </div>
 </a>
 
-<a href="/jewellry" className="block">
+<a href="/spark-databox" className="block">
 <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
   <Image
     src={PortfolioImg3}
@@ -83,7 +85,7 @@ export default function PortfolioPage() {
 </div>
 </a>
 
-<a href="/spark-databox" className="block">
+<a href="/face-fwd" className="block">
 <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
   <Image
     src={PortfolioImg4}
@@ -110,7 +112,7 @@ export default function PortfolioPage() {
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
 
-<a href="/jewellry" className="block">
+<a href="/limo-bermuda" className="block">
   <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
     <Image
       src={PortfolioImg2}
@@ -159,7 +161,7 @@ export default function PortfolioPage() {
   </div>
   </a>
 
-  <a href="/jewellry" className="block">
+  <a href="/face-fwd" className="block">
   <div className="relative h-[450px] rounded-[1.5rem] overflow-hidden group cursor-pointer">
     <Image
       src={PortfolioImg4}

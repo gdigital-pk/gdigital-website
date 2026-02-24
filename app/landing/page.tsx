@@ -298,7 +298,7 @@ export default function LandingPage() {
       </section>
 
       <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-20">
-<a href="/spark-databox" className="block">
+<a href="/limo-bermuda" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg2} alt="work" fill className="object-cover" />
 
@@ -324,7 +324,7 @@ export default function LandingPage() {
 </div>
 </a>
 
-<a href="/jewellry" className="block">
+<a href="/spark-databox" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg3} alt="work" fill className="object-cover" />
 
@@ -350,7 +350,7 @@ export default function LandingPage() {
 </div>
 </a>
 
-<a href="/spark-databox" className="block">
+<a href="/face-fwd" className="block">
 <div className="relative rounded-[2.5rem] overflow-hidden group shadow-2xl ransition-transform duration-500 ease-in-out h-[580px] hover:-translate-y-5">
   <Image src={PortfolioImg4} alt="work" fill className="object-cover" />
 

@@ -4,72 +4,72 @@ import Navbar from "../../component/layout/Navbar";
 import Footer from "../../component/layout/Footer";
 
 // Your imports
+import limoBermuda from "../../component/assets/Images/limo-bermuda.png";
+import limoBermuda2 from "../../component/assets/Images/limo-bermuda2.png";
+import limoBermuda3 from "../../component/assets/Images/limo-bermuda3.png";
+import limoBermuda4 from "../../component/assets/Images/lima-bermuda4.png";
 import PortfolioImg4 from "../../component/assets/Images/PortfolioImg4.png";
 import PortfolioImg2 from "../../component/assets/Images/PortfolioImg2.png";
 import PortfolioImg3 from "../../component/assets/Images/PortfolioImg3.png";
-import SparkDatabox from "../../component/assets/Images/spark-databox.png";
-import DataboxImg4 from "../../component/assets/Images/DataboxImg4.png";
-import DataboxImg5 from "../../component/assets/Images/DataboxImg5.png";
-import DataboxImg6 from "../../component/assets/Images/DataboxImg6.png";
 import logo1 from "../../component/assets/Icons/logo1.png";
 import logo2 from "../../component/assets/Icons/logo2.png";
 import logo3 from "../../component/assets/Icons/logo3.png";
 
 
-export default function SparkDataboxPage() {
+export default function JewellryPage() {
   return (
     <div className="bg-white font-sans text-gray-900">
       <Navbar />
-      <section className="pt-24 max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20">
+    <section className="pt-24 max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20">
 
-{/* Image Container */}
-<div className="relative max-w-7xl mx-auto flex justify-center items-center">
-  <div className="relative">
-    <Image 
-      src={SparkDatabox} 
-      alt="Main Mockup" 
-      className="w-full max-w-[1400px] object-contain"
-    />
+  {/* Image Container */}
+  <div className="relative max-w-7xl mx-auto flex justify-center items-center">
+    <div className="relative">
+      <Image 
+        src={limoBermuda} 
+        alt="Main Mockup" 
+        className="w-full max-w-[1400px] object-contain"
+      />
+    </div>
   </div>
+
+  <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+<div className="flex flex-col items-center">
+<h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
+Client
+</h4>
+  <p className="text-lg md:text-xl font-normal mt-2">
+    Spark Databox
+  </p>
 </div>
 
-<div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-
-  <div className="flex flex-col items-center">
+<div className="flex flex-col items-center">
   <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
-  Client
-</h4>
-    <p className="text-lg md:text-xl font-normal mt-2">
-      Spark Databox
-    </p>
-  </div>
+    What We Did
+  </h4>
+  <p className="text-lg md:text-xl font-normal mt-2">
+    Web Development
+  </p>
+</div>
 
-  <div className="flex flex-col items-center">
-    <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
-      What We Did
-    </h4>
-    <p className="text-lg md:text-xl font-normal mt-2">
-      Web Development
-    </p>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
-      Sector
-    </h4>
-    <p className="text-lg md:text-xl font-normal mt-2 ">
-      Education
-    </p>
-  </div>
+<div className="flex flex-col items-center">
+  <h4 className="font-circular font-bold text-lg md:text-2xl text-[#3D3D3D] tracking-wider">
+    Sector
+  </h4>
+  <p className="text-lg md:text-xl font-normal mt-2 ">
+    Education
+  </p>
+</div>
 
 </div>
 
 </section>
 
-    <section className="2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   <div className="rounded-3xl p-8 flex justify-center">
     <Image
-      src={DataboxImg4}
+      src={limoBermuda2}
       alt="Mobile App"
       className="w-100 drop-shadow-2xl"
     />
@@ -87,17 +87,16 @@ export default function SparkDataboxPage() {
 
 </section>
 
-
-      {/* 4. Large Banner Section */}
-      <section className="2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+      <section className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="rounded-3xl overflow-hidden shadow-xl">
-          <Image src={DataboxImg6} alt="Conference Display" className="w-full h-auto object-cover" />
+          <Image src={limoBermuda3} alt="Conference Display" className="w-full h-auto object-cover" />
         </div>
       </section>
 
-      <section className="2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {/* 5. Tablet Mockup Section */}
+      <section className="max-w-7xl 2xl:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
   
-  <div className="order-2 md:order-1 flex items-end h-full max-w-lg">
+      <div className="order-2 md:order-1 flex items-end h-full max-w-lg">
     <p className="text-gray-700 text-lg leading-relaxed font-medium mb-10 font-inter text-[#3D3D3D]">
       We believe exceptional digital experiences are never the result of shortcuts.
       Every project begins with deep research and thoughtful experimentation, where
@@ -110,7 +109,7 @@ export default function SparkDataboxPage() {
   {/* Right column (image) */}
   <div className="rounded-3xl p-8 flex justify-center order-1 md:order-2">
     <Image
-      src={DataboxImg5}
+      src={limoBermuda4}
       alt="Tablet Mockup"
       className="w-100 drop-shadow-2xl"
     />
@@ -118,7 +117,8 @@ export default function SparkDataboxPage() {
 
 </section>
 
-      <section className="2xl:max-w-[1400px] mx-auto px-6 sm:px-6 lg:px-12 py-20">
+
+<section className="2xl:max-w-[1400px] mx-auto px-6 sm:px-6 lg:px-12 py-20">
         <h2 className="text-4xl font-bold mb-4">More OF Our Work</h2>
         <p className="text-gray-600 mb-12 max-w-md font-medium">
           Whether you're launching a new site or scaling your business, our plans are built to deliver speed, security, and value.
@@ -205,7 +205,6 @@ export default function SparkDataboxPage() {
 </section>
 
       </section>
-
       <Footer />
     </div>
   );
