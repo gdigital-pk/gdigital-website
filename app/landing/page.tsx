@@ -152,7 +152,7 @@ export default function LandingPage() {
         },
         {
           name: "Morani C",
-          avatar: jonathan,
+          avatar: moraniC,
           text: "We are absolutely thrilled with the exceptional service provided by GDigital. Their seamless integration of the Web3 SDK into our platform has truly elevated our user experience.",
         },
         {
@@ -508,28 +508,26 @@ export default function LandingPage() {
           </h2>
         </div>
 
-        {/* Right Side - Vertical scrolling container */}
-        <div className="w-full md:w-2/3 h-[600px] overflow-hidden relative">
-          <div className="animate-marquee flex flex-col gap-8 absolute top-0">
-            
-            {/* Duplicate array for smooth infinite scroll */}
-            {[...testimonials, ...testimonials].map((person, idx) => (
-              <div
-                key={idx}
-                className="flex items-start bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md
-                           border-l-4 border-transparent hover:border-[#23A654]
-                           transition-all duration-500 ease-in-out"
-              >
-                <Image src={person.avatar} alt={person.name} className="w-16 h-16 rounded-full object-cover" />
-                <div>
-                  <h3 className="font-bold text-xl text-gray-900">{person.name}</h3>
-                  <p className="text-gray-700 text-md">{person.text}</p>
-                </div>
-              </div>
-            ))}
-
-          </div>
+     <div className="w-full md:w-2/3 h-[600px] overflow-hidden relative testimonial-container">
+  <div className="animate-marquee flex flex-col gap-8 absolute top-0 left-0 w-full">
+    
+    {[...testimonials, ...testimonials].map((person, idx) => (
+      <div
+        key={idx}
+        className="flex items-start bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md
+                   border-l-4 border-transparent hover:border-[#23A654]
+                   transition-all duration-500 ease-in-out"
+      >
+        <Image src={person.avatar} alt={person.name} className="w-16 h-16 rounded-full object-cover" />
+        <div>
+          <h3 className="font-bold text-xl text-gray-900">{person.name}</h3>
+          <p className="text-gray-700 text-md">{person.text}</p>
         </div>
+      </div>
+    ))}
+
+  </div>
+</div>
       </div>
     </section>
 

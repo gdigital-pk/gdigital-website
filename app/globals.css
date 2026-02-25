@@ -126,5 +126,9 @@
 }
 
 .animate-marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 40s linear infinite forwards;
+}
+
+.testimonial-container:hover .animate-marquee {
+  animation-play-state: paused;
 }

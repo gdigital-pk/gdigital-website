@@ -27,6 +27,14 @@ import HostingImg6 from "../../component/assets/Images/HostingImg6.png";
 import HostingImg7 from "../../component/assets/Images/HostingImg7.png";
 import HostingImg8 from "../../component/assets/Images/HostingImg8.png";
 import Avatar from "../../component/assets/Icons/Avatar.png";
+import aman from "../../component/assets/Icons/aman.png";
+import kivilcim from "../../component/assets/Icons/kivilcim.png";
+import jonathan from "../../component/assets/Icons/jonathan.png";
+import moraniC from "../../component/assets/Icons/moraniC.png";
+import stumpsin from "../../component/assets/Icons/stumpsin.png";
+import landynn from "../../component/assets/Icons/landynn.png";
+import leeKangseok from "../../component/assets/Icons/leeKangseok.png";
+import ragan from "../../component/assets/Icons/ragan.png";
 
 
 
@@ -48,6 +56,49 @@ export default function Hosting() {
       name: "Inferno",
       price: "$200",
       icon: FireIcon,
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Aman Kodwani",
+      avatar: aman,
+      text: "Highly recommend GDigital! Super quick service and an exceptional team that not only fixes glitches with apps but also works hard to correct any code issues. Really satisfied!",
+    },
+    {
+      name: "Jonathan Ruben",
+      avatar: jonathan,
+      text: "GDigital delivered with amazing speed and was incredibly easy to work with throughout the entire process.",
+    },
+    {
+      name: "Landyn",
+      avatar: landynn,
+      text: "GDigital delivered exactly what was promised and completed the work fast. They were easy to communicate with and made the entire experience hassle-free.",
+    },
+    {
+      name: "Kivilcimsez",
+      avatar: kivilcim,
+      text: "We highly recommend GDigital for website deployment. They efficiently deployed our website with great attention to detail. Their communication and expertise made the process seamless.",
+    },
+    {
+      name: "Morani C",
+      avatar: moraniC,
+      text: "We are absolutely thrilled with the exceptional service provided by GDigital. Their seamless integration of the Web3 SDK into our platform has truly elevated our user experience.",
+    },
+    {
+      name: "Stumpf Sinner",
+      avatar: stumpsin,
+      text: "Fast delivery and first-class support! :-)",
+    },
+    {
+      name: "Lee Kangseok",
+      avatar: leeKangseok,
+      text: "We asked GDigital for what we needed, and they went above and beyond, giving even better suggestions and making the whole process super easy.",
+    },
+    {
+      name: "Ragan J",
+      avatar: ragan,
+      text: "GDigital worked closely with us to accomplish our specific goals. Big thanks for making everything run so smoothly!",
     },
   ];
 
@@ -446,81 +497,39 @@ mb-2 px-2 md:px-6"
 
 </div>
 
-<section className="bg-gray-50 py-24 px-10">
-  <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-6 gap-12">
-    <div className="flex flex-col gap-2 w-full md:w-2/3">
-      <h3 className="text-xl lg:text-2xl font-bold mt-0 text-[#23A654]">Testimonials</h3>
-      <h2 className="text-2xl md:text-5xl font-bold">
-        <span className="text-gray-900">What Our Customer</span> <br />
-        <span className="text-gray-900">Says About US</span>
-      </h2>
-    </div>
+ <section className="bg-gray-50 py-34 px-10">
+      <div className="flex flex-col md:flex-row max-w-7xl 2xl:max-w-[1400px] mx-auto px-6 gap-12">
+        
+        {/* Left Side */}
+        <div className="flex flex-col gap-2 w-full md:w-2/3 md:justify-center">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
+            <span className="text-[#23A654]">What Our Customer</span> <br />
+            <span className="text-gray-900">Says About US</span>
+          </h2>
+        </div>
 
-    <div className="flex flex-col gap-8 w-full md:w-2/3 mt-8 md:mt-0">
-      <div className="flex justify-center">
-      <div className="flex items-start
-                  bg-white rounded-xl shadow-md 
-                  p-6 gap-4 w-full max-w-md
-                  border-l-4 border-transparent 
-                  hover:border-[#23A654]
-                  transition-all duration-500 ease-in-out
-                  md:translate-x-10 
-                  md:hover:translate-x-0">
-          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-          <div>
-            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-            <p className="text-gray-700 text-md">
-              The online shop where you can sell your products.
-            </p>
-          </div>
+     <div className="w-full md:w-2/3 h-[600px] overflow-hidden relative testimonial-container">
+  <div className="animate-marquee flex flex-col gap-8 absolute top-0 left-0 w-full">
+    
+    {[...testimonials, ...testimonials].map((person, idx) => (
+      <div
+        key={idx}
+        className="flex items-start bg-white rounded-xl shadow-md p-6 gap-4 w-full max-w-md
+                   border-l-4 border-transparent hover:border-[#23A654]
+                   transition-all duration-500 ease-in-out"
+      >
+        <Image src={person.avatar} alt={person.name} className="w-16 h-16 rounded-full object-cover" />
+        <div>
+          <h3 className="font-bold text-xl text-gray-900">{person.name}</h3>
+          <p className="text-gray-700 text-md">{person.text}</p>
         </div>
       </div>
+    ))}
 
-      {/* 2nd Card → Right */}
-      <div className="flex justify-center">
-      <div className="flex items-start
-                  bg-white rounded-xl shadow-md 
-                  p-6 gap-4 w-full max-w-md
-                  border-l-4 border-transparent 
-                  hover:border-[#23A654]
-                  transition-all duration-500 ease-in-out
-                  md:translate-x-10 
-                  md:hover:translate-x-0">
-
-          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-          <div>
-            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-            <p className="text-gray-700 text-md">
-              Amazing customer support and smooth shopping experience.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* 3rd Card → Center */}
-      <div className="flex justify-center">
-      <div className="flex items-start
-                  bg-white rounded-xl shadow-md 
-                  p-6 gap-4 w-full max-w-md
-                  border-l-4 border-transparent 
-                  hover:border-[#23A654]
-                  transition-all duration-500 ease-in-out
-                  md:translate-x-10 
-                  md:hover:translate-x-0">
-                    
-          <Image src={Avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover" />
-          <div>
-            <h3 className="font-bold text-xl text-gray-900">Mehwish</h3>
-            <p className="text-gray-700 text-md">
-              Loved the products, will definitely order again!
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </div>
-</section>
+</div>
+      </div>
+    </section>
 
 
 
