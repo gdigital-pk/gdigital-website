@@ -29,7 +29,7 @@ export default function AnimatedTextarea({
         onChange={onChange}
         rows={4}
         className="w-full text-black px-4 py-3 bg-gray-100 rounded-lg 
-        focus:outline-none focus:ring-2 focus:ring-[#23A654] 
+        focus:outline-none focus:ring-2 focus:ring-gray-400
         transition-all resize-none"
       />
 

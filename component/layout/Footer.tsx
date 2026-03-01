@@ -8,8 +8,6 @@ import Phone from "../assets/Icons/Phone.png";
 import logoDesign from "../../public/logoDesign.png";
 import LinkedIn from "../assets/Icons/LinkedIn.png";
 import Instagram from "../assets/Icons/Instagram.png";
-import WhatsApp from "../assets/Icons/WhatsApp.png";
-import Social from "../assets/Icons/Social.png";
 import consultrationIcon from "../assets/Icons/consultrationIcon.png";
 import { ArrowRight } from "lucide-react";
 
@@ -55,20 +53,18 @@ export default function Footer() {
               welcome to apply.
             </p>
           </div>
+          
           <div className="mt-8 md:mt-0">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-[#00966C] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#007a58] transition-all"
-            >
-              Contact Us
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+          <Link href="/contact">
+          <button className="bg-[#129F68] text-white px-8 py-3 rounded-full flex items-center gap-2 
+          transition transform duration-300 hover:bg-[#0e8557] transition-colors">
+             Contact Us <ArrowRight size={18} />
+          </button>
+          </Link>
           </div>
         </div>
 
-        {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8">
-          {/* Company Info */}
           <div className="md:col-span-5 lg:col-span-6">
             <Image
               src={logoDesign}
@@ -141,7 +137,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Links & Copyright */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 mt-10 pt-8">
           <div className="md:col-span-5 lg:col-span-6 flex gap-2 items-center">
           <a

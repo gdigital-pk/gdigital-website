@@ -19,18 +19,14 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
-        {/* Navbar main row, logo left, menu right */}
         <div className="flex items-center h-20">
-          {/* Logo */}
           <div className="flex-shrink-0">
           <Link href="/landing">
             <img src={LogoDesign.src} alt="Logo" className="cursor-pointer" />
             </Link>
           </div>
 
-          {/* Push rest to right */}
           <div className="flex flex-1 items-center justify-end">
-            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-6">
               {links.map((link) => (
                 <Link
@@ -47,17 +43,15 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA Button */}
             <div className="hidden md:block ml-4">
-              <Link
-                href="/contact"
-                className="bg-green-600 text-white px-6 py-2 rounded-full text-md font-medium hover:bg-green-700 transition-colors"
-              >
-                Contact Us
-              </Link>
+              <Link href="/contact">
+              <button className="bg-[#129F68] text-white px-8 py-3 rounded-full flex items-center gap-2 
+          transition transform duration-300 hover:bg-[#0e8557] transition-colors">
+             Contact Us
+          </button>
+          </Link>
             </div>
 
-            {/* Mobile menu button */}
             <div className="md:hidden ml-4">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -108,13 +102,12 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-
-              <Link
-                href="/contact"
-                className="block px-3 py-2 bg-green-600 text-white rounded-full text-center mt-2"
-              >
-                Contact Us
-              </Link>
+              <Link href="/contact">
+              <button className="bg-[#129F68] text-white px-4 py-2 mt-2 rounded-full flex text-center
+          transition transform duration-300 hover:bg-[#0e8557] transition-colors">
+             Contact Us
+          </button>
+          </Link>
             </div>
           </div>
         )}

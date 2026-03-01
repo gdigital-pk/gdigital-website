@@ -279,20 +279,16 @@ export default function LandingPage() {
             From strategy to execution, each project highlights our commitment to performance, usability, and long-term value.
           </p>
 
-          <hr className="w-full sm:w-[500px] border-t border-gray-300 mb-6" />
+          <hr className="w-full sm:w-[600px] border-t border-gray-300 mb-6" />
 
           <div className="flex justify-between items-center">
              <p className="text-base sm:text-lg font-bold text-gray-400">Let's Built something <br/> <span className="text-base sm:text-lg text-black">meaningful together</span></p>
-             <Link href="/our-work">
-             <button
-  className="bg-[#00B86B] text-white px-4 py-2 text-sm md:px-6 md:py-3 md:text-base 
-             rounded-full flex items-center gap-2 
-             transition transform duration-300 hover:bg-green-600 hover:scale-105"
->
-  See Projects 
-  <ArrowRight size={16} className="md:w-[18px] md:h-[18px]" />
-</button>
-      </Link>
+      <Link href="/our-work">
+          <button className="bg-[#129F68] text-white px-8 py-3 rounded-full flex items-center gap-2 
+          transition transform duration-300 hover:bg-[#0e8557] transition-colors">
+                 See Projects <ArrowRight size={18} />
+          </button>
+          </Link>
           </div>
         </div>
       </section>
@@ -406,11 +402,11 @@ export default function LandingPage() {
   </span>
 </PointerHighlight>
         <Link href="/services">
-        <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2 mt-4
-        transition transform duration-300 hover:bg-green-600 hover:scale-105">
-          Read More <ArrowRight size={18} />
-        </button>
-        </Link>
+          <button className="bg-[#129F68] text-white px-8 py-3 mt-4 rounded-full flex items-center gap-2 
+          transition transform duration-300 hover:bg-[#0e8557] transition-colors">
+                Read More <ArrowRight size={18} />
+          </button>
+          </Link>
       </div>
     </section>
 
@@ -427,9 +423,9 @@ export default function LandingPage() {
             grows. From startups to enterprise platforms, our hosting is engineered to support real-world performance and long-term growth.
           </p>
           <Link href="/hosting">
-          <button className="bg-[#00B86B] text-white px-8 py-3 rounded-full flex items-center gap-2 
-          transition transform duration-300 hover:bg-green-600 hover:scale-105">
-            View Hosting Plans <ArrowRight size={18} />
+          <button className="bg-[#129F68] text-white px-8 py-3 rounded-full flex items-center gap-2 
+          transition transform duration-300 hover:bg-[#0e8557] transition-colors">
+              View Hosting Plans <ArrowRight size={18} />
           </button>
           </Link>
         </div>
@@ -490,10 +486,12 @@ export default function LandingPage() {
     </a>
   ))}
 </div>
-      <a href="/articles"
-  className="mt-12 inline-flex items-center gap-2 bg-[#129F68] text-white px-7 py-3.5 rounded-full font-bold text-sm hover:bg-[#0e8557] transition-colors">
-  Read More <ArrowRight size={16} strokeWidth={3} />
-</a>
+<Link href="/articles">
+          <button className="bg-[#129F68] text-white px-8 py-3 mt-12 rounded-full flex items-center gap-2 
+          transition transform duration-300 hover:bg-[#0e8557] transition-colors">
+              Read More  <ArrowRight size={18} />
+          </button>
+          </Link>
     </section>
 
     <section className="bg-gray-50 py-24 px-10">
